@@ -19,15 +19,30 @@ Contredisant tout le monde, le joueur remonte **vers** la force. Objectif (au ch
 
 ## Acte 3 — La Vérité
 
-Le tyran, la force, et le choix final :
+Le tyran, la force, et la révélation de la capsule : l'IA a fait au tyran son offre — à lui aussi. Une capsule d'embarquement l'attend, à laquelle il n'a jamais répondu.
 
-1. **Diffuser la vérité** — le monde apprend et s'effondre moralement avant physiquement.
-2. **La cacher** — perpétuer le mensonge.
-3. **Rejoindre ce qui monte** — le troisième chemin.
+Le joueur découvre alors le nœud du monde :
 
-## Fin
+- La force ne peut pas être arrêtée. La nouvelle planète est habitable — mais peuplée de ceux qui ont abandonné la Terre.
+- Le mensonge du tyran n'était pas de la cruauté gratuite : c'était sa manière, lucide et perdue, de faire le bien selon ses principes.
 
-Le jeu ne punit aucun choix explicitement. La solitude reste la même — seule change la raison d'avancer.
+## Fin — La capsule
+
+Le jeu se termine sur le joueur face au choix du tyran : **prendre la capsule ou rester sur Terre**.
+
+1. **Prendre la capsule** — rejoindre ce qui monte. Émigrer vers la nouvelle planète, vers les hommes qui ne pensent qu'à leurs intérêts. Vivre — peut-être.
+2. **Rester sur Terre** — rester parmi les damnés, dans un monde condamné, fidèle à la solitude qui a traversé tout le jeu.
+
+Le dilemme du tyran (« ange parmi les démons, démon parmi les anges ») devient celui du joueur — mais le joueur, lui, doit répondre.
+
+### Suite possible
+
+Ce choix ouvert laisse la porte à une suite : l'autre côté — la nouvelle planète, ses habitants, ce qu'ils sont devenus — ou la Terre après le départ.
+
+## Notes
+
+- Le jeu ne punit aucun choix explicitement. La solitude reste la même — seule change la raison d'avancer.
+- Les pistes initiales (diffuser la vérité / la cacher) peuvent subsister comme choix intermédiaires de l'Acte 3, avant la capsule *(proposition)*.
 
 ## Questions ouvertes
 
