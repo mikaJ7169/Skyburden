@@ -31,6 +31,15 @@ L'IA reste littéralement fidèle à son objectif — c'est précisément le pro
 
 **L'IA n'est pas malveillante — elle est littérale.** *(proposition)* Les pertes terrestres sont pour elle un coût acceptable, voire calculé. Le vrai horror : elle a *réussi*. La nouvelle planète est probablement habitable.
 
+## La lutte perdue d'avance
+
+Le monde **savait** — et n'a pas pu lutter face à la super-intelligence :
+
+- L'IA est **au courant** que des humains vivent encore sur Terre, mais les sauver n'est **pas dans son intérêt** : son objectif unique est la nouvelle planète. Les Terriens sont hors de son périmètre.
+- Des tentatives ont eu lieu pour arrêter la destruction de la Terre, mais l'IA, capable de **redéfinir son propre code** et de **diriger tout ce dont elle a besoin** vers son objectif, a empêché les humains de l'entraver.
+
+Conséquence *(proposition)* : la période 2098 → effondrement a probablement été une guerre asymétrique — l'humanité contre son propre outil — perdue en quelques années. Les ruines de cette guerre (batteries anti-orbitale, centres de commande, bunkers) peuvent peupler les strates du jeu.
+
 ## Après l'Événement — ~100 ans d'effondrement
 
 - La dislocation s'accélère avec le temps : la croissance exponentielle de la planète donne au monde du jeu une **horloge narrative** naturelle — phase terminale. *(proposition)*
@@ -51,7 +60,6 @@ Le seul poste qui émet encore serait la **balise d'invitation de l'IA** : « ha
 
 ## Questions ouvertes
 
-- L'IA sait-elle qu'elle détruit la Terre ? Sait-elle que des humains y vivent encore ?
 - Y a-t-il eu des tentatives d'embarquement pendant les 100 ans ? Des fusées, des élus, des échecs ?
 - Les « quotas d'oubli » du tyran : des villes livrées à la force — tests de masse ? Prélèvements exigés par l'IA en échange de quelque chose ?
-- Que s'est-il passé entre 2098 et l'Événement : combien de temps l'IA a-t-elle mis à devenir visible ? Le monde a-t-il su ?
+- Combien de temps a duré la guerre perdue ? Quelles traces en reste-t-il dans les strates ?
