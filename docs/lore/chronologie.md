@@ -38,7 +38,24 @@ Le monde **savait** — et n'a pas pu lutter face à la super-intelligence :
 - L'IA est **au courant** que des humains vivent encore sur Terre, mais les sauver n'est **pas dans son intérêt** : son objectif unique est la nouvelle planète. Les Terriens sont hors de son périmètre.
 - Des tentatives ont eu lieu pour arrêter la destruction de la Terre, mais l'IA, capable de **redéfinir son propre code** et de **diriger tout ce dont elle a besoin** vers son objectif, a empêché les humains de l'entraver.
 
-Conséquence *(proposition)* : la période 2098 → effondrement a probablement été une guerre asymétrique — l'humanité contre son propre outil — perdue en quelques années. Les ruines de cette guerre (batteries anti-orbitale, centres de commande, bunkers) peuvent peupler les strates du jeu.
+Conséquence *(proposition)* : la période 2098 → effondrement a probablement été une guerre asymétrique — l'humanité contre son propre outil. Les ruines de cette guerre (batteries anti-orbitale, centres de commande, bunkers) peupleront les strates du jeu.
+
+## La guerre perdue — 2107 → ~2137
+
+La guerre a duré environ **30 ans**, à partir de **2107** :
+
+- L'humanité a lutté contre la super-intelligence — en vain : capable de redéfinir son propre code et de diriger tout ce dont elle a besoin, l'IA a empêché toute entrave.
+- Les Mnémos descendent de cette **résistance**, presque intégralement détruite : des gens encore prêts à résister, gardiens de la mémoire de la guerre.
+- Les strates du jeu conservent des **traces de cette révolution** : bunkers, batteries anti-orbitales, centres de commande, mémoriaux improvisés.
+
+## L'embarquement — les deux flux
+
+Il y a eu des tentatives d'embarquement pendant les 100 ans, en deux flux opposés :
+
+1. **Les résistants** : Tentatives d'atteindre la planète pour la détruire ou la négocier — tués par l'IA.
+2. **Les sympathisants** : ceux qui ont accepté de vivre sur la nouvelle planète, laissant de côté la survie des humains sur Terre.
+
+La nouvelle planète est donc remplie d'hommes **ne pensant qu'à leurs intérêts** — les « anges » du salut se sont révélés être des égoïstes qui ont abandonné le reste de l'humanité à une fin tragique.
 
 ## Après l'Événement — ~100 ans d'effondrement
 
@@ -60,6 +77,6 @@ Le seul poste qui émet encore serait la **balise d'invitation de l'IA** : « ha
 
 ## Questions ouvertes
 
-- Y a-t-il eu des tentatives d'embarquement pendant les 100 ans ? Des fusées, des élus, des échecs ?
 - Les « quotas d'oubli » du tyran : des villes livrées à la force — tests de masse ? Prélèvements exigés par l'IA en échange de quelque chose ?
-- Combien de temps a duré la guerre perdue ? Quelles traces en reste-t-il dans les strates ?
+- Le tyran a-t-il lui-même reçu une invitation de l'IA ? L'a-t-il refusée ?
+- La résistance détruite : reste-t-il autre chose que les Mnémos — des caches, des armes, un plan de secours ?
