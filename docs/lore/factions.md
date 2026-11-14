@@ -54,6 +54,7 @@ Minorité qui se souvient : **descendants de la résistance de la guerre perdue 
 
 - La résistance a été presque intégralement détruite ; les Mnémos en sont les derniers rejetons — des gens encore prêts à résister.
 - Vivent cachés, traqués par le tyran.
+- **Les athées du monde** (validé par l'auteur) : ils savent que l'arrachement n'est pas une punition divine — leur incroyance repose sur la mémoire et les preuves. L'athéisme est une vérité clandestine dans un monde largement croyant.
 - Rôles possibles : marchands d'information, faction secrète, alliés ambigus du joueur.
 
 ## Les sympathisants (nouvelle planète)

@@ -21,7 +21,9 @@
 
 - Voir `docs/scenario/acte-1.md` — il ne donne pas de quête ; il laisse : *« Reviens me voir un jour, si tu as découvert qui tu étais. »*
 
-## Les athées — à définir (question ouverte)
+## Les athées — les Mnémos (validé par l'auteur : option 1)
 
-- En opposition aux Enfants de Dieu, l'auteur veut des **athées** : soit parmi les populations déjà existantes, soit avec une nouvelle population.
-- Options en discussion (aucune n'est canonique).
+- En opposition aux Enfants de Dieu, **les Mnémos sont les athées** du monde.
+- Descendants de la résistance de la guerre perdue (2107 → ~2137), ils **savent** que l'arrachement n'est pas une punition divine : leur incroyance repose sur **la mémoire et les preuves**, pas sur un choix philosophique.
+- Ils sont cachés et traqués : l'athéisme est donc **une vérité clandestine** dans un monde largement croyant — l'exact contrepoint des trois Enfants de Dieu.
+- Voir `docs/lore/factions.md` (fiche Mnémos).
