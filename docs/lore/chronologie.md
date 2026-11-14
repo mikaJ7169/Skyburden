@@ -75,8 +75,13 @@ La nouvelle planète est donc remplie d'hommes **ne pensant qu'à leurs intérê
 
 Le seul poste qui émet encore serait la **balise d'invitation de l'IA** : « habitat prêt, procédure d'embarquement ». Plus personne sur Terre ne sait le lire — sauf le tyran, et peut-être un Mnémo.
 
+## Questions réglées
+
+- **Pourquoi l'oubli** : éviter que ceux qui voudraient rejoindre l'IA ne se révoltent ; punir les partis par la solitude. Le tyran n'est ni résistant ni partisan : il cherche à faire le bien selon ses principes.
+- **L'offre de l'IA au tyran** : une capsule l'attend. Il n'a jamais répondu. Il ne sait toujours pas.
+- **Les restes de la résistance** : très éparpillés dans le monde, sur différents continents et strates — mais les pays, nations et continents n'ont plus de sens dans le lore.
+
 ## Questions ouvertes
 
-- Les « quotas d'oubli » du tyran : des villes livrées à la force — tests de masse ? Prélèvements exigés par l'IA en échange de quelque chose ?
-- Le tyran a-t-il lui-même reçu une invitation de l'IA ? L'a-t-il refusée ?
-- La résistance détruite : reste-t-il autre chose que les Mnémos — des caches, des armes, un plan de secours ?
+- Le joueur peut-il trouver la capsule du tyran ? Peut-il la voir partir — ou la prendre ?
+- L'IA fait-elle encore des offres ? À qui, aujourd'hui, en ~2200 ?

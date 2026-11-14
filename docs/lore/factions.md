@@ -11,6 +11,20 @@ Fasciste, il contrôle les populations du monde qui ne s'est pas encore effondr�
 - Il n'est **pas** le boss final. Il est peut-être le personnage le plus lucide du jeu.
 - Détail cruel (piste) : il organise secrètement des « quotas d'oubli » — des villes entières livrées à la force. Pour ralentir quoi ? Ou pour rien. Même lui ne sait plus.
 
+### Pourquoi l'oubli organisé
+
+Il a tout intérêt à garder la population sous contrôle via l'oubli :
+
+- **Éviter la révolte** : si la vérité était connue, tous ceux qui souhaitent rejoindre l'IA se dresseraient contre lui — et les uns contre les autres. L'oubli est un ciment social autant qu'une prison.
+- **Punir par la solitude** : il laisse seuls les gens qui ont rejoint l'IA. La solitude est une belle punition pour avoir abandonné la Terre — il ne les poursuit pas, il les oublie à son tour.
+- **Il n'est ni résistant, ni partisan de l'IA** : il cherche quand même à faire le bien — *selon ses principes*. Un bien qui exige un monde qui ne demande rien.
+
+### La capsule
+
+L'IA lui a fait son offre — à lui aussi. Une capsule d'embarquement **l'attend**.
+
+Il n'a **toujours pas donné de réponse**. Il ne sait toujours pas. Le dilemme n'est pas philosophique pour lui : il le vit, chaque jour, dans un hangar dont il est le seul à avoir la clé.
+
 ### Le dilemme philosophique
 
 Il vit le même dilemme depuis des années : **« être un ange parmi les démons, ou être un démon parmi les anges »**.
@@ -43,6 +57,15 @@ Ceux qui ont accepté l'invitation de l'IA et vécu sur la nouvelle planète, la
 - Une société d'hommes **ne pensant qu'à leurs intérêts**.
 - Le miroir inversé du monde du jeu : eux aussi ont choisi le mensonge — le leur était simplement plus confortable.
 - Probablement jamais montrés en direct dans le jeu *(proposition)* : ils existent comme vérité, pas comme spectacle.
+- Le tyran les laisse seuls, volontairement : la solitude est leur punition pour avoir abandonné la Terre.
+
+## La résistance — les restes
+
+La résistance de la guerre (2107 → ~2137) a été presque intégralement détruite, mais il reste des traces **très éparpillées dans le monde** :
+
+- Des caches, des bunkers, des mémoriaux — dispersés sur différents continents et différentes strates.
+- Les pays, les nations, les continents **n'ont plus de sens** dans le lore : ce ne sont plus que des noms sur des cartes anciennes.
+- Les Mnémos en sont les gardiens, mais personne n'a la carte complète — pas même eux.
 
 ## Le joueur
 
