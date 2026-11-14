@@ -2,6 +2,14 @@
 
 > Document de travail. Rien n'est fixé. À enrichir pendant la phase scénario.
 
+## Moteur (décision actée)
+
+- **Godot 4** : le jeu sera développé avec Godot. Le développement commencera après la phase d'écriture du scénario et de la carte du monde.
+
+## Structure du jeu
+
+- **Monde ouvert** (validé par l'auteur) : le joueur va où il veut. Une carte de la terre ferme sera fournie par l'auteur.
+
 ## Le joueur
 
 - Vue première personne (à confirmer), sans nom ni voix.
@@ -21,4 +29,4 @@
 
 - Y a-t-il du combat ? Des ennemis ? La force a-t-elle des « émanations » ?
 - Quelle progression : zones ouvertes successives, ou semi-monde ouvert ?
-- Moteur : Godot ? Un engine type DOOM (GZDoom) pour du vrai raycasting ? À décider bien plus tard.
+- ~~Moteur : à décider~~ → **Godot 4** (décision actée).
