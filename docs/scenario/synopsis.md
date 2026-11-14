@@ -21,8 +21,10 @@
 
 **Deuxième fin — La Note (si le joueur est curieux) :**
 
-- Si le joueur **relance le jeu après ça** pour chercher des réponses, **le tyran lui soumet l'idée** que le personnage principal a **forcément laissé une trace de son passé avant de rentrer dans la capsule**.
-- Se joue alors **une autre intrigue** : retrouver le sous-sol — qui, depuis tout ce temps, **a été arraché de la terre**.
+- **Le jeu reprend là où il s'est arrêté** : l'écran de fin n'était pas la fin.
+- Le tyran — **en réalité pacifique** — **revient voir le personnage principal** après lui avoir montré la capsule et expliqué ce qu'il sait.
+- Il vient lui **redonner de l'espoir** et lui faire comprendre que **son existence continue** : que **le seul moyen d'expier ses péchés est de savoir ce que l'ancien lui savait**, et qu'il a **forcément laissé une trace** de son passé avant de rentrer dans la capsule.
+- Se joue alors **une autre intrigue** : retrouver le sous-sol — qui, depuis tout ce temps, **a été arraché de la terre** et **emporté au loin, dans un endroit caché à travers les strates**.
 - Le joueur y retrouve **la note qu'il s'est laissée à lui-même** avant sa cryogénisation. Elle révèle **l'objectif qu'il cherchait à accomplir** — **pourquoi il a fait tout ça**.
 
 ## Ce qui reste à définir ensemble

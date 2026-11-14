@@ -11,8 +11,8 @@
 - Comme tout le monde, il a **oublié** son passé et celui de l'humanité.
 - **La note — deuxième fin** (validé par l'auteur) :
   - Première fin : après avoir trouvé **la capsule du tyran**, le personnage se morfond dans la culpabilité → fondu noir, musique de fond, écran de fin.
-  - Si le joueur **relance le jeu** pour chercher des réponses, **le tyran lui soumet l'idée** que le personnage a forcément **laissé une trace de son passé avant de rentrer dans la capsule**.
-  - Nouvelle intrigue : retrouver **le sous-sol, arraché de la terre depuis tout ce temps**.
+  - **Le jeu reprend là où il s'est arrêté** : le tyran — **en réalité pacifique** — **revient voir le personnage** après lui avoir montré la capsule et expliqué ce qu'il sait. Il lui **redonne de l'espoir** et lui fait comprendre que **son existence continue** : le seul moyen d'expier ses péchés est de **savoir ce que l'ancien lui savait** — et il a **forcément laissé une trace** avant de rentrer dans la capsule.
+  - Nouvelle intrigue : retrouver **le sous-sol, arraché de la terre** et **emporté au loin dans un endroit caché à travers les strates**.
   - Le joueur y retrouve **la note qu'il s'est laissée à lui-même**, révélant l'objectif qu'il cherchait à accomplir — pourquoi il a fait tout ça.
   - Cette deuxième fin se joue **après avoir retrouvé Ben une dernière fois** (voir `acte-1.md`).
 - Le dilemme de l'identité : le joueur est-il encore ce qu'il était au moment de créer l'IA ? Doit-il payer pour des crimes dont il n'a jamais eu conscience dans ses souvenirs ? Est-ce réellement la même personne qui a détruit la Terre, sans continuité de la pensée entre les deux ?
