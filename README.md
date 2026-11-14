@@ -30,6 +30,7 @@ docs/
 │   └── factions.md    # Le tyran, l'Église de l'Ancrage, les Mnémos
 └── scenario/
     ├── synopsis.md            # Synopsis en trois actes (brouillon)
+    ├── acte-1.md              # Acte 1 — Le Réveil, puis la Fuite (5 zones)
     └── revelation-joueur.md  # Le joueur, codeur de l'IA — identité et culpabilité
 ```
 
