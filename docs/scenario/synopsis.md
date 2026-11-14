@@ -12,10 +12,18 @@
 - En sortant à la surface : **la ville est en ruine** elle aussi.
 - Le joueur et le personnage sont plongés dans le même flou et la même soif de découvrir et comprendre le monde.
 
-### La toute fin
+### La fin — deux fins possibles (validé par l'auteur)
 
-- Le joueur doit retrouver **une note qu'il s'est laissée à lui-même** avant sa cryogénisation.
-- Cette note révèle **l'objectif qu'il cherchait à accomplir** avant sa cryogénisation — **pourquoi il a fait tout ça**.
+**Première fin — Le Fondu Noir :**
+
+- Après avoir trouvé **la capsule du tyran**, le personnage finit par **se morfondre dans la culpabilité**.
+- L'écran passe sur un **fondu noir avec une musique de fond**, puis l'**écran de fin**.
+
+**Deuxième fin — La Note (si le joueur est curieux) :**
+
+- Si le joueur **relance le jeu après ça** pour chercher des réponses, **le tyran lui soumet l'idée** que le personnage principal a **forcément laissé une trace de son passé avant de rentrer dans la capsule**.
+- Se joue alors **une autre intrigue** : retrouver le sous-sol — qui, depuis tout ce temps, **a été arraché de la terre**.
+- Le joueur y retrouve **la note qu'il s'est laissée à lui-même** avant sa cryogénisation. Elle révèle **l'objectif qu'il cherchait à accomplir** — **pourquoi il a fait tout ça**.
 
 ## Ce qui reste à définir ensemble
 
