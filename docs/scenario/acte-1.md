@@ -22,11 +22,20 @@
 **Défini par l'auteur :**
 
 - À la surface, il tombe sur **la ville en ruine**, qu'il **explore**.
-- Il finit par tomber sur **un homme**, qui se présente comme un **« profiteur de vestiges »** — un homme errant dans les vestiges *(nom de la catégorie à choisir — propositions : Glaneur, Écumeur, Chineur — voir discussion)*.
+- Il finit par tomber sur **un homme**, un **glaneur** — un homme errant dans les vestiges.
 
-### Ce que cet homme lui apprend
+### Ben, le glaneur
 
-Les **bases de ce monde** et des **objets qui existent encore** et dont l'utilisation a pu être comprise :
+**Défini par l'auteur :**
+
+- **Environ 60 ans**, **cheveux gris longs et pas coupés**.
+- **Apparence lugubre et sale**.
+- Il semble **plutôt fermé aux nouvelles rencontres**.
+- Il **repart après** pour continuer sa route, **sans le joueur**.
+
+### Ce que Ben lui apprend
+
+**Les bases de ce monde** et des **objets qui existent encore** et dont l'utilisation a pu être comprise :
 
 - **Une lampe à huile**
 - **Un briquet**
@@ -34,12 +43,20 @@ Les **bases de ce monde** et des **objets qui existent encore** et dont l'utilis
   - se nourrir grâce à des **conserves** ;
   - **filtrer l'eau**, rendue **toxique par l'utilisation abusive des ressources humaines**.
 
+**Sur le monde :**
+
+- **Le monde se disloque**, et lui **fuit dans la direction opposée**.
+- Il ne sait **rien** à part **ce que les gens disent** : que **Dieu dévore la Terre en punition divine**.
+- Il **n'a pas d'avis** là-dessus.
+- Il cherche à **vivre le plus longtemps possible**, comme il le peut.
+- Il **ne s'associe à personne, par peur de la trahison**.
+- **L'humain est pour lui profondément mauvais et égoïste.**
+
 ## Questions pour construire la suite
 
-1. Le nom de la catégorie « profiteur de vestiges » : Glaneur ? Écumeur ? Chineur ? Autre chose ?
-2. Cet homme : son nom, son apparence, son caractère ? Reste-t-il dans la ville ou repart-il ?
-3. Que lui apprend-il du monde en général — la dislocation ? la religion ? le pouvoir en place ? Ou seulement la survie ?
-4. Après cette rencontre : où va le joueur ? L'homme lui indique-t-il une direction, un lieu, un but ?
+1. Le nom « Ben » : à garder, ou un autre nom trouvé ensemble ?
+2. Après le départ de Ben : où va le joueur ? Ben lui indique-t-il une direction, un lieu, un but ?
+3. Ben reviendra-t-il plus tard dans le jeu, ou est-ce une rencontre unique ?
 
 ## Ce qui n'est PAS encore défini
 
