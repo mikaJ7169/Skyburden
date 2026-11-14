@@ -59,11 +59,14 @@ L'ambiguïté est le point : c'est la même question que la capsule, posée cent
 - Le joueur ne sait rien de plus que lui — aucune scène d'intro, aucun texte d'exposition.
 - Toute la découverte du monde est vécue à la première personne, littéralement : le joueur apprend ce que le personnage apprend, au moment où il l'apprend.
 
-Reste à définir : pourquoi se réveille-t-il *maintenant* ? Déclenchement automatique, sabotage, accident, ou quelqu'un l'a-t-il réveillé — et dans quel but ?
+## Le réveil — automatique (canon)
+
+Le réveil est **automatique** : selon les calculs qu'il avait faits, sa capsule devait le réveiller **avant que la Terre soit complètement absorbée**. Personne ne l'a réveillé — il s'est réveillé à l'heure qu'il avait lui-même choisie, cent ans plus tôt.
+
+Détail cruel *(proposition)* : il a calculé juste. Mais il ne se souvient ni de ses calculs, ni de ce qu'il comptait faire une fois réveillé. Le plan a fonctionné — sauf le planificateur.
 
 ## Questions ouvertes
 
-- Pourquoi se réveille-t-il maintenant ? Quelqu'un l'a-t-il réveillé — et dans quel but ?
 - Pourquoi le tyran ne l'a-t-il pas reconnu plus tôt — ou le savait-il depuis le début ?
 - L'oubli du joueur : subi (Église de l'Ancrage), choisi (culpabilité), effet secondaire de la cryogénie — ou les trois ?
 - Le joueur découvre-t-il des traces de lui-même dans les strates : son nom, son visage, son code, sa maison, sa capsule de réveil ?
