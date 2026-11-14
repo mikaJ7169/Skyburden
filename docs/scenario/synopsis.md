@@ -21,8 +21,13 @@
 
 - Le contenu de la note : quel était son objectif ? Pourquoi s'est-il cryogénisé ?
 - Le déroulé entre le réveil et la note : zones, actes, rencontres.
-- Le lien éventuel avec les éléments du lore (l'IA, le tyran, la capsule — voir `docs/lore/`).
 - La fin exacte : que se passe-t-il après avoir lu la note ?
+
+## Lore — décision de l'auteur
+
+- **Tout le lore validé ensemble est conservé** (l'IA, la chronologie, le tyran, l'Église de l'Ancrage, les Mnémos, la capsule, l'oubli — voir `docs/lore/`).
+- **Sont retirés** uniquement les éléments imaginés seul par le binôme autour de la sortie de cryogénisation (déjà supprimés lors de la remise à zéro).
+- Les éléments marqués *(proposition)* dans le lore restent **non canoniques** jusqu'à validation explicite de l'auteur, une par une.
 
 ## Notes de méthode
 
