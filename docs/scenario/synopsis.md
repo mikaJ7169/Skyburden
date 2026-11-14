@@ -26,7 +26,9 @@ Le joueur découvre alors le nœud du monde :
 - La force ne peut pas être arrêtée. La nouvelle planète est habitable — mais peuplée de ceux qui ont abandonné la Terre.
 - Le mensonge du tyran n'était pas de la cruauté gratuite : c'était sa manière, lucide et perdue, de faire le bien selon ses principes.
 
-## Fin — La capsule
+**La révélation finale** *(piste canon en cours d'exploration — voir `revelation-joueur.md`)* : le joueur est reconnu par le tyran comme **l'un des codeurs de l'IA**. Lui aussi a oublié. Le renversement est complet : le joueur devient pire que le tyran, rongé par la culpabilité d'avoir anéanti tout ce qu'il connaissait et chérissait — et le tyran devient presque une bonne personne.
+
+## Fin — La Capsule
 
 Le jeu se termine sur le joueur face au choix du tyran : **prendre la capsule ou rester sur Terre**.
 

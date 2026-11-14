@@ -28,7 +28,8 @@ docs/
 │   ├── chronologie.md # 2025 → 2098 → l'Événement → aujourd'hui du jeu
 │   └── factions.md    # Le tyran, l'Église de l'Ancrage, les Mnémos
 └── scenario/
-    └── synopsis.md    # Synopsis en trois actes (brouillon)
+    ├── synopsis.md            # Synopsis en trois actes (brouillon)
+    └── revelation-joueur.md  # Le joueur, codeur de l'IA — identité et culpabilité
 ```
 
 ## Nom
