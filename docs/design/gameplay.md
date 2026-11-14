@@ -21,6 +21,12 @@
 - **Très peu de combats**.
 - Ennemis possibles : **les gardes du tyran**, **des voleurs**, et **des populations hostiles éparpillées** en général.
 
+## La survie (validé par l'auteur)
+
+- **Liée surtout aux ressources pour se nourrir** : trouver de quoi manger (conserves, etc.) et boire (filtrer l'eau toxique — voir Ben, Acte 1).
+- La survie comme motivation d'exploration : chercher à manger pousse le joueur dans les ruines et les lieux cachés.
+
+
 ## Le joueur
 
 - Vue première personne (à confirmer), sans nom ni voix.
@@ -39,7 +45,7 @@
 
 - La force a-t-elle des « émanations » ? Y a-t-il un danger non-humain ?
 - Les combats : sous quelle forme ? (esquive, fuite, armes rares ?)
-- La survie (faim, soif, eau toxique) : mécanique active ou simple toile de fond ?
+- ~~La survie (faim, soif, eau toxique)~~ → Liée surtout aux ressources pour se nourrir (validé).
 - ~~Y a-t-il du combat ?~~ → Très peu : gardes du tyran, voleurs, populations hostiles (validé).
 - ~~Quelle progression ?~~ → Monde ouvert très peu guidé, récompense de la curiosité (validé).
 - ~~Moteur : à décider~~ → **Godot 4** (décision actée).
