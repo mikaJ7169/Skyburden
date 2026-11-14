@@ -20,6 +20,8 @@
 
 - **Très peu de combats**.
 - Ennemis possibles : **les gardes du tyran**, **des voleurs**, et **des populations hostiles éparpillées** en général.
+- **Le joueur peut se battre**, mais il est **surtout livré à lui-même pour faire ses propres choix** : se battre, fuir, se cacher, contourner, négocier — le jeu ne impose pas de solution.
+- Cohérent avec l'ensemble : pas de guidage, la curiosité récompensée — le combat est un choix parmi d'autres, jamais une obligation.
 
 ## La survie (validé par l'auteur)
 
@@ -44,7 +46,7 @@
 ## Questions ouvertes
 
 - La force a-t-elle des « émanations » ? Y a-t-il un danger non-humain ?
-- Les combats : sous quelle forme ? (esquive, fuite, armes rares ?)
+- ~~Les combats : sous quelle forme ?~~ → Le joueur peut se battre mais est surtout livré à lui-même pour ses propres choix (validé).
 - ~~La survie (faim, soif, eau toxique)~~ → Liée surtout aux ressources pour se nourrir (validé).
 - ~~Y a-t-il du combat ?~~ → Très peu : gardes du tyran, voleurs, populations hostiles (validé).
 - ~~Quelle progression ?~~ → Monde ouvert très peu guidé, récompense de la curiosité (validé).
