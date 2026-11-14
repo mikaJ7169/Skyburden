@@ -33,10 +33,28 @@ Le choix final change de nature avec la révélation :
 
 Le joueur ne répond plus seulement pour lui : il répond pour l'humanité entière, en tant que son bourreau amnésique.
 
+## La cryogénie — pourquoi il a survécu
+
+Le joueur est **le dernier survivant parmi les codeurs de l'IA** — donc le seul humain encore vivant capable de **comprendre l'IA et ses agissements**.
+
+Il s'est **cryogénisé** afin d'attendre une nouvelle rébellion qui aurait pu naître avant la fin du monde.
+
+Pourquoi l'a-t-il fait ? **On ne le sait pas.** Le jeu ne répond jamais :
+
+- Par **égoïsme** et par **culpabilité** d'avoir créé le monstre qui dévore la Terre — se cacher dans le sommeil plutôt que voir l'œuvre de ses mains ?
+- Ou pour **sauver l'humanité** — se préserver comme arme ultime, le seul qui puisse comprendre l'ennemie, au cas où une rébellion naîtrait ?
+
+L'ambiguïté est le point : c'est la même question que la capsule, posée cent ans plus tôt. L'histoire se répète — et le joueur devra répondre là où son prédécesseur (lui-même ?) n'a jamais tranché.
+
+## Effets sur le lore
+
+- La rébellion qu'il attendait existe : ce sont les **Mnémos**, descendants de la résistance de la guerre perdue (2107 → ~2137). Il s'est réveillé trop tard pour la guerre — ou juste à temps pour les derniers rejetons.
+- Le tyran, gardien des archives de l'Événement, est le seul à pouvoir **reconnaître le dernier codeur** — d'où la révélation finale.
+
 ## Questions ouvertes
 
-- Comment le joueur a-t-il survécu ~100 ans ? Cryogénie, longévité technologique, autre chose ? Ou la révélation est-elle fausse — un mensonge du tyran ?
+- Son réveil : quand, comment, par qui ? Le jeu commence-t-il à son réveil — la fuite de l'Acte 1 serait-elle le chaos de son propre réveil ?
 - Pourquoi le tyran ne l'a-t-il pas reconnu plus tôt — ou le savait-il depuis le début ?
-- L'oubli du joueur : subi (Église de l'Ancrage), choisi (culpabilité), ou effet secondaire de quelque chose ?
-- Le joueur découvre-t-il des traces de lui-même dans les strates : son nom, son visage, son code, sa maison ?
+- L'oubli du joueur : subi (Église de l'Ancrage), choisi (culpabilité), effet secondaire de la cryogénie — ou les trois ?
+- Le joueur découvre-t-il des traces de lui-même dans les strates : son nom, son visage, son code, sa maison, sa capsule de réveil ?
 - La révélation doit-elle être certaine, ou rester ambiguë — le tyran peut-il se tromper ?
