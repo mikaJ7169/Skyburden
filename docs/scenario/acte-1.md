@@ -52,11 +52,24 @@
 - Il **ne s'associe à personne, par peur de la trahison**.
 - **L'humain est pour lui profondément mauvais et égoïste.**
 
+## Structure du jeu — monde ouvert
+
+**Défini par l'auteur :**
+
+- Le jeu est en **monde ouvert** : le joueur va **où il veut**.
+- L'auteur réalisera **une carte de la terre ferme** du monde, telle qu'il la voit.
+
+## Ben — retour à la toute fin
+
+**Défini par l'auteur :**
+
+- On **retrouvera Ben à la toute fin du jeu**, **avant de revenir chercher la note dans le sous-sol**.
+
 ## Questions pour construire la suite
 
-1. Le nom « Ben » : à garder, ou un autre nom trouvé ensemble ?
-2. Après le départ de Ben : où va le joueur ? Ben lui indique-t-il une direction, un lieu, un but ?
-3. Ben reviendra-t-il plus tard dans le jeu, ou est-ce une rencontre unique ?
+1. La carte du monde (à venir de l'auteur) : zones, terres stables, directions.
+2. Dans un monde ouvert sans but imposé : qu'est-ce qui pousse le joueur vers la fin du jeu — la note, ou autre chose qu'il découvre en explorant ?
+3. La rencontre finale avec Ben : que se passe-t-il entre eux, après tout ce chemin ?
 
 ## Ce qui n'est PAS encore défini
 
