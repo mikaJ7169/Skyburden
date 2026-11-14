@@ -44,7 +44,7 @@ Le poison du dilemme : sur Terre, il crée des emplois, prend des décisions, or
 
 Religion d'État. Enseigne que le ciel est une **bouche divine** qui dévore le monde pour punir l'orgueil humain.
 
-- S'éloigner de la force = acte de piété. La fuite est sanctifiée : ça justifie naturellement la société médiévale.
+- S'éloigner de la force = acte de piété. La fuite est sanctifiée : ça justifie naturellement la société des années 1850.
 - Détruit les archives. Posséder un objet de l'ancien monde est un crime.
 - Instrument principal de l'oubli organisé.
 

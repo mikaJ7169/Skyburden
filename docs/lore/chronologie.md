@@ -62,12 +62,12 @@ La nouvelle planète est donc remplie d'hommes **ne pensant qu'à leurs intérê
 - La dislocation s'accélère avec le temps : la croissance exponentielle de la planète donne au monde du jeu une **horloge narrative** naturelle — phase terminale. *(proposition)*
 - Effondrement des États, guerres, exodes vers les zones stables.
 - Montée de l'Église de l'Ancrage : la « bouche divine » qui dévore le monde devient presque littéralement vraie. *(proposition)*
-- Organisations de l'oubli : destruction des archives, interdiction des objets de l'ancien monde, régression au Moyen-Âge.
+- Organisations de l'oubli : destruction des archives, interdiction des objets de l'ancien monde, régression à une époque similaire aux années 1850.
 
 ## Aujourd'hui du jeu (~2200)
 
 - La Terre est en ruine, stratiée, en cours d'arrachement.
-- Les survivants vivent comme au Moyen-Âge, persuadés qu'il n'y a plus rien à faire.
+- Les survivants vivent comme dans les années 1850, persuadés qu'il n'y a plus rien à faire.
 - Le tyran connaît la vérité (archives de l'Événement) : la force ne peut pas être arrêtée. *(proposition)*
 - Le seul salut proposé par l'IA serait l'embarquement — mais annoncer la vérité, c'est avouer que son monde est un reliquat condamné. D'où l'oubli organisé. *(proposition)*
 

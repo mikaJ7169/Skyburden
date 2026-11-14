@@ -85,6 +85,10 @@ label(46, 70, "LE VILLAGE DES ENDEILLÉS", "rendus fous par la perte de ceux qu'
 group(40, 26, "#6a9a5a")
 label(40, 26, "LE HAMEAU DES SIMPLES", "vivaient paisibles avant le désastre · fermiers", dy=5)
 
+# Malades incurables
+group(100, 16, "#a89f8f")
+label(100, 16, "LE LAZARET DES INCURABLES", "malades incurables · hospice en ruine · fin de vie", dy=5)
+
 # Ruines
 ruin(120, 40)
 label(120, 40, "RUINES INDUSTRIELLES", "usines de l'ancien monde · dangereuses", dy=5)

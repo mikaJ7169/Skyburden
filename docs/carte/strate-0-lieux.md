@@ -29,11 +29,16 @@
 - Gens simples vivant une vie paisible comme avant le désastre : fermiers, artisans.
 - Ignorance heureuse ou choix conscient de ne pas savoir — à définir avec l'auteur.
 
+### Le Lazaret des Incurables (malades incurables)
+- Malades incurables regroupés dans un hospice en ruine.
+- Thème : la fin de vie dans un monde en fin de vie — soignés par qui reste, sans espoir de guérison.
+- À définir avec l'auteur : qui les soigne ? Sont-ils craints, rejetés, ou vénérés (proches du ciel qui dévore) ?
+
 ## Les lieux de ruines
 
 - **Ruines industrielles** : usines de l'ancien monde, dangereuses.
 - **La Cathédrale Greffée** : cathédrale gothique sur un centre commercial — ruine majeure.
-- **Le Stade-Village** : village médiéval construit dans un stade de foot.
+- **Le Stade-Village** : village des années 1850 construit dans un stade de foot.
 - **La Muraille** : autoroute servant de muraille — vestiges de la guerre perdue.
 
 ## Les traces de la résistance
