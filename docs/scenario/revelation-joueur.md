@@ -51,9 +51,19 @@ L'ambiguïté est le point : c'est la même question que la capsule, posée cent
 - La rébellion qu'il attendait existe : ce sont les **Mnémos**, descendants de la résistance de la guerre perdue (2107 → ~2137). Il s'est réveillé trop tard pour la guerre — ou juste à temps pour les derniers rejetons.
 - Le tyran, gardien des archives de l'Événement, est le seul à pouvoir **reconnaître le dernier codeur** — d'où la révélation finale.
 
+## Le réveil — le début du jeu (canon)
+
+**Le jeu commence à son réveil.** Le joueur et le personnage sont plongés dans le même flou et la même soif de découvrir et comprendre le monde :
+
+- Le personnage sort de sa capsule sans savoir ce qu'elle était, qui il est, ni pourquoi il dort là.
+- Le joueur ne sait rien de plus que lui — aucune scène d'intro, aucun texte d'exposition.
+- Toute la découverte du monde est vécue à la première personne, littéralement : le joueur apprend ce que le personnage apprend, au moment où il l'apprend.
+
+Reste à définir : pourquoi se réveille-t-il *maintenant* ? Déclenchement automatique, sabotage, accident, ou quelqu'un l'a-t-il réveillé — et dans quel but ?
+
 ## Questions ouvertes
 
-- Son réveil : quand, comment, par qui ? Le jeu commence-t-il à son réveil — la fuite de l'Acte 1 serait-elle le chaos de son propre réveil ?
+- Pourquoi se réveille-t-il maintenant ? Quelqu'un l'a-t-il réveillé — et dans quel but ?
 - Pourquoi le tyran ne l'a-t-il pas reconnu plus tôt — ou le savait-il depuis le début ?
 - L'oubli du joueur : subi (Église de l'Ancrage), choisi (culpabilité), effet secondaire de la cryogénie — ou les trois ?
 - Le joueur découvre-t-il des traces de lui-même dans les strates : son nom, son visage, son code, sa maison, sa capsule de réveil ?

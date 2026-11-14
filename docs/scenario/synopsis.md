@@ -2,12 +2,17 @@
 
 > Version 0. Rien n'est fixé.
 
-## Acte 1 — La Fuite
+## Acte 1 — Le Réveil, puis la Fuite
 
-Le joueur fuit sa ville, en cours d'arrachement. Il apprend les règles du monde : s'éloigner, obéir, oublier.
+**Le jeu commence au réveil du joueur-cryogénisé.** Sans le savoir : le joueur et le personnage sont plongés dans le même flou et la même soif de découvrir et comprendre le monde. Aucun des deux ne sait qui il est.
 
+- Le personnage sort de sa capsule dans une ville en cours d'arrachement — la ville où il dormait, mais il ne le sait pas.
+- La fuite est le chaos de son propre réveil : le monde s'écroule autour de lui, il court avec tout le monde.
+- Il apprend les règles du monde en même temps que le joueur : s'éloigner, obéir, oublier.
 - Tutoriel diégétique : la gravité instable, les zones d'arrachement, l'interdiction des objets de l'ancien monde.
 - Première rencontre avec l'Église de l'Ancrage et sa fuite sanctifiée.
+
+**Symétrie** : le premier et le dernier plan du jeu sont presque le même — un homme seul face à un choix, sans savoir qui il est. Le jeu se termine comme il commence.
 
 ## Acte 2 — Les Strates
 
