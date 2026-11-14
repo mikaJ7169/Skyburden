@@ -10,11 +10,21 @@
 
 - **Monde ouvert** (validé par l'auteur) : le joueur va où il veut. Une carte de la terre ferme sera fournie par l'auteur.
 
+## Principes de gameplay (validés par l'auteur)
+
+- **La curiosité est récompensée** : le jeu récompense le joueur curieux — cohérent avec la structure de double fin (la note ne se révèle qu'au joueur qui cherche).
+- **Très peu de guidage** : le joueur est très peu guidé sur les endroits où se rendre. Difficile donc de définir une durée de jeu.
+- **Chercher et comprendre** : le joueur doit beaucoup chercher et comprendre, à partir de **détails cachés dans les paroles des PNJ** et dans **les lieux qu'il explore**.
+
+## Le combat (validé par l'auteur)
+
+- **Très peu de combats**.
+- Ennemis possibles : **les gardes du tyran**, **des voleurs**, et **des populations hostiles éparpillées** en général.
+
 ## Le joueur
 
 - Vue première personne (à confirmer), sans nom ni voix.
-- Progression par exploration, pas par combat de masse (à débattre : le combat existe-t-il ?).
-
+- Progression par exploration, pas par combat de masse.
 ## La dislocation comme mécanique
 
 - **Tension verticale** : les objets ne tombent pas, ils *montent*. Bâtiments arrachés figés en lévitation.
@@ -23,10 +33,13 @@
 
 ## Fil rouge possible
 
-- **Radio morte** : le joueur trouve talkies et postes de radio — tous morts depuis 100 ans. Sauf *un*, qui émet encore, quelque part.
+- **Radio morte** : le joueur trouve talkies et postes de radio — tous morts depuis 100 ans. Sauf *un*, qui émet encore, quelque part. *(proposition — liée au lore de la balise de l'IA, à valider)*
 
 ## Questions ouvertes
 
-- Y a-t-il du combat ? Des ennemis ? La force a-t-elle des « émanations » ?
-- Quelle progression : zones ouvertes successives, ou semi-monde ouvert ?
+- La force a-t-elle des « émanations » ? Y a-t-il un danger non-humain ?
+- Les combats : sous quelle forme ? (esquive, fuite, armes rares ?)
+- La survie (faim, soif, eau toxique) : mécanique active ou simple toile de fond ?
+- ~~Y a-t-il du combat ?~~ → Très peu : gardes du tyran, voleurs, populations hostiles (validé).
+- ~~Quelle progression ?~~ → Monde ouvert très peu guidé, récompense de la curiosité (validé).
 - ~~Moteur : à décider~~ → **Godot 4** (décision actée).
