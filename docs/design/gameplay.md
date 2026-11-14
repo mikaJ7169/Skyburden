@@ -21,6 +21,8 @@
 - **Très peu de combats**.
 - Ennemis possibles : **les gardes du tyran**, **des voleurs**, et **des populations hostiles éparpillées** en général.
 - **Le joueur peut se battre**, mais il est **surtout livré à lui-même pour faire ses propres choix** : se battre, fuir, se cacher, contourner, négocier — le jeu ne impose pas de solution.
+- **Armes et objets** (validé par l'auteur) : le joueur se bat avec des **objets et des armes qu'il trouve** — ou qu'il **gagne en faisant des quêtes données par les PNJ**.
+- Les quêtes viennent donc des PNJ : pas de menu de quêtes imposé, mais des demandes humaines, rencontrées en explorant.
 - Cohérent avec l'ensemble : pas de guidage, la curiosité récompensée — le combat est un choix parmi d'autres, jamais une obligation.
 
 ## La survie (validé par l'auteur)
