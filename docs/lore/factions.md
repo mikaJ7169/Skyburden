@@ -2,9 +2,15 @@
 
 ## Le Tyran
 
-Fasciste, il contrôle les populations du monde qui ne s'est pas encore effondré.
+Il contrôle les populations du monde qui ne s'est pas encore effondré.
 
 **Le twist** : il connaît la vérité. Il est **incapable** de changer quoi que ce soit à la situation — et ne le voudrait pas s'il le pouvait.
+
+**Sa finalité** *(validé par l'auteur)* : il contrôle **l'information et les libertés** dans le but de **punir les personnes ayant rejoint l'IA**.
+
+**Pourquoi fasciste** *(validé par l'auteur)* : personne n'a le choix de **ne pas adhérer à sa vision**. Le fascisme n'est pas sa finalité, c'est son moyen — la punition exige un monde sans déviation.
+
+**Et pourtant pacifique** *(validé par l'auteur — voir le scénario)* : en réalité, il est pacifique. Au moment de la fausse fin, c'est lui qui vient rendre l'espoir au personnage principal (voir `docs/scenario/synopsis.md`). L'homme qui prive le monde de choix offre au dernier codeur le sien.
 
 - Il a compris (ou hérité) que la dislocation est **irréversible**. Tout ce qui reste à gérer, c'est *comment* l'humanité meurt.
 - Son choix : l'ordre, le confort mental, le sens. Il donne un récit (la religion, l'ennemi, la mission) parce qu'une population qui sait mourir devient incontrôlable ou suicidaire.
