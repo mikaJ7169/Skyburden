@@ -32,6 +32,9 @@
 - **Apparence lugubre et sale**.
 - Il semble **plutôt fermé aux nouvelles rencontres**.
 - Il **repart après** pour continuer sa route, **sans le joueur**.
+- **Il ne donne pas de quête.** Au moment de partir, il laisse seulement une phrase :
+  > *« Reviens me voir un jour, si tu as découvert qui tu étais. »*
+- **Indice caché depuis le début** (validé par l'auteur) : cette phrase fait allusion à la deuxième fin — Ben sait (ou pressent) que le personnage a un passé à retrouver. Le joueur ne comprendra cette phrase qu'après la fausse fin, en retrouvant Ben avant de redescendre chercher la note.
 
 ### Ce que Ben lui apprend
 
