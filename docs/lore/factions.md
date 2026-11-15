@@ -6,9 +6,11 @@ Il contrôle les populations du monde qui ne s'est pas encore effondré.
 
 **Apparence et lieu** *(validé par l'auteur)* :
 
-- Un homme d'**environ 40 ans**, **propre sur lui** — mais il reçoit dans un **bâtiment en ruine**.
-- Seuls objets en bon état : **un bureau, une chaise, ainsi qu'une pendule**.
-- Le contraste dit tout : l'ordre incarné dans un homme, au milieu du chaos du monde.
+- Un homme d'**environ 40 ans**, **propre sur lui**.
+- Son **domaine en ruine** est situé dans **les strates les plus hautes**.
+- Son bâtiment est **très gris et en ruine**.
+- Les seuls objets qui ne sont pas cassés : **un bureau, une chaise et une pendule**.
+- Le contraste dit tout : l'ordre incarné dans un homme, au milieu du chaos du monde — et son domaine perché dans les hauteurs, là où le monde se défait.
 
 **Le twist** : il connaît la vérité. Il est **incapable** de changer quoi que ce soit à la situation — et ne le voudrait pas s'il le pouvait.
 
