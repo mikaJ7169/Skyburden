@@ -1,6 +1,8 @@
 # Factions et personnages
 
-## Le Tyran
+## Le Tyran — L'Horloger
+
+**Nom** *(validé par l'auteur)* : **L'Horloger** — l'homme qui tient la pendule du monde.
 
 Il contrôle les populations du monde qui ne s'est pas encore effondré.
 

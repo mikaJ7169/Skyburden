@@ -21,6 +21,10 @@
 
 - Voir `docs/scenario/acte-1.md` — il ne donne pas de quête ; il laisse : *« Reviens me voir un jour, si tu as découvert qui tu étais. »*
 
+## L'Horloger (le tyran)
+
+- Voir `docs/lore/factions.md` — environ 40 ans, propre sur lui, domaine très gris en ruine dans les strates les plus hautes ; bureau, chaise, pendule.
+
 ## Les athées — les Mnémos (validé par l'auteur : option 1)
 
 - En opposition aux Enfants de Dieu, **les Mnémos sont les athées** du monde.
