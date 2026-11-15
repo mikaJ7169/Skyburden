@@ -4,6 +4,12 @@
 
 Il contrôle les populations du monde qui ne s'est pas encore effondré.
 
+**Apparence et lieu** *(validé par l'auteur)* :
+
+- Un homme d'**environ 40 ans**, **propre sur lui** — mais il reçoit dans un **bâtiment en ruine**.
+- Seuls objets en bon état : **un bureau, une chaise, ainsi qu'une pendule**.
+- Le contraste dit tout : l'ordre incarné dans un homme, au milieu du chaos du monde.
+
 **Le twist** : il connaît la vérité. Il est **incapable** de changer quoi que ce soit à la situation — et ne le voudrait pas s'il le pouvait.
 
 **Sa finalité** *(validé par l'auteur)* : il contrôle **l'information et les libertés** dans le but de **punir les personnes ayant rejoint l'IA**.
