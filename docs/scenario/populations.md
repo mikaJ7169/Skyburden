@@ -21,12 +21,11 @@
 
 **L'indice caché (validé par l'auteur) :**
 
-- Le même villageois glisse un indice subtil sur les **« habitants des hauteurs »** *(nom provisoire — à affiner)* : ils sauraient **plus de choses à propos de ce monde qu'eux**.
+- Le même villageois glisse un indice subtil sur **« Ceux d'en haut »** *(nom validé par l'auteur)* : ils sauraient **plus de choses à propos de ce monde qu'eux**.
 - **Double lecture voulu** : le joueur comprend d'abord qu'il s'agit des **pilleurs de la montagne**.
 - En réalité, le villageois parlait des **habitants des strates supérieures**.
 
 **Reste à définir (questions ouvertes) :**
 
-- Le nom exact des « habitants des hauteurs » (voir propositions en discussion).
 - Noms et identités des 5 habitants.
 - Les pilleurs : combien, leur chef, comment se passe la réconciliation ?
