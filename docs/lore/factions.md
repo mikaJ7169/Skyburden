@@ -115,10 +115,16 @@ Minorité qui se souvient : **descendants de la résistance de la guerre perdue 
 - **Il n'influe en rien sur le jugement du joueur** : il montre, sans convaincre.
 - Car même en tant que Mnémo, il est **impuissant** — **touché par la fatalité et la solitude**.
 
+**Comment le trouver** *(validé par l'auteur)* :
+
+- Le joueur le trouve **en cherchant et en explorant la carte, au niveau des strates supérieures**.
+- Il se cache dans **une zone cachée située sous les quartiers de L'Horloger**.
+- Ironie voulie : le plus grand héritier de la résistance vit caché **sous les pieds du tyran**.
+
 **À définir :**
 
-- Son nom.
-- Comment le joueur le trouve — et ce qu'il demande en échange (s'il demande quelque chose).
+- Son nom (propositions en discussion).
+- Demande-t-il quelque chose en échange de son aide ?
 
 ## Les sympathisants (nouvelle planète)
 
