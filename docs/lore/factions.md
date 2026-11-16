@@ -79,11 +79,18 @@ Minorité qui se souvient : **descendants de la résistance de la guerre perdue 
 - Ils habitent **sur les strates moyennes**.
 - Mais ils ne sont **pas les seuls habitants** de cette zone.
 
+**Défini par l'auteur :**
+
+- Leur tradition est **héritée de la résistance** (lien de filiation avec les Mnémos et la guerre perdue 2107 → ~2137).
+- **Certains sont embauchés par L'Horloger** pour maintenir **son emprise sur la strate 0**.
+
+**Tension interne** *(remarque, à valider)* : les Amarreurs protègent la strate 0 — et certains servent, sans peut-être le savoir, le contrôle politique de L'Horloger. Le geste est le même (tenir), la cause change : protéger les gens, ou tenir les gens.
+
 **À définir :**
 
 - Qui d'autre habite les strates moyennes ?
-- Depuis combien de générations ils amarrent les fragments.
-- Leurs liens éventuels avec les Mnémos ou les Enlevés.
+- Les Mnémos savent-ils que certains Amarreurs travaillent pour L'Horloger — et qu'en pensent-ils ?
+- Les Amarreurs connaissent-ils la vérité de la résistance, ou n'en ont-ils gardé que le geste (amarre) sans la mémoire ?
 - Le joueur peut-il les rencontrer — et peuvent-ils savoir où sont passés certains fragments arrachés (dont le sous-sol du joueur ?).
 
 ## Les sympathisants (nouvelle planète)
