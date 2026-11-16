@@ -51,12 +51,12 @@
 
 - Le nom des personnes qui raccrochent les morceaux (propositions en discussion).
 - Comment se passe la réconciliation avec le Val-Tranquille.
-- Leurs identités distinctes (qui est Vesna, qui est Rulle, qui est Odile ?).
+- Leurs identités distinctes (qui est Vesna, qui est Rulle, qui est Gritte ?).
 
 **Reste à définir (questions ouvertes) :**
 
 - Les quêtes et indices du Lazaret des Affligés, du Hameau des Absents, des Enlevés, du Prieuré de Sainte-Anse.
-- Les identités distinctes des trois voleuses (qui est Vesna, qui est Rulle, qui est Odile ?).
+- Les identités distinctes des trois voleuses (qui est Vesna, qui est Rulle, qui est Gritte ?).
 - La réconciliation entre les voleuses et les villageois : comment elle se passe.
 
 ## Les 5 villageois du Val-Tranquille (noms validés par l'auteur)
