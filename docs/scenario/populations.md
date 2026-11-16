@@ -31,7 +31,7 @@
 
 - **Pas de chef.**
 - **Trois voleuses**, vivant dans la montagne entre le Val-Tranquille et le Hameau des Absents.
-- Leurs noms *(validé par l'auteur)* : **Vesna, Rulle, Odile**.
+- Leurs noms *(validé par l'auteur)* : **Vesna, Rulle, Gritte**.
 - Volent les biens des populations.
 - Liées à la quête du Val-Tranquille : la réconciliation avec les villageois.
 
