@@ -59,6 +59,13 @@
 - Les identités distinctes des trois voleuses (qui est Vesna, qui est Rulle, qui est Lise ?).
 - La réconciliation entre les voleuses et les villageois : comment elle se passe.
 
+## Le Lazaret des Affligés
+
+**Défini par l'auteur :**
+
+- **4 habitants** — malades incurables, hospice en ruine, fin de vie.
+- Reste à définir : leurs identités, la quête, l'indice caché.
+
 ## Les 5 villageois du Val-Tranquille (noms validés par l'auteur)
 
 - **Ariste** — le vieillard, paysan d'un autre siècle.
