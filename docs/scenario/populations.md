@@ -64,5 +64,5 @@
 - **Ariste** — le vieillard, paysan d'un autre siècle.
 - **Mélie** — la femme au four, qui parle récoltes et châtiment dans la même phrase.
 - **Boniface** — le meunier, rond et lent.
-- **Ondine** — la plus jeune, la seule qui regarde parfois le ciel.
+- **Hélène** — la plus jeune, la seule qui regarde parfois le ciel.
 - **Gédéon** — le forgeron, qui répare ce qui n'a plus personne pour s'en servir.
