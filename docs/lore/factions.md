@@ -67,6 +67,15 @@ Minorité qui se souvient : **descendants de la résistance de la guerre perdue 
 - **Les athées du monde** (validé par l'auteur) : ils savent que l'arrachement n'est pas une punition divine — leur incroyance repose sur la mémoire et les preuves. L'athéisme est une vérité clandestine dans un monde largement croyant.
 - Rôles possibles : marchands d'information, faction secrète, alliés ambigus du joueur.
 
+## Les Amarreurs
+
+*(Nom validé par l'auteur — fiche à développer.)*
+
+- Des personnes qui **raccordent les morceaux qui s'envolent** pour **les maintenir à distance de la strate 0** — ils amarrant les fragments comme des bateaux.
+- Révélés par un **indice caché** dans la citation des trois voleuses (voir `docs/scenario/populations.md`).
+- Résonance voulue avec **l'Église de l'Ancrage** : le même geste, nommé par la religion qui prie en fuyant et par les gens qui, eux, tiennent.
+- À définir : où ils vivent (strates intermédiaires ?), depuis combien de générations, leurs liens éventuels avec les Mnémos ou les Enlevés.
+
 ## Les sympathisants (nouvelle planète)
 
 Ceux qui ont accepté l'invitation de l'IA et vécu sur la nouvelle planète, laissant les autres derrière eux :

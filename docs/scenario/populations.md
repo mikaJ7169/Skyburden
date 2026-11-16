@@ -44,7 +44,7 @@
 **L'indice caché** *(validé par l'auteur)* :
 
 - La dernière phrase de leur discours est un **indice caché** : **certaines personnes raccrochent les morceaux qui s'envolent**, pour **les maintenir à distance de la strate 0**.
-- Ces personnes existent réellement — **leur nom reste à définir**.
+- Ces personnes existent réellement : **les Amarreurs** *(nom validé par l'auteur)* — ils amarrant les fragments comme des bateaux, pour tenir le monde.
 - Double lecture : le joueur croit d'abord à une métaphore (le « point d'accroche » des voleuses entre elles) ; en réalité, des gens **amarrent physiquement les fragments** pour protéger la strate 0.
 
 **Reste à définir :**
