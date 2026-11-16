@@ -108,10 +108,17 @@ Minorité qui se souvient : **descendants de la résistance de la guerre perdue 
 - Il se trouve dans **une branche lointaine des strates supérieures**.
 - Grâce à lui, le joueur peut retrouver où sont passés les fragments arrachés — **dont le sous-sol de sa maison** (voir la deuxième fin, `docs/scenario/synopsis.md`).
 
+**Son profil** *(validé par l'auteur)* :
+
+- **Le plus savant des Mnémos** : le plus renseigné sur **l'histoire avec L'Horloger**, et **le plus grand héritier de la résistance**.
+- Il **montrera au joueur tout ce qu'il a rassemblé** comme **information et archives**.
+- **Il n'influe en rien sur le jugement du joueur** : il montre, sans convaincre.
+- Car même en tant que Mnémo, il est **impuissant** — **touché par la fatalité et la solitude**.
+
 **À définir :**
 
-- Son nom, son profil (conscient/Mnémo ? espérant ? archiviste ?).
-- Comment le joueur le trouve — et ce qu'il demande en échange.
+- Son nom.
+- Comment le joueur le trouve — et ce qu'il demande en échange (s'il demande quelque chose).
 
 ## Les sympathisants (nouvelle planète)
 
