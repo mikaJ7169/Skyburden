@@ -63,8 +63,9 @@
 
 **Défini par l'auteur :**
 
-- **4 habitants** — malades incurables, hospice en ruine, fin de vie.
-- Reste à définir : leurs identités, la quête, l'indice caché.
+- **4 habitants** : **3 malades** et **un médecin en fauteuil roulant**.
+- Reste à définir : leurs noms, la quête, l'indice caché.
+- Question ouverte : le médecin est-il lui aussi incurable — soigné par ses patients ? (à trancher par l'auteur)
 
 ## Les 5 villageois du Val-Tranquille (noms validés par l'auteur)
 
