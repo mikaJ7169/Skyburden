@@ -54,3 +54,15 @@
 - Leurs identités distinctes (qui est Vesna, qui est Rulle, qui est Odile ?).
 
 **Reste à définir (questions ouvertes) :**
+
+- Les quêtes et indices du Lazaret des Affligés, du Hameau des Absents, des Enlevés, du Prieuré de Sainte-Anse.
+- Les identités distinctes des trois voleuses (qui est Vesna, qui est Rulle, qui est Odile ?).
+- La réconciliation entre les voleuses et les villageois : comment elle se passe.
+
+## Les 5 villageois du Val-Tranquille (noms validés par l'auteur)
+
+- **Ariste** — le vieillard, paysan d'un autre siècle.
+- **Mélie** — la femme au four, qui parle récoltes et châtiment dans la même phrase.
+- **Boniface** — le meunier, rond et lent.
+- **Ondine** — la plus jeune, la seule qui regarde parfois le ciel.
+- **Gédéon** — le forgeron, qui répare ce qui n'a plus personne pour s'en servir.
