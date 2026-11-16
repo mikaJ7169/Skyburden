@@ -97,9 +97,13 @@ Minorité qui se souvient : **descendants de la résistance de la guerre perdue 
 2. **Les espérants** : d'autres se raccrochent à **l'espoir que si un jour la force disparaît, ils auront sauvé des fragments de l'ancien monde et des vies**.
 - 3. **Les archivistes** : d'autres s'accrochent à **l'histoire que les strates supérieures renferment** — ils amarrent pour préserver ce que les hauteurs contiennent.
 
+**Les Mnémos et les Amarreurs de L'Horloger** *(validé par l'auteur — options B et C)* :
+
+- Les Mnémos **savent** que certains Amarreurs sont embauchés par L'Horloger — mais **ferment les yeux** : malgré tout, ces Amarreurs protègent aussi des fragments et des vies. *(Nécessité)*
+- Et parmi les Amarreurs embauchés par L'Horloger, **certains sont des Mnémos qui sont restés exprès** : des **espions de la mémoire au cœur du pouvoir**. *(Infiltration)*
+
 **À définir :**
 
-- Les Mnémos-Amarreurs conscients savent-ils que certains des leurs travaillent pour L'Horloger — et qu'en pensent-ils ?
 - Le joueur peut-il les rencontrer — et peuvent-ils savoir où sont passés certains fragments arrachés (dont le sous-sol du joueur ?).
 
 ## Les sympathisants (nouvelle planète)
