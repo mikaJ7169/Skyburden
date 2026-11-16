@@ -115,6 +115,8 @@ Minorité qui se souvient : **descendants de la résistance de la guerre perdue 
 - **Il n'influe en rien sur le jugement du joueur** : il montre, sans convaincre.
 - Car même en tant que Mnémo, il est **impuissant** — **touché par la fatalité et la solitude**.
 
+**Son nom** *(validé par l'auteur)* : **Sésame** — l'homme qui ouvre : il ouvre ses archives au joueur.
+
 **Comment le trouver** *(validé par l'auteur)* :
 
 - Le joueur le trouve **en cherchant et en explorant la carte, au niveau des strates supérieures**.
@@ -123,7 +125,6 @@ Minorité qui se souvient : **descendants de la résistance de la guerre perdue 
 
 **À définir :**
 
-- Son nom (propositions en discussion).
 - Demande-t-il quelque chose en échange de son aide ?
 
 ## Les sympathisants (nouvelle planète)
