@@ -102,9 +102,16 @@ Minorité qui se souvient : **descendants de la résistance de la guerre perdue 
 - Les Mnémos **savent** que certains Amarreurs sont embauchés par L'Horloger — mais **ferment les yeux** : malgré tout, ces Amarreurs protègent aussi des fragments et des vies. *(Nécessité)*
 - Et parmi les Amarreurs embauchés par L'Horloger, **certains sont des Mnémos qui sont restés exprès** : des **espions de la mémoire au cœur du pouvoir**. *(Infiltration)*
 
+**L'Amarreur de la fin** *(validé par l'auteur)* :
+
+- **Un Amarreur en particulier** pourra **aider le joueur vers la fin du jeu**.
+- Il se trouve dans **une branche lointaine des strates supérieures**.
+- Grâce à lui, le joueur peut retrouver où sont passés les fragments arrachés — **dont le sous-sol de sa maison** (voir la deuxième fin, `docs/scenario/synopsis.md`).
+
 **À définir :**
 
-- Le joueur peut-il les rencontrer — et peuvent-ils savoir où sont passés certains fragments arrachés (dont le sous-sol du joueur ?).
+- Son nom, son profil (conscient/Mnémo ? espérant ? archiviste ?).
+- Comment le joueur le trouve — et ce qu'il demande en échange.
 
 ## Les sympathisants (nouvelle planète)
 
