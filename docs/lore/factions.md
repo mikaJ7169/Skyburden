@@ -74,7 +74,17 @@ Minorité qui se souvient : **descendants de la résistance de la guerre perdue 
 - Des personnes qui **raccordent les morceaux qui s'envolent** pour **les maintenir à distance de la strate 0** — ils amarrant les fragments comme des bateaux.
 - Révélés par un **indice caché** dans la citation des trois voleuses (voir `docs/scenario/populations.md`).
 - Résonance voulue avec **l'Église de l'Ancrage** : le même geste, nommé par la religion qui prie en fuyant et par les gens qui, eux, tiennent.
-- À définir : où ils vivent (strates intermédiaires ?), depuis combien de générations, leurs liens éventuels avec les Mnémos ou les Enlevés.
+**Défini par l'auteur :**
+
+- Ils habitent **sur les strates moyennes**.
+- Mais ils ne sont **pas les seuls habitants** de cette zone.
+
+**À définir :**
+
+- Qui d'autre habite les strates moyennes ?
+- Depuis combien de générations ils amarrent les fragments.
+- Leurs liens éventuels avec les Mnémos ou les Enlevés.
+- Le joueur peut-il les rencontrer — et peuvent-ils savoir où sont passés certains fragments arrachés (dont le sous-sol du joueur ?).
 
 ## Les sympathisants (nouvelle planète)
 
