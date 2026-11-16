@@ -25,7 +25,19 @@
 - **Double lecture voulu** : le joueur comprend d'abord qu'il s'agit des **pilleurs de la montagne**.
 - En réalité, le villageois parlait des **habitants des strates supérieures**.
 
-**Reste à définir (questions ouvertes) :**
+## Les Pilleurs de la Montagne
 
-- Noms et identités des 5 habitants.
-- Les pilleurs : combien, leur chef, comment se passe la réconciliation ?
+**Défini par l'auteur :**
+
+- **Pas de chef.**
+- **Trois voleuses**, vivant dans la montagne entre le Val-Tranquille et le Hameau des Absents.
+- Volent les biens des populations.
+- Liées à la quête du Val-Tranquille : la réconciliation avec les villageois.
+
+**Reste à définir :**
+
+- Leurs noms (propositions en discussion).
+- Pourquoi elles volent (famine ? survie ? rancune ?).
+- Comment se passe la réconciliation.
+
+**Reste à définir (questions ouvertes) :**
