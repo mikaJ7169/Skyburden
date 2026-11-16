@@ -35,10 +35,22 @@
 - Volent les biens des populations.
 - Liées à la quête du Val-Tranquille : la réconciliation avec les villageois.
 
+**Pourquoi elles volent** *(validé par l'auteur)* :
+
+- **Pour survivre** — elles aussi trouvent que le reste des habitants du jeu est **comme déconnecté de la réalité**.
+- Leur vision du bien et du mal est, selon elles, **très en prise avec la situation** :
+  > *« Qu'est-ce qui est bien au final dans ce monde ? Vivre avec des fous jusqu'à ce qu'on en devienne aussi ? Pour faire plaisir à qui ? Notre bonne conscience ? Elle nous dicte de rester entre nous, car nous sommes notre seul point d'accroche qui nous relie à la terre, pour ne pas finir comme eux. »*
+
+**L'indice caché** *(validé par l'auteur)* :
+
+- La dernière phrase de leur discours est un **indice caché** : **certaines personnes raccrochent les morceaux qui s'envolent**, pour **les maintenir à distance de la strate 0**.
+- Ces personnes existent réellement — **leur nom reste à définir**.
+- Double lecture : le joueur croit d'abord à une métaphore (le « point d'accroche » des voleuses entre elles) ; en réalité, des gens **amarrent physiquement les fragments** pour protéger la strate 0.
+
 **Reste à définir :**
 
-- Pourquoi elles volent (famine ? survie ? rancune ?).
-- Comment se passe la réconciliation.
+- Le nom des personnes qui raccrochent les morceaux (propositions en discussion).
+- Comment se passe la réconciliation avec le Val-Tranquille.
 - Leurs identités distinctes (qui est Vesna, qui est Rulle, qui est Odile ?).
 
 **Reste à définir (questions ouvertes) :**
