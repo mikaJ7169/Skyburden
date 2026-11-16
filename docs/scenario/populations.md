@@ -31,7 +31,7 @@
 
 - **Pas de chef.**
 - **Trois voleuses**, vivant dans la montagne entre le Val-Tranquille et le Hameau des Absents.
-- Leurs noms *(validé par l'auteur)* : **Vesna, Rulle, Gritte**.
+- Leurs noms *(validé par l'auteur)* : **Vesna, Rulle, Lise**.
 - Volent les biens des populations.
 - Liées à la quête du Val-Tranquille : la réconciliation avec les villageois.
 
@@ -51,12 +51,12 @@
 
 - Le nom des personnes qui raccrochent les morceaux (propositions en discussion).
 - Comment se passe la réconciliation avec le Val-Tranquille.
-- Leurs identités distinctes (qui est Vesna, qui est Rulle, qui est Gritte ?).
+- Leurs identités distinctes (qui est Vesna, qui est Rulle, qui est Lise ?).
 
 **Reste à définir (questions ouvertes) :**
 
 - Les quêtes et indices du Lazaret des Affligés, du Hameau des Absents, des Enlevés, du Prieuré de Sainte-Anse.
-- Les identités distinctes des trois voleuses (qui est Vesna, qui est Rulle, qui est Gritte ?).
+- Les identités distinctes des trois voleuses (qui est Vesna, qui est Rulle, qui est Lise ?).
 - La réconciliation entre les voleuses et les villageois : comment elle se passe.
 
 ## Les 5 villageois du Val-Tranquille (noms validés par l'auteur)
