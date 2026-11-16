@@ -86,11 +86,20 @@ Minorité qui se souvient : **descendants de la résistance de la guerre perdue 
 
 **Tension interne** *(remarque, à valider)* : les Amarreurs protègent la strate 0 — et certains servent, sans peut-être le savoir, le contrôle politique de L'Horloger. Le geste est le même (tenir), la cause change : protéger les gens, ou tenir les gens.
 
+**Les autres habitants des strates moyennes** *(validé par l'auteur)* :
+
+- Des **ermites solitaires**.
+- Des **petits villages arrachés, en ruine** — des fragments-habitats qui continuent d'exister en hauteur.
+
+**Les trois profils d'Amarreurs** *(validé par l'auteur)* :
+
+1. **Les conscients** : certains sont conscients de la vérité — et sont donc **des Mnémos**. (Une partie des Amarreurs et des Mnémos sont donc les mêmes personnes.)
+2. **Les espérants** : d'autres se raccrochent à **l'espoir que si un jour la force disparaît, ils auront sauvé des fragments de l'ancien monde et des vies**.
+- 3. **Les archivistes** : d'autres s'accrochent à **l'histoire que les strates supérieures renferment** — ils amarrent pour préserver ce que les hauteurs contiennent.
+
 **À définir :**
 
-- Qui d'autre habite les strates moyennes ?
-- Les Mnémos savent-ils que certains Amarreurs travaillent pour L'Horloger — et qu'en pensent-ils ?
-- Les Amarreurs connaissent-ils la vérité de la résistance, ou n'en ont-ils gardé que le geste (amarre) sans la mémoire ?
+- Les Mnémos-Amarreurs conscients savent-ils que certains des leurs travaillent pour L'Horloger — et qu'en pensent-ils ?
 - Le joueur peut-il les rencontrer — et peuvent-ils savoir où sont passés certains fragments arrachés (dont le sous-sol du joueur ?).
 
 ## Les sympathisants (nouvelle planète)
