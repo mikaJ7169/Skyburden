@@ -75,6 +75,18 @@
 
 - Ambroise parlerait **brièvement de quelqu'un qui habiterait la forêt**, mais **sans parler à personne** — cet habitant serait **en réalité un Mnémo**.
 
+**Les personnalités des malades** *(validé par l'auteur)* :
+
+- **Firmin** — l'aîné : calme, presque serein ; il a accepté la mort, parle peu, remercie beaucoup. Il est là depuis toujours, comme un meuble de l'hospice.
+- **Anselme** — le rongé : amer et ironique ; il a été abandonné ici par les siens et ne pardonne pas. Il teste le joueur, pique, refuse la pitié.
+- **Hansie** — la plus jeune : dans le déni ; elle prépare des projets pour « quand elle sera guérie », parle d'avenir à personne d'autre qu'elle.
+
+**Leur rapport à la religion** *(validé par l'auteur)* :
+
+- Ce sont **les rares à ne pas être religieux**.
+- **Dieu ne leur a jamais tendu la main** : ils ont le sentiment d'avoir été **châtiés toute leur vie pour des raisons qu'ils n'ont même pas connues**.
+- **Indice subtil** : le fait qu'ils se sentent punis pour des fautes antérieures à leur naissance suggère qu'**il y a eu des problèmes causés avant leur naissance** — les péchés de l'ancien monde (l'Événement, la création de l'IA) sans que personne ne puisse les nommer.
+
 **Précision** *(validé par l'auteur)* : **Ambroise arrive à rester hors de la contagion** de ses patients.
 
 **Questions ouvertes :**
