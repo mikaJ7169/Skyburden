@@ -25,7 +25,7 @@
 **Première fin — L'écran noir (révisé par l'auteur, plus de fondu noir) :**
 
 - Après avoir trouvé **la capsule de L'Horloger** et reçu **ses explications**, si le joueur atteint cette première fin **avant les 37 minutes** de la boucle : **l'écran devient noir — une représentation de l'état mental du personnage**.
-- Il n'y a **plus de fondu noir « écran de fin »** : le noir dure jusqu'à la fin de la boucle, qui ramène le personnage au sous-sol (point de départ de chaque boucle).
+- Il n'y a **plus de fondu noir « écran de fin »** : **le noir s'arrête quand L'Horloger revient lui redonner espoir** (voir la deuxième fin).
 
 **Deuxième fin — La Note (si le joueur est curieux) :**
 

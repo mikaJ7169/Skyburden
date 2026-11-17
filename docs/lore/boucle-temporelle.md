@@ -39,7 +39,7 @@
 
 ## Structure des fins dans la boucle (validé par l'auteur)
 
-- **Plus de fondu noir « écran de fin »** : si le joueur atteint la première fin (les explications de L'Horloger) **avant les 37 minutes**, **l'écran devient noir — une représentation de l'état mental du personnage** — jusqu'à la fin de la boucle.
+- **Plus de fondu noir « écran de fin »** : si le joueur atteint la première fin (les explications de L'Horloger) **avant les 37 minutes**, **l'écran devient noir — une représentation de l'état mental du personnage** — et **s'arrête quand L'Horloger revient lui redonner espoir**.
 - **Le sous-sol est toujours le point de départ** de chaque boucle.
 - **Oui : L'Horloger, Ben, Sésame et tous les personnages se répètent aussi** à chaque boucle — sauf si le joueur accomplit une tâche qui change leurs réactions.
 
