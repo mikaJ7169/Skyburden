@@ -85,3 +85,13 @@ Le seul poste qui émet encore serait la **balise d'invitation de l'IA** : « ha
 
 - Le joueur peut-il trouver la capsule du tyran ? Peut-il la voir partir — ou la prendre ?
 - L'IA fait-elle encore des offres ? À qui, aujourd'hui, en ~2200 ?
+
+## La boucle temporelle — canon (validé par l'auteur, voir `boucle-temporelle.md`)
+
+- Pour construire sa planète, l'IA a puisé dans les ressources des autres planètes du système solaire — **y compris la Lune, totalement engloutie** — augmentant sa taille et sa masse.
+- Conséquences : la Terre arrachée morceau par morceau, et l'orbite combinée Terre/nouvelle planète déviée assez pour **croiser l'orbite de Mars**.
+- **L'extinction n'est pas arrivée à cause de l'homme, comme on le pense — mais de l'IA.**
+- L'IA récupère l'énergie du crash de Mars sur la Terre (dispositifs placés au préalable autour du crash) pour **ramener localement Mars et la Terre dans le passé** : le monde est remonté environ 30 minutes avant le crash, **toutes les 37 minutes** (chiffre arbitraire).
+- Détail complet dans `boucle-temporelle.md`.
+
+> Note : cette section est canonique et prime sur les éléments antérieurs marqués *(proposition)*.

@@ -12,6 +12,14 @@
 - En sortant à la surface : **la ville est en ruine** elle aussi.
 - Le joueur et le personnage sont plongés dans le même flou et la même soif de découvrir et comprendre le monde.
 
+### La boucle temporelle (validé par l'auteur — canon central)
+
+- Le monde est pris dans une **boucle temporelle de 37 minutes** créée par l'IA (voir `docs/lore/boucle-temporelle.md`) :
+  - **Mars grandit dans le ciel jusqu'au crash** ; l'IA récupère l'énergie du crash pour ramener localement Mars et la Terre dans le passé.
+  - Le joueur est **ramené à son point de départ à chaque boucle**, mais **garde ses souvenirs** — sa progression s'arrête, pas sa connaissance.
+  - **Toutes les zones sont accessibles dès le début** : rien ne bloque physiquement le joueur.
+  - **Tout le monde est pris dans la boucle** : les PNJ se répètent, sauf si le joueur accomplit une tâche — alors ils réagissent différemment.
+
 ### La fin — deux fins possibles (validé par l'auteur)
 
 **Première fin — Le Fondu Noir :**
@@ -29,9 +37,10 @@
 
 ## Ce qui reste à définir ensemble
 
-- Le contenu de la note : quel était son objectif ? Pourquoi s'est-il cryogénisé ?
-- Le déroulé entre le réveil et la note : zones, actes, rencontres.
-- La fin exacte : que se passe-t-il après avoir lu la note ?
+- ~~Le contenu de la note~~ → défini (voir `docs/lore/boucle-temporelle.md`) : le seul à se souvenir, la machine quantique de l'IA, les effacements volontaires.
+- Le déroulé du jeu à l'intérieur de la boucle : zones, actes, rencontres.
+- Comment réconcilier la boucle avec la structure de double fin ci-dessus (fondu noir, retour de L'Horloger, sous-sol arraché).
+- La fin exacte après la lecture de la note (la combinaison spatiale — voir `docs/lore/boucle-temporelle.md`).
 
 ## Lore — décision de l'auteur
 
