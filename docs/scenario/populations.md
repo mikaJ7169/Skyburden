@@ -64,8 +64,10 @@
 **Défini par l'auteur :**
 
 - **4 habitants** : **3 malades** et **un médecin en fauteuil roulant**.
-- Reste à définir : leurs noms, la quête, l'indice caché.
-- Question ouverte : le médecin est-il lui aussi incurable — soigné par ses patients ? (à trancher par l'auteur)
+- Les malades : **Firmin, Anselme, Annie** — atteints d'une **maladie inconnue avec la médecine qu'ils connaissent, semblable à la peste**.
+- Le médecin : **Ambroise** — **âgé**, et semble, malgré tout ce qui l'entoure, **poussé à aider et soigner**.
+- Reste à définir : la quête, l'indice caché.
+- Question ouverte : Ambroise est-il lui aussi incurable — soigné par ses patients ? (à trancher par l'auteur)
 
 ## Les 5 villageois du Val-Tranquille (noms validés par l'auteur)
 
