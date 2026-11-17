@@ -64,7 +64,7 @@
 **Défini par l'auteur :**
 
 - **4 habitants** : **3 malades** et **un médecin en fauteuil roulant**.
-- Les malades : **Firmin, Anselme, Annie** — atteints d'une **maladie inconnue avec la médecine qu'ils connaissent, semblable à la peste**.
+- Les malades : **Firmin, Anselme, Hansie** — atteints d'une **maladie inconnue avec la médecine qu'ils connaissent, semblable à la peste**.
 - Le médecin : **Ambroise** — **âgé**, et semble, malgré tout ce qui l'entoure, **poussé à aider et soigner**.
 - Reste à définir : la quête, l'indice caché.
 - Question ouverte : Ambroise est-il lui aussi incurable — soigné par ses patients ? (à trancher par l'auteur)
