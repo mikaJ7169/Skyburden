@@ -22,17 +22,16 @@
 
 ### La fin — deux fins possibles (validé par l'auteur)
 
-**Première fin — Le Fondu Noir :**
+**Première fin — L'écran noir (révisé par l'auteur, plus de fondu noir) :**
 
-- Après avoir trouvé **la capsule du tyran**, le personnage finit par **se morfondre dans la culpabilité**.
-- L'écran passe sur un **fondu noir avec une musique de fond**, puis l'**écran de fin**.
+- Après avoir trouvé **la capsule de L'Horloger** et reçu **ses explications**, si le joueur atteint cette première fin **avant les 37 minutes** de la boucle : **l'écran devient noir — une représentation de l'état mental du personnage**.
+- Il n'y a **plus de fondu noir « écran de fin »** : le noir dure jusqu'à la fin de la boucle, qui ramène le personnage au sous-sol (point de départ de chaque boucle).
 
 **Deuxième fin — La Note (si le joueur est curieux) :**
 
-- **Le jeu reprend là où il s'est arrêté** : l'écran de fin n'était pas la fin.
-- Le tyran — **en réalité pacifique** — **revient voir le personnage principal** après lui avoir montré la capsule et expliqué ce qu'il sait.
+- L'Horloger — **en réalité pacifique** — **revient voir le personnage principal** après lui avoir montré la capsule et expliqué ce qu'il sait.
 - Il vient lui **redonner de l'espoir** et lui faire comprendre que **son existence continue** : que **le seul moyen d'expier ses péchés est de savoir ce que l'ancien lui savait**, et qu'il a **forcément laissé une trace** de son passé avant de rentrer dans la capsule.
-- Se joue alors **une autre intrigue** : retrouver le sous-sol — qui, depuis tout ce temps, **a été arraché de la terre** et **emporté au loin, dans un endroit caché à travers les strates**.
+- Se joue alors **une autre intrigue** : retrouver le sous-sol — qui, depuis tout ce temps, **a été arraché de la terre** et **emporté au loin, dans un endroit caché à travers les strates** (c'est le sous-sol de départ, arraché ; chaque boucle repart d'un point — à clarifier : la boucle démarre au sous-sol, qui est aussi le lieu de la note).
 - Le joueur y retrouve **la note qu'il s'est laissée à lui-même** avant sa cryogénisation. Elle révèle **l'objectif qu'il cherchait à accomplir** — **pourquoi il a fait tout ça**.
 
 ## Ce qui reste à définir ensemble

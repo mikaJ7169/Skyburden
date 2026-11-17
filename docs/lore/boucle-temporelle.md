@@ -37,8 +37,12 @@
 - **Il n'y a pas de sortie possible pour sauver le monde** — c'est la fin définitive du jeu.
 - **L'une des fins possibles** : s'équiper d'une **combinaison spatiale trouvée dans la capsule de L'Horloger** pour **sortir de la zone où le temps est remonté**, afin d'errer sur **un débris de la Terre propulsé au loin dans l'espace** — y rester, **admirer la fin du monde et le ciel**, en tant que **dernier humain capable de conscientiser ce qui se passe réellement**.
 
+## Structure des fins dans la boucle (validé par l'auteur)
+
+- **Plus de fondu noir « écran de fin »** : si le joueur atteint la première fin (les explications de L'Horloger) **avant les 37 minutes**, **l'écran devient noir — une représentation de l'état mental du personnage** — jusqu'à la fin de la boucle.
+- **Le sous-sol est toujours le point de départ** de chaque boucle.
+- **Oui : L'Horloger, Ben, Sésame et tous les personnages se répètent aussi** à chaque boucle — sauf si le joueur accomplit une tâche qui change leurs réactions.
+
 ## Questions ouvertes
 
-- Comment réconcilier la boucle avec la structure de double fin actuelle (fondu noir, le retour de L'Horloger, le sous-sol arraché) ?
-- Le point de départ de chaque boucle : le sous-sol ? (cohérent avec le début du jeu)
-- Que font L'Horloger, Ben, Sésame et les autres dans la boucle — se répètent-ils aussi ?
+- Cohérence à clarifier : le sous-sol est le **point de départ de chaque boucle**, et on le dit **arraché de la terre et caché dans les strates** dans la deuxième fin — comment ces deux états coexistent (le sous-sol arraché a-t-il été ramené par une boucle ? la deuxième fin se joue-t-elle en dehors de la boucle ?).
