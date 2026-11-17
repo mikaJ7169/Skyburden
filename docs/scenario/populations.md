@@ -66,8 +66,19 @@
 - **4 habitants** : **3 malades** et **un médecin en fauteuil roulant**.
 - Les malades : **Firmin, Anselme, Hansie** — atteints d'une **maladie inconnue avec la médecine qu'ils connaissent, semblable à la peste**.
 - Le médecin : **Ambroise** — **âgé**, et semble, malgré tout ce qui l'entoure, **poussé à aider et soigner**.
-- Reste à définir : la quête, l'indice caché.
-- Question ouverte : Ambroise est-il lui aussi incurable — soigné par ses patients ? (à trancher par l'auteur)
+**La quête** *(validé par l'auteur)* :
+
+- Donnée par **Ambroise** : aller chercher **des herbes médicinales dans le bois d'à côté**.
+- Une fois trouvées, Ambroise **remercierait chaleureusement** le joueur pour son service et lui donnerait **de quoi se soigner en cas de nécessité**.
+
+**L'indice caché** *(validé par l'auteur)* :
+
+- Ambroise parlerait **brièvement de quelqu'un qui habiterait la forêt**, mais **sans parler à personne** — cet habitant serait **en réalité un Mnémo**.
+
+**Questions ouvertes :**
+
+- Ambroise est-il lui aussi incurable — soigné par ses patients ?
+- Quel bois exactement sur la carte (La Forêt des Chutes ? Le Bois-Suspendu ? un bois à ajouter près du Lazaret ?)
 
 ## Les 5 villageois du Val-Tranquille (noms validés par l'auteur)
 
