@@ -96,7 +96,7 @@
 ## Les 5 villageois du Val-Tranquille (noms validés par l'auteur)
 
 - **Ariste** — le vieillard, paysan d'un autre siècle.
-- **Mélie** — la femme au four, qui parle récoltes et châtiment dans la même phrase.
-- **Boniface** — le meunier, rond et lent.
-- **Hélène** — la plus jeune, la seule qui regarde parfois le ciel.
+- **Esmée** — la femme au four, qui parle récoltes et châtiment dans la même phrase.
+- **Louison** — le meunier, rond et lent.
+- **Hortense** — la plus jeune, la seule qui regarde parfois le ciel.
 - **Gédéon** — le forgeron, qui répare ce qui n'a plus personne pour s'en servir.
