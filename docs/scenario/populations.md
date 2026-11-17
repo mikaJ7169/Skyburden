@@ -75,10 +75,11 @@
 
 - Ambroise parlerait **brièvement de quelqu'un qui habiterait la forêt**, mais **sans parler à personne** — cet habitant serait **en réalité un Mnémo**.
 
+**Précision** *(validé par l'auteur)* : **Ambroise arrive à rester hors de la contagion** de ses patients.
+
 **Questions ouvertes :**
 
-- Ambroise est-il lui aussi incurable — soigné par ses patients ?
-- Quel bois exactement sur la carte (La Forêt des Chutes ? Le Bois-Suspendu ? un bois à ajouter près du Lazaret ?)
+- ~~Quel bois exactement sur la carte~~ → **Le Bois-Suspendu**, déplacé près du Lazaret.
 
 ## Les 5 villageois du Val-Tranquille (noms validés par l'auteur)
 
