@@ -1,36 +1,53 @@
-# Synopsis — Brouillon en trois actes
+# Synopsis — Version remise à zéro
 
-> Version 0. Rien n'est fixé.
+> Repartie de zéro à la demande de l'auteur. Ne contient que les éléments validés par l'auteur. Tout le reste est à définir ensemble.
 
-## Acte 1 — La Fuite
+## Éléments canoniques (validés par l'auteur)
 
-Le joueur fuit sa ville, en cours d'arrachement. Il apprend les règles du monde : s'éloigner, obéir, oublier.
+### Le début
 
-- Tutoriel diégétique : la gravité instable, les zones d'arrachement, l'interdiction des objets de l'ancien monde.
-- Première rencontre avec l'Église de l'Ancrage et sa fuite sanctifiée.
+- Le jeu commence au **réveil du joueur** : il se réveille **dans le noir total**.
+- Il est dans le **sous-sol de son ancienne maison**, où il a **lui-même clandestinement créé son système de cryogénisation**.
+- Il cherche dans la pénombre **de quoi s'éclairer** et sortir du sous-sol — après l'avoir **fouillé en vain**, car le sous-sol est en ruine.
+- En sortant à la surface : **la ville est en ruine** elle aussi.
+- Le joueur et le personnage sont plongés dans le même flou et la même soif de découvrir et comprendre le monde.
 
-## Acte 2 — Les Strates
+### La boucle temporelle (validé par l'auteur — canon central)
 
-Contredisant tout le monde, le joueur remonte **vers** la force. Objectif (au choix) : la source du signal radio, un Mnémo, la vérité.
+- Le monde est pris dans une **boucle temporelle de 37 minutes** créée par l'IA (voir `docs/lore/boucle-temporelle.md`) :
+  - **Mars grandit dans le ciel jusqu'au crash** ; l'IA récupère l'énergie du crash pour ramener localement Mars et la Terre dans le passé.
+  - Le joueur est **ramené à son point de départ à chaque boucle**, mais **garde ses souvenirs** — sa progression s'arrête, pas sa connaissance.
+  - **Toutes les zones sont accessibles dès le début** : rien ne bloque physiquement le joueur.
+  - **Tout le monde est pris dans la boucle** : les PNJ se répètent, sauf si le joueur accomplit une tâche — alors ils réagissent différemment.
 
-- Chaque zone = une époque de ruines superposées.
-- Rencontres rares : les Mnémos, les agents du tyran, des survivants qui ont choisi de rester.
-- Le monde devient de plus en plus instable : îlots flottants, brouillard envahissant, montagnes suspendues.
+### La fin — deux fins possibles (validé par l'auteur)
 
-## Acte 3 — La Vérité
+**Première fin — L'écran noir (révisé par l'auteur, plus de fondu noir) :**
 
-Le tyran, la force, et le choix final :
+- Après avoir trouvé **la capsule de L'Horloger** et reçu **ses explications**, si le joueur atteint cette première fin **avant les 37 minutes** de la boucle : **l'écran devient noir — une représentation de l'état mental du personnage**.
+- Il n'y a **plus de fondu noir « écran de fin »** : **le noir s'arrête quand L'Horloger revient lui redonner espoir** (voir la deuxième fin).
 
-1. **Diffuser la vérité** — le monde apprend et s'effondre moralement avant physiquement.
-2. **La cacher** — perpétuer le mensonge.
-3. **Rejoindre ce qui monte** — le troisième chemin.
+**Deuxième fin — La Note (si le joueur est curieux) :**
 
-## Fin
+- L'Horloger — **en réalité pacifique** — **revient voir le personnage principal** après lui avoir montré la capsule et expliqué ce qu'il sait.
+- Il vient lui **redonner de l'espoir** et lui faire comprendre que **son existence continue** : que **le seul moyen d'expier ses péchés est de savoir ce que l'ancien lui savait**, et qu'il a **forcément laissé une trace** de son passé avant de rentrer dans la capsule.
+- Se joue alors **une autre intrigue** : retrouver le sous-sol — qui, depuis tout ce temps, **a été arraché de la terre** et **emporté au loin, dans un endroit caché à travers les strates** (c'est le sous-sol de départ, arraché ; chaque boucle repart d'un point — à clarifier : la boucle démarre au sous-sol, qui est aussi le lieu de la note).
+- Le joueur y retrouve **la note qu'il s'est laissée à lui-même** avant sa cryogénisation. Elle révèle **l'objectif qu'il cherchait à accomplir** — **pourquoi il a fait tout ça**.
 
-Le jeu ne punit aucun choix explicitement. La solitude reste la même — seule change la raison d'avancer.
+## Ce qui reste à définir ensemble
 
-## Questions ouvertes
+- ~~Le contenu de la note~~ → défini (voir `docs/lore/boucle-temporelle.md`) : le seul à se souvenir, la machine quantique de l'IA, les effacements volontaires.
+- Le déroulé du jeu à l'intérieur de la boucle : zones, actes, rencontres.
+- Comment réconcilier la boucle avec la structure de double fin ci-dessus (fondu noir, retour de L'Horloger, sous-sol arraché).
+- La fin exacte après la lecture de la note (la combinaison spatiale — voir `docs/lore/boucle-temporelle.md`).
 
-- Qui est le joueur ? D'où vient-il ? Pourquoi lui ?
-- Où se trouve le siège du tyran — et pourquoi le joueur y va-t-il ?
-- Que sait le tyran exactement, et comment le joueur l'apprend-il ?
+## Lore — décision de l'auteur
+
+- **Tout le lore validé ensemble est conservé** (l'IA, la chronologie, le tyran, l'Église de l'Ancrage, les Mnémos, la capsule, l'oubli — voir `docs/lore/`).
+- **Sont retirés** uniquement les éléments imaginés seul par le binôme autour de la sortie de cryogénisation (déjà supprimés lors de la remise à zéro).
+- Les éléments marqués *(proposition)* dans le lore restent **non canoniques** jusqu'à validation explicite de l'auteur, une par une.
+
+## Notes de méthode
+
+- Ce document ne doit contenir que du contenu validé par l'auteur.
+- Les propositions du binôme sont présentées dans la conversation et validées une par une avant d'être intégrées.

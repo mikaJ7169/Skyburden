@@ -14,7 +14,7 @@ Une seule loi gouverne les survivants : **s'éloigner le plus possible de la for
 
 Le monde n'est pas seulement en ruine : il est **stratifié**. Les vestiges de toutes les époques coexistent et se superposent :
 
-- Un village médiéval construit *dans* un stade de foot.
+- Un village des années 1850 construit *dans* un stade de foot.
 - Une cathédrale gothique greffée sur un centre commercial.
 - Une autoroute servant de muraille.
 - Des couches de 2125 sous des couches plus anciennes — ou l'inverse.
@@ -23,10 +23,13 @@ L'étude de ces strates est interdite (voir `factions.md`).
 
 ## L'oubli organisé
 
-La régression au Moyen-Âge n'est pas naturelle : on a **fait oublier** l'ancien monde aux populations. Les objets de l'ancien monde (clés USB, livres imprimés, photos) sont des criminels à posséder. Le joueur, lui, en trouve partout — tension constante entre curiosité et danger.
+La régression aux années 1850 n'est pas naturelle : on a **fait oublier** l'ancien monde aux populations. Les objets de l'ancien monde (clés USB, livres imprimés, photos) sont des criminels à posséder. Le joueur, lui, en trouve partout — tension constante entre curiosité et danger.
+
+## La force — Origine (définie)
+
+La « force inconnue » est la **gravité d'une nouvelle planète** construite en orbite par une super-intelligence née en 2098, dont l'objectif mal aligné était de créer un monde habitable pour les humains. Détails dans `chronologie.md`.
 
 ## Questions ouvertes
 
-- Nature de la force : naturelle ? artificielle (technologie de l'ancien monde) ? extérieure (le monde est « réclamé ») ?
-- Le jeu n'a pas besoin d'y répondre. Mais l'auteur doit le savoir.
-- Chronologie détaillée à écrire : notre monde → 2125 → l'Événement → 100 ans d'oubli → aujourd'hui du jeu.
+- Le jeu n'a jamais besoin d'exposer l'origine au joueur. Mais l'auteur la connaît : voir `chronologie.md`.
+- Chronologie détaillée : voir `chronologie.md` (version 0.1).
