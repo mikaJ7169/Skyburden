@@ -32,8 +32,8 @@ static func _noise_layer(img: Image, seed: int, amp: float, grid: int) -> void:
 			var y0 := int(gy) % grid
 			var x1 := (x0 + 1) % grid
 			var y1 := (y0 + 1) % grid
-			var fx := gx - floor(gx)
-			var fy := gy - floor(gy)
+			var fx := gx - floorf(gx)
+			var fy := gy - floorf(gy)
 			var v00 := vals[y0 * grid + x0]
 			var v10 := vals[y0 * grid + x1]
 			var v01 := vals[y1 * grid + x0]
