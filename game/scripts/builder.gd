@@ -20,7 +20,8 @@ static func box(
 	bm.size = size
 	mi.mesh = bm
 	if tile > 0.0:
-		mi.material_override = _scaled_material(material, _tile_scale(maxf(size.x, size.y, size.z), tile))
+		var max_dim := maxf(maxf(size.x, size.y), size.z)
+		mi.material_override = _scaled_material(material, _tile_scale(max_dim, tile))
 	else:
 		mi.material_override = material
 	body.add_child(mi)
