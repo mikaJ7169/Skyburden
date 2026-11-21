@@ -3,6 +3,7 @@ extends CharacterBody3D
 const SPEED := 4.5
 const MOUSE_SENSITIVITY := 0.0022
 const GRAVITY := 12.0
+const JUMP_VELOCITY := 5.2
 
 var _spawn_position := Vector3.ZERO
 var _spawn_rotation := Vector3.ZERO
@@ -101,6 +102,8 @@ func _physics_process(delta: float) -> void:
 	var can_move := not GameState.menu_open and not GameState.inventory_open
 	if GameState.ui != null and GameState.ui.input_blocked():
 		can_move = false
+	if can_move and is_on_floor() and Input.is_key_pressed(Keybinds.key_for("jump")):
+		velocity.y = JUMP_VELOCITY
 	if can_move:
 		if Input.is_key_pressed(Keybinds.key_for("forward")) or Input.is_key_pressed(KEY_W):
 			input_dir.y -= 1.0

@@ -11,6 +11,7 @@ Rendu rétro-3D : résolution interne **640×400** upscalée plein écran, textu
 ## Contrôles
 
 - **ZQSD ou WASD + souris** — se déplacer / regarder
+- **Espace** — sauter
 - **F** — parler / ramasser / avancer dans les dialogues (invite « F — … » quand on vise un objet)
 - **F11** — plein écran on/off
 - **Tab** — inventaire (objets ramassés, persistants entre boucles via la mémoire)

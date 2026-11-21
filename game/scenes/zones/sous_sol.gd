@@ -31,7 +31,7 @@ func _mat(tint: Color, tex: ImageTexture) -> StandardMaterial3D:
 func _build_room() -> void:
 	var wall_tex := Tex.make_concrete()
 	var wall := _mat(Color(0.55, 0.55, 0.58), wall_tex)
-	var floor_mat := _mat(Color(0.5, 0.5, 0.52), Tex.make_floor())
+	var floor_mat := _mat(Color(0.5, 0.48, 0.44), Tex.make_dirt())
 	var ceil := _mat(Color(0.45, 0.45, 0.48), wall_tex)
 	var w := ROOM_MAX.x - ROOM_MIN.x
 	var d := ROOM_MAX.y - ROOM_MIN.y

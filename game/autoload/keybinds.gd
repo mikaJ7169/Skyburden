@@ -9,6 +9,7 @@ const DEFAULTS := {
 	"fullscreen": KEY_F11,
 	"pause": KEY_ESCAPE,
 	"inventory": KEY_TAB,
+	"jump": KEY_SPACE,
 }
 
 const LABELS := {
@@ -20,6 +21,7 @@ const LABELS := {
 	"fullscreen": "Plein écran",
 	"pause": "Menu / pause",
 	"inventory": "Inventaire",
+	"jump": "Sauter",
 }
 
 const SAVE_PATH := "user://keybinds.cfg"
