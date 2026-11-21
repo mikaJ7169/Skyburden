@@ -6,7 +6,9 @@
 
 ## Statut
 
-**Phase : écriture du scénario et du lore.** Aucun développement pour l'instant.
+**Phase : prototype technique + écriture du scénario et du lore.**
+
+Un premier prototype jouable existe : un raycaster rétro-3D en Python pur (aucune dépendance), conforme à la vision (brouillard de distance, textures basse résolution). Le choix du moteur définitif (Godot, moteur raycasting dédié, etc.) reste ouvert.
 
 ## Pitch
 
@@ -28,6 +30,25 @@ docs/
 │   └── factions.md    # Le tyran, l'Église de l'Ancrage, les Mnémos
 └── scenario/
     └── synopsis.md    # Synopsis en trois actes (brouillon)
+
+skyburden/             # prototype raycaster (Python stdlib uniquement)
+├── world.py           # chargement des cartes (texte)
+├── raycaster.py       # lancer de rayons (DDA)
+├── textures.py        # textures procédurales 64x64
+├── render.py          # framebuffer, brouillard, écriture PNG
+├── player.py          # déplacement et collisions
+└── game.py            # démo scriptée (headless)
+main.py                # point d'entrée
+maps/                  # cartes en texte (# mur, B brique, W bois, P départ)
+tests/                 # tests unitaires (unittest)
+```
+
+## Lancer le prototype
+
+```bash
+python3 main.py --out out/frame.png            # une image à la position de départ
+python3 main.py --demo out/demo                 # une séquence de déplacements
+python3 -m unittest discover -s tests           # tests
 ```
 
 ## Nom
