@@ -36,12 +36,12 @@ Rendu rétro-3D : résolution interne **640×400** upscalée plein écran, textu
 game/
 ├── project.godot
 ├── autoload/        # Keybinds (touches remappables), GameState, LoopManager (boucle 37 min), WorldState, MemoryStore
-├── scripts/         # player, sky_manager, npc, interactable, relic, oil_lamp, builder, textures
+├── scripts/         # player, sky_manager, npc, interactable, relic, oil_lamp, note, door, builder, textures
 ├── scenes/
 │   ├── main.tscn    # assemble environnement, lumière, zones, PNJ, joueur, HUD
 │   ├── zones/       # sous_sol.tscn (départ) + cendreval.tscn (ville de départ)
 │   ├── npc/         # ben.tscn
-│   └── ui/          # hud.tscn (compte à rebours, fondu, invite, dialogues) + pause_menu.tscn (onglet Paramètres)
+│   └── ui/          # hud.tscn (fondu, invite, dialogues, lecteur de notes) + pause_menu.tscn (onglet Paramètres)
 ├── data/dialogues/  # dialogues en français (JSON), jamais dans le code
 ├── assets/          # models (.glb low-poly), textures 64-128px, audio
 └── addons/          # plugins (shader rétro, dialogues)

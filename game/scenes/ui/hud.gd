@@ -5,7 +5,6 @@ signal note_closed
 
 var dialogue_active := false
 var note_active := false
-var _timer: Label
 var _box: PanelContainer
 var _speaker: Label
 var _text: Label
@@ -24,11 +23,6 @@ func _ready() -> void:
 	_fade.set_anchors_preset(Control.PRESET_FULL_RECT)
 	add_child(_fade)
 	LoopManager.loop_started.connect(_on_loop_started)
-	_timer = Label.new()
-	_timer.set_anchors_preset(Control.PRESET_TOP_RIGHT)
-	_timer.position = Vector2(-150, 8)
-	_timer.add_theme_font_size_override("font_size", 16)
-	add_child(_timer)
 	var cross := Label.new()
 	cross.text = "+"
 	cross.set_anchors_preset(Control.PRESET_CENTER)
@@ -72,10 +66,6 @@ func _ready() -> void:
 
 func input_blocked() -> bool:
 	return dialogue_active or note_active
-
-func _process(_delta: float) -> void:
-	var s := int(LoopManager.remaining_seconds())
-	_timer.text = "%02d:%02d  —  boucle %d" % [s / 60, s % 60, GameState.loop_count]
 
 func set_prompt(text: String) -> void:
 	_prompt.text = text
