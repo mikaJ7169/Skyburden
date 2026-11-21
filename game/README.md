@@ -11,13 +11,13 @@ Rendu rétro-3D : résolution interne **640×400** upscalée plein écran, textu
 ## Contrôles
 
 - **ZQSD ou WASD + souris** — se déplacer / regarder
-- **E** — parler / ramasser / avancer dans les dialogues (une invite « E — … » s'affiche quand on vise un objet)
+- **F** — parler / ramasser / avancer dans les dialogues (invite « F — … » quand on vise un objet)
 - **F11** — plein écran on/off
-- **Échap** — libérer la souris
+- **Échap** — menu pause (onglet **Paramètres** : changer toutes les touches, sauvegardé dans `user://keybinds.cfg`)
 
 ## Jalons en cours
 
-- **M0/M1** : réveil dans le **sous-sol** (fondu depuis le noir, lampe à huile à ramasser avec `E`), rampe remontant jusqu'à **Cendreval** + **Ben le glaneur** (visible, étiquette 3D, ouverture dans l'auberge) + ciel dynamique.
+- **M0/M1** : réveil dans le **sous-sol** (fondu depuis le noir, lampe à huile à ramasser avec `F`), rampe remontant jusqu'à **Cendreval** + **Ben le glaneur** (visible, étiquette 3D, ouverture dans l'auberge) + ciel dynamique.
 - **Ciel à deux planètes** : la planète construite par l'IA apparaît d'abord **plus grosse que Mars**, puis Mars grandit pendant la boucle et la dépasse ; au crash de fin de boucle, flash rouge + réinitialisation.
 - **Débris flottants** (limite d'arrachement + morceaux en ville) qui **dérivent vers la planète de l'IA** à l'horizon au fil de la boucle.
 - **Objets interactifs animés** : lampe à huile, radio morte, livre (crime selon l'Église), conserves — animation de ramassage (lévitation + rotation + rétrécissement), drapeaux de mémoire persistants entre boucles.
@@ -28,13 +28,13 @@ Rendu rétro-3D : résolution interne **640×400** upscalée plein écran, textu
 ```
 game/
 ├── project.godot
-├── autoload/        # GameState, LoopManager (boucle 37 min), WorldState (snapshot), MemoryStore (drapeaux persistants)
+├── autoload/        # Keybinds (touches remappables), GameState, LoopManager (boucle 37 min), WorldState, MemoryStore
 ├── scripts/         # player, sky_manager, npc, interactable, relic, oil_lamp, builder, textures
 ├── scenes/
 │   ├── main.tscn    # assemble environnement, lumière, zones, PNJ, joueur, HUD
 │   ├── zones/       # sous_sol.tscn (départ) + cendreval.tscn (ville de départ)
 │   ├── npc/         # ben.tscn
-│   └── ui/          # hud.tscn — compte à rebours, fondu noir, invite d'interaction, dialogues
+│   └── ui/          # hud.tscn (compte à rebours, fondu, invite, dialogues) + pause_menu.tscn (onglet Paramètres)
 ├── data/dialogues/  # dialogues en français (JSON), jamais dans le code
 ├── assets/          # models (.glb low-poly), textures 64-128px, audio
 └── addons/          # plugins (shader rétro, dialogues)

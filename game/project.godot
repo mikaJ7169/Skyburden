@@ -12,6 +12,7 @@ config/features=PackedStringArray("4.2", "Forward Plus")
 
 [autoload]
 
+Keybinds="*res://autoload/keybinds.gd"
 GameState="*res://autoload/game_state.gd"
 LoopManager="*res://autoload/loop_manager.gd"
 WorldState="*res://autoload/world_state.gd"

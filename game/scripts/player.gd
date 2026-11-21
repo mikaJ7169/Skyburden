@@ -39,12 +39,14 @@ func _unhandled_input(event: InputEvent) -> void:
 		_camera.rotate_x(-event.relative.y * MOUSE_SENSITIVITY)
 		_camera.rotation.x = clampf(_camera.rotation.x, -PI / 2.0, PI / 2.0)
 	elif event is InputEventKey and event.pressed and not event.echo:
-		if event.keycode == KEY_E:
-			_try_interact()
-		elif event.keycode == KEY_F11:
-			_toggle_fullscreen()
-		elif event.keycode == KEY_ESCAPE:
-			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		if event.keycode == Keybinds.key_for("pause"):
+			if GameState.ui == null or not GameState.ui.dialogue_active:
+				GameState.toggle_menu()
+		elif not GameState.menu_open:
+			if event.keycode == Keybinds.key_for("interact"):
+				_try_interact()
+			elif event.keycode == Keybinds.key_for("fullscreen"):
+				_toggle_fullscreen()
 
 func _toggle_fullscreen() -> void:
 	if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN:
@@ -54,7 +56,9 @@ func _toggle_fullscreen() -> void:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 
 func _try_interact() -> void:
-	if _ray == null or (GameState.ui != null and GameState.ui.dialogue_active):
+	if _ray == null or GameState.menu_open:
+		return
+	if GameState.ui != null and GameState.ui.dialogue_active:
 		return
 	_ray.force_raycast_update()
 	var node: Node = _ray.get_collider() as Node
@@ -65,14 +69,18 @@ func _try_interact() -> void:
 		node = node.get_parent()
 
 func _process(_delta: float) -> void:
-	if _ray == null or GameState.ui == null:
+	if GameState.ui == null:
+		return
+	if _ray == null or GameState.menu_open:
+		GameState.ui.set_prompt("")
 		return
 	_ray.force_raycast_update()
 	var node: Node = _ray.get_collider() as Node
 	var text := ""
 	while node != null:
 		if node.has_method("interact") and node.get("prompt") != null and not node.get("taken"):
-			text = "E — " + String(node.get("prompt"))
+			var key := Keybinds.key_name("interact")
+			text = "%s — %s" % [key, String(node.get("prompt"))]
 			break
 		node = node.get_parent()
 	GameState.ui.set_prompt(text)
@@ -84,14 +92,17 @@ func _physics_process(delta: float) -> void:
 		reset_to_spawn()
 		return
 	var input_dir := Vector2.ZERO
-	if GameState.ui == null or not GameState.ui.dialogue_active:
-		if Input.is_key_pressed(KEY_W) or Input.is_key_pressed(KEY_Z):
+	var can_move := not GameState.menu_open
+	if GameState.ui != null and GameState.ui.dialogue_active:
+		can_move = false
+	if can_move:
+		if Input.is_key_pressed(Keybinds.key_for("forward")) or Input.is_key_pressed(KEY_W):
 			input_dir.y -= 1.0
-		if Input.is_key_pressed(KEY_S):
+		if Input.is_key_pressed(Keybinds.key_for("back")) or Input.is_key_pressed(KEY_S):
 			input_dir.y += 1.0
-		if Input.is_key_pressed(KEY_A) or Input.is_key_pressed(KEY_Q):
+		if Input.is_key_pressed(Keybinds.key_for("left")) or Input.is_key_pressed(KEY_A):
 			input_dir.x -= 1.0
-		if Input.is_key_pressed(KEY_D):
+		if Input.is_key_pressed(Keybinds.key_for("right")) or Input.is_key_pressed(KEY_D):
 			input_dir.x += 1.0
 	var direction := transform.basis * Vector3(input_dir.x, 0.0, input_dir.y)
 	if direction.length() > 0.0:
