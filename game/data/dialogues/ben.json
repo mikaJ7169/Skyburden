@@ -1,0 +1,15 @@
+{
+  "id": "ben",
+  "name": "Ben",
+  "default": [
+    "Encore un qui sort du sous-sol. Tout le monde en sort, tôt ou tard.",
+    "Moi c'est Ben. Je glane dans les ruines — Cendreval donne encore, si on sait fouiller.",
+    "Garde rien de l'ancien monde sur toi. Ici, les Enfants de Dieu ne plaisantent pas avec ça.",
+    "Regarde le ciel, là-haut. Mars grossit à chaque boucle. Eux, ils disent que le ciel a faim. Moi, je dis qu'il avale."
+  ],
+  "repeat": [
+    "Tu reviens. Normal : la boucle ramène tout le monde au point de départ.",
+    "Tu as découvert qui tu étais, cette fois ? Non ? On verra à la prochaine boucle."
+  ],
+  "farewell": "Reviens me voir un jour, si tu as découvert qui tu étais."
+}

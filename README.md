@@ -6,9 +6,9 @@
 
 ## Statut
 
-**Phase : prototype technique + écriture du scénario et du lore.**
+**Phase : production du code — Godot 4.x (GDScript), projet dans `game/`.**
 
-Un premier prototype jouable existe : un raycaster rétro-3D en Python pur (aucune dépendance), conforme à la vision (brouillard de distance, textures basse résolution). Le choix du moteur définitif (Godot, moteur raycasting dédié, etc.) reste ouvert.
+Jalon **M1** en cours : Cendreval (ville de départ, white-box) + Ben le glaneur (PNJ, dialogues en JSON français) + ciel dynamique (Mars grandit pendant la boucle de 37 min, flash rouge au crash, monde restauré à chaque boucle, mémoire persistante). Le prototype raycaster Python (zéro dépendance) reste dans le repo comme bac à sable technique.
 
 ## Pitch
 
@@ -28,22 +28,29 @@ docs/
 ├── lore/
 │   ├── monde.md       # La dislocation, les strates, la chronologie
 │   └── factions.md    # Le tyran, l'Église de l'Ancrage, les Mnémos
-└── scenario/
-    └── synopsis.md    # Synopsis en trois actes (brouillon)
+├── scenario/
+│   └── synopsis.md    # Synopsis en trois actes (brouillon)
+└── cartes/
+    └── strate_0.png   # Carte canonique de la Strate 0 (la terre ferme)
 
-skyburden/             # prototype raycaster (Python stdlib uniquement)
-├── world.py           # chargement des cartes (texte)
-├── raycaster.py       # lancer de rayons (DDA)
-├── textures.py        # textures procédurales 64x64
-├── render.py          # framebuffer, brouillard, écriture PNG
-├── player.py          # déplacement et collisions
-└── game.py            # démo scriptée (headless)
-main.py                # point d'entrée
-maps/                  # cartes en texte (# mur, B brique, W bois, P départ)
-tests/                 # tests unitaires (unittest)
+game/                  # projet Godot 4 (moteur de production)
+├── autoload/          # GameState, LoopManager, WorldState, MemoryStore
+├── scripts/           # player, sky_manager, npc
+├── scenes/            # main, zones/cendreval, npc/ben, ui/hud
+├── data/dialogues/    # dialogues FR (JSON)
+└── assets/ + addons/
+
+skyburden/             # prototype raycaster Python (stdlib uniquement)
+main.py                # point d'entrée du prototype
+maps/                  # cartes du prototype (texte)
+tests/                 # tests du prototype (unittest)
 ```
 
-## Lancer le prototype
+## Lancer le jeu (Godot)
+
+Ouvrir `game/` dans **Godot 4.x** puis `F5`. Boucle de test : 5 min (`LoopManager.USE_TEST_DURATION`), boucle canonique : 37 min. Voir `game/README.md`.
+
+## Lancer le prototype Python
 
 ```bash
 python3 main.py --out out/frame.png            # une image à la position de départ

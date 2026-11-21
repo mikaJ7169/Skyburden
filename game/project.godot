@@ -1,0 +1,33 @@
+; Engine configuration file.
+; Skyburden — Le Poids du Ciel
+
+config_version=5
+
+[application]
+
+config/name="Skyburden"
+config/description="Jeu PC solo d'exploration et de narration — Le Poids du Ciel. Prototype de production Godot 4 (jalon M1 : Cendreval, Ben, ciel dynamique)."
+run/main_scene="res://scenes/main.tscn"
+config/features=PackedStringArray("4.2", "Forward Plus")
+
+[autoload]
+
+GameState="*res://autoload/game_state.gd"
+LoopManager="*res://autoload/loop_manager.gd"
+WorldState="*res://autoload/world_state.gd"
+MemoryStore="*res://autoload/memory_store.gd"
+
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=400
+window/size/window_width_override=1280
+window/size/window_height_override=800
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+textures/default_filters/texture_filter=0
+environment/defaults/default_clear_color=Color(0.1, 0.105, 0.13, 1)
