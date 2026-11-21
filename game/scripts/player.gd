@@ -54,7 +54,7 @@ func _toggle_fullscreen() -> void:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 
 func _try_interact() -> void:
-	if GameState.ui != null and GameState.ui.dialogue_active:
+	if _ray == null or (GameState.ui != null and GameState.ui.dialogue_active):
 		return
 	_ray.force_raycast_update()
 	var node: Node = _ray.get_collider() as Node
@@ -65,7 +65,7 @@ func _try_interact() -> void:
 		node = node.get_parent()
 
 func _process(_delta: float) -> void:
-	if GameState.ui == null:
+	if _ray == null or GameState.ui == null:
 		return
 	_ray.force_raycast_update()
 	var node: Node = _ray.get_collider() as Node
