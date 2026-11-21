@@ -40,7 +40,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		_camera.rotation.x = clampf(_camera.rotation.x, -PI / 2.0, PI / 2.0)
 	elif event is InputEventKey and event.pressed and not event.echo:
 		if event.keycode == Keybinds.key_for("pause"):
-			if GameState.ui == null or not GameState.ui.dialogue_active:
+			if GameState.ui == null or not GameState.ui.input_blocked():
 				GameState.toggle_menu()
 		elif not GameState.menu_open and not GameState.inventory_open:
 			if event.keycode == Keybinds.key_for("interact"):
@@ -48,7 +48,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			elif event.keycode == Keybinds.key_for("fullscreen"):
 				_toggle_fullscreen()
 			elif event.keycode == Keybinds.key_for("inventory"):
-				if GameState.ui == null or not GameState.ui.dialogue_active:
+				if GameState.ui == null or not GameState.ui.input_blocked():
 					GameState.toggle_inventory()
 
 func _toggle_fullscreen() -> void:
@@ -61,7 +61,7 @@ func _toggle_fullscreen() -> void:
 func _try_interact() -> void:
 	if _ray == null or GameState.menu_open or GameState.inventory_open:
 		return
-	if GameState.ui != null and GameState.ui.dialogue_active:
+	if GameState.ui != null and GameState.ui.input_blocked():
 		return
 	_ray.force_raycast_update()
 	var node: Node = _ray.get_collider() as Node
@@ -75,6 +75,9 @@ func _process(_delta: float) -> void:
 	if GameState.ui == null:
 		return
 	if _ray == null or GameState.menu_open or GameState.inventory_open:
+		GameState.ui.set_prompt("")
+		return
+	if GameState.ui.input_blocked():
 		GameState.ui.set_prompt("")
 		return
 	_ray.force_raycast_update()
@@ -96,7 +99,7 @@ func _physics_process(delta: float) -> void:
 		return
 	var input_dir := Vector2.ZERO
 	var can_move := not GameState.menu_open and not GameState.inventory_open
-	if GameState.ui != null and GameState.ui.dialogue_active:
+	if GameState.ui != null and GameState.ui.input_blocked():
 		can_move = false
 	if can_move:
 		if Input.is_key_pressed(Keybinds.key_for("forward")) or Input.is_key_pressed(KEY_W):

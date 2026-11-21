@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 const ITEMS_FILE := "res://data/items.json"
+const Icons := preload("res://scripts/icons.gd")
 
 var _list: VBoxContainer
 
@@ -42,14 +43,25 @@ func refresh() -> void:
 			continue
 		count += 1
 		var entry: Dictionary = items[id]
+		var kind := String(id).replace("relique_", "").replace("lampe_huile", "lampe")
+		var row := HBoxContainer.new()
+		_list.add_child(row)
+		var icon := TextureRect.new()
+		icon.texture = Icons.make_icon(kind)
+		icon.custom_minimum_size = Vector2(32, 32)
+		icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		icon.stretch_mode = TextureRect.STRETCH_KEEP
+		row.add_child(icon)
+		var texts := VBoxContainer.new()
+		row.add_child(texts)
 		var name_label := Label.new()
-		name_label.text = "• " + String(entry.get("name", id))
+		name_label.text = String(entry.get("name", id))
 		name_label.add_theme_font_size_override("font_size", 15)
-		_list.add_child(name_label)
+		texts.add_child(name_label)
 		var desc := Label.new()
-		desc.text = "    " + String(entry.get("desc", ""))
+		desc.text = String(entry.get("desc", ""))
 		desc.add_theme_font_size_override("font_size", 12)
-		_list.add_child(desc)
+		texts.add_child(desc)
 	if count == 0:
 		var empty := Label.new()
 		empty.text = "Vide. Fouille les ruines de Cendreval."

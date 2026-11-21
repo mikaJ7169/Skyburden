@@ -1,24 +1,22 @@
 extends CanvasLayer
 
 signal advance_dialogue
+signal note_closed
 
 var dialogue_active := false
+var note_active := false
 var _timer: Label
 var _box: PanelContainer
 var _speaker: Label
 var _text: Label
 var _fade: ColorRect
 var _prompt: Label
+var _note_box: PanelContainer
+var _note_title: Label
+var _note_text: Label
 
 func _ready() -> void:
 	GameState.register_ui(self)
-	var vignette := TextureRect.new()
-	vignette.texture = _make_vignette()
-	vignette.set_anchors_preset(Control.PRESET_FULL_RECT)
-	vignette.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-	vignette.stretch_mode = TextureRect.STRETCH_SCALE
-	vignette.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	add_child(vignette)
 	_fade = ColorRect.new()
 	_fade.color = Color(0, 0, 0)
 	_fade.modulate.a = 1.0
@@ -55,6 +53,23 @@ func _ready() -> void:
 	_text.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	_text.add_theme_font_size_override("font_size", 14)
 	vb.add_child(_text)
+	_note_box = PanelContainer.new()
+	_note_box.set_anchors_preset(Control.PRESET_CENTER)
+	_note_box.custom_minimum_size = Vector2(420, 0)
+	_note_box.visible = false
+	add_child(_note_box)
+	var nvb := VBoxContainer.new()
+	_note_box.add_child(nvb)
+	_note_title = Label.new()
+	_note_title.add_theme_font_size_override("font_size", 18)
+	nvb.add_child(_note_title)
+	_note_text = Label.new()
+	_note_text.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	_note_text.add_theme_font_size_override("font_size", 14)
+	nvb.add_child(_note_text)
+
+func input_blocked() -> bool:
+	return dialogue_active or note_active
 
 func _process(_delta: float) -> void:
 	var s := int(LoopManager.remaining_seconds())
@@ -62,18 +77,6 @@ func _process(_delta: float) -> void:
 
 func set_prompt(text: String) -> void:
 	_prompt.text = text
-
-func _make_vignette() -> ImageTexture:
-	var size := 256
-	var img := Image.create(size, size, false, Image.FORMAT_RGBA8)
-	var c := Vector2(size, size) / 2.0
-	var max_d := c.length()
-	for y in range(size):
-		for x in range(size):
-			var d := Vector2(x, y).distance_to(c) / max_d
-			var a := clampf((d - 0.55) / 0.45, 0.0, 1.0) * 0.45
-			img.set_pixel(x, y, Color(0, 0, 0, a))
-	return ImageTexture.create_from_image(img)
 
 func _on_loop_started(_index: int) -> void:
 	_fade.modulate.a = 1.0
@@ -92,7 +95,29 @@ func play_dialogue(speaker_name: String, lines: Array) -> void:
 	dialogue_active = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
+func show_note(title: String, text: String) -> void:
+	note_active = true
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	_note_title.text = title
+	_note_text.text = text
+	_note_box.visible = true
+	await note_closed
+	_note_box.visible = false
+	note_active = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
 func _unhandled_input(event: InputEvent) -> void:
+	if note_active:
+		var close := false
+		if event is InputEventKey and event.pressed and not event.echo:
+			var keys := [Keybinds.key_for("interact"), KEY_ENTER, KEY_KP_ENTER, KEY_SPACE]
+			close = event.keycode in keys
+		elif event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+			close = true
+		if close:
+			note_closed.emit()
+			get_viewport().set_input_as_handled()
+		return
 	if not dialogue_active:
 		return
 	var advance := false

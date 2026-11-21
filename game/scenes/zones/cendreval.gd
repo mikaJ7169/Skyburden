@@ -4,11 +4,18 @@ const Builder := preload("res://scripts/builder.gd")
 const Tex := preload("res://scripts/textures.gd")
 const SkyManager := preload("res://scripts/sky_manager.gd")
 const Relic := preload("res://scripts/relic.gd")
+const Note := preload("res://scripts/note.gd")
 
 const CITY_HALF := 58.0
 const SHAFT_MIN := Vector2(-2.0, 2.0)
 const SHAFT_MAX := Vector2(2.0, 8.0)
 const BLOCK_POSITIONS := [10.0, 30.0, 50.0, -10.0, -30.0, -50.0]
+const FORCED_TYPES := {
+	Vector2(30, 30): "shop_boulangerie",
+	Vector2(-30, -30): "shop_echoppe",
+	Vector2(30, -30): "library",
+	Vector2(-30, 30): "apartment",
+}
 const RED := Color(0.62, 0.10, 0.07)
 const NEON := Color(0.55, 0.85, 0.65)
 const WARM := Color(1.0, 0.75, 0.45)
@@ -25,7 +32,8 @@ func _ready() -> void:
 		"stone": Tex.make_stone(),
 		"brick": Tex.make_brick(),
 		"concrete": Tex.make_concrete(),
-		"floor": Tex.make_floor(),
+		"dirt": Tex.make_dirt(),
+		"plaster": Tex.make_plaster(),
 		"wood": Tex.make_wood(),
 		"metal": Tex.make_metal(),
 		"roof": Tex.make_roof(),
@@ -33,6 +41,7 @@ func _ready() -> void:
 	_build_ground()
 	_build_auberge()
 	_build_houses()
+	_build_signs()
 	_build_lamps()
 	_build_pillars()
 	_build_doors()
@@ -40,7 +49,6 @@ func _ready() -> void:
 	_build_rubble()
 	_build_border()
 	_build_floating()
-	_build_pickups()
 
 func _mat(tint: Color, tex_name := "", emission := false) -> StandardMaterial3D:
 	var key := tint.to_html() + "|" + tex_name + ("|e" if emission else "")
@@ -86,12 +94,36 @@ func _street_pos() -> Vector3:
 		return Vector3.ZERO
 	return Vector3(x, 0.0, z)
 
+func _make_note(pos: Vector3, file: String) -> void:
+	var note := Note.new()
+	note.note_file = file
+	note.position = pos
+	add_child(note)
+
+func _make_relic(kind: String, pos: Vector3) -> void:
+	var relic := Relic.new()
+	relic.kind = kind
+	relic.position = pos
+	add_child(relic)
+
+func _make_sign(pos: Vector3, text: String) -> void:
+	var wood := Color(0.45, 0.36, 0.25)
+	_box(pos + Vector3(0, 1.0, 0), Vector3(0.12, 2.0, 0.12), wood, "wood")
+	_box(pos + Vector3(0, 2.1, 0), Vector3(1.8, 0.5, 0.06), Color(0.5, 0.4, 0.28), "wood")
+	var label := Label3D.new()
+	label.text = text
+	label.position = pos + Vector3(0, 2.1, 0.09)
+	label.billboard = BaseMaterial3D.BILLBOARD_ENABLED
+	label.pixel_size = 0.005
+	label.modulate = Color(0.9, 0.87, 0.75)
+	add_child(label)
+
 func _build_ground() -> void:
-	var t := Color(0.85, 0.85, 0.87)
-	Builder.box(self, Vector3(0, -0.5, -28.0), Vector3(116.0, 1.0, 60.0), _mat(t, "floor"))
-	Builder.box(self, Vector3(0, -0.5, 33.0), Vector3(116.0, 1.0, 50.0), _mat(t, "floor"))
-	Builder.box(self, Vector3(-30.0, -0.5, 5.0), Vector3(56.0, 1.0, 6.0), _mat(t, "floor"))
-	Builder.box(self, Vector3(30.0, -0.5, 5.0), Vector3(56.0, 1.0, 6.0), _mat(t, "floor"))
+	var t := Color(0.9, 0.88, 0.85)
+	Builder.box(self, Vector3(0, -0.5, -28.0), Vector3(116.0, 1.0, 60.0), _mat(t, "dirt"))
+	Builder.box(self, Vector3(0, -0.5, 33.0), Vector3(116.0, 1.0, 50.0), _mat(t, "dirt"))
+	Builder.box(self, Vector3(-30.0, -0.5, 5.0), Vector3(56.0, 1.0, 6.0), _mat(t, "dirt"))
+	Builder.box(self, Vector3(30.0, -0.5, 5.0), Vector3(56.0, 1.0, 6.0), _mat(t, "dirt"))
 
 func _build_auberge() -> void:
 	var cz := -6.0
@@ -107,26 +139,59 @@ func _build_auberge() -> void:
 	Builder.box(self, slab_pos, Vector3(10.5, 0.3, 10.5), slab_mat, Vector3(0, 0, 0.22))
 	var chim := _mat(Color(0.7, 0.68, 0.65), "stone")
 	Builder.box(self, Vector3(-3.5, h + 1.0, cz - 3.5), Vector3(0.8, 2.0, 0.8), chim)
+	_make_sign(Vector3(0, 0, cz + 6.5), "Auberge")
 
 func _build_houses() -> void:
 	for bx: float in BLOCK_POSITIONS:
 		for bz: float in BLOCK_POSITIONS:
 			if absf(bx) <= 12.0 and absf(bz) <= 12.0:
 				continue
-			if _rng.randf() < 0.3:
+			var cell := Vector2(bx, bz)
+			var forced: String = FORCED_TYPES.get(cell, "")
+			if forced == "" and _rng.randf() < 0.3:
 				continue
 			var px: float = bx + _rng.randf_range(-1.0, 1.0)
 			var pz: float = bz + _rng.randf_range(-1.0, 1.0)
-			_build_house(px, pz)
+			if forced == "shop_boulangerie":
+				_build_shop(px, pz, "Boulangerie", "res://data/notes/journal_boulanger.json")
+			elif forced == "shop_echoppe":
+				_build_shop(px, pz, "Échoppe", "")
+			elif forced == "library":
+				_build_library(px, pz)
+			elif forced == "apartment":
+				_build_apartment(px, pz)
+			else:
+				var r := _rng.randf()
+				if r < 0.6:
+					_build_house(px, pz)
+				elif r < 0.8:
+					_build_shop(px, pz, "", "")
+				else:
+					_build_apartment(px, pz)
+
+func _make_wall(cx: float, cz: float, size: Vector3, mat: Material, horizontal: bool) -> void:
+	var gap := _rng.randf_range(1.2, 2.0)
+	var len := size.x if horizontal else size.z
+	var seg := (len - gap) / 2.0
+	var off := gap / 2.0 + seg / 2.0
+	for side in [-1.0, 1.0]:
+		var pos := Vector3(cx, size.y / 2.0, cz)
+		if horizontal:
+			pos.x = cx + side * off
+			Builder.box(self, pos, Vector3(seg, size.y, size.z), mat)
+		else:
+			pos.z = cz + side * off
+			Builder.box(self, pos, Vector3(size.x, size.y, seg), mat)
 
 func _build_house(cx: float, cz: float) -> void:
-	var w := _rng.randf_range(9.0, 13.0)
-	var d := _rng.randf_range(9.0, 13.0)
+	var w := _rng.randf_range(8.0, 13.0)
+	var d := _rng.randf_range(8.0, 13.0)
 	var ruined := _rng.randf() < 0.55
-	var h: float = _rng.randf_range(2.6, 4.2) if ruined else _rng.randf_range(4.5, 7.5)
-	var r := _rng.randf()
-	var tex_name := "stone" if r < 0.5 else ("brick" if r < 0.8 else "concrete")
-	var wall := _mat(Color(0.85, 0.84, 0.82), tex_name)
+	var h: float = _rng.randf_range(2.6, 4.2) if ruined else _rng.randf_range(4.5, 7.0)
+	var texes := ["stone", "brick", "plaster", "concrete"]
+	var tex_name: String = texes[_rng.randi_range(0, texes.size() - 1)]
+	var tint := Color(0.85, 0.84, 0.82) * _rng.randf_range(0.9, 1.1)
+	var wall := _mat(tint, tex_name)
 	var hw := w / 2.0
 	var hd := d / 2.0
 	_make_wall(cx, cz - hd, Vector3(w, h, 0.5), wall, true)
@@ -143,9 +208,13 @@ func _build_house(cx: float, cz: float) -> void:
 		var roof_pos := Vector3(cx + _rng.randf_range(-0.5, 0.5), h + 0.15, cz)
 		Builder.box(self, roof_pos, Vector3(w + 0.6, 0.25, d + 0.6), roof, Vector3(0, 0, tilt))
 	else:
-		var fallen := Vector3(cx + w * 0.2, 0.15, cz + d * 0.3)
 		var fallen_rot := Vector3(0, 0, _rng.randf_range(0.3, 0.8))
+		var fallen := Vector3(cx + w * 0.2, 0.15, cz + d * 0.3)
 		Builder.box(self, fallen, Vector3(w * 0.7, 0.3, d * 0.5), roof, fallen_rot)
+	if not ruined and _rng.randf() < 0.4:
+		var wood := _mat(Color(0.6, 0.48, 0.35), "wood")
+		var table_pos := Vector3(cx + 1.0, 0.4, cz + 1.0)
+		Builder.box(self, table_pos, Vector3(1.2, 0.8, 0.8), wood)
 	if _rng.randf() < 0.25:
 		var light := OmniLight3D.new()
 		light.light_color = WARM
@@ -155,19 +224,101 @@ func _build_house(cx: float, cz: float) -> void:
 		light.position = Vector3(cx, h * 0.6, cz)
 		add_child(light)
 
-func _make_wall(cx: float, cz: float, size: Vector3, mat: Material, horizontal: bool) -> void:
-	var gap := _rng.randf_range(1.2, 2.0)
-	var len := size.x if horizontal else size.z
-	var seg := (len - gap) / 2.0
-	var off := gap / 2.0 + seg / 2.0
-	for side in [-1.0, 1.0]:
-		var pos := Vector3(cx, size.y / 2.0, cz)
-		if horizontal:
-			pos.x = cx + side * off
-			Builder.box(self, pos, Vector3(seg, size.y, size.z), mat)
-		else:
-			pos.z = cz + side * off
-			Builder.box(self, pos, Vector3(size.x, size.y, seg), mat)
+func _build_shop(cx: float, cz: float, name: String, note_file: String) -> void:
+	var w := _rng.randf_range(9.0, 12.0)
+	var d := _rng.randf_range(9.0, 12.0)
+	var h := 4.5
+	var wall := _mat(Color(0.85, 0.82, 0.78), "brick")
+	var hw := w / 2.0
+	var hd := d / 2.0
+	_make_wall(cx, cz - hd, Vector3(w, h, 0.5), wall, true)
+	_make_wall(cx, cz + hd, Vector3(w, h, 0.5), wall, true)
+	_make_wall(cx - hw, cz, Vector3(0.5, h, d), wall, false)
+	_make_wall(cx + hw, cz, Vector3(0.5, h, d), wall, false)
+	var roof := _mat(Color(0.6, 0.58, 0.55), "roof")
+	Builder.box(self, Vector3(cx, h + 0.15, cz), Vector3(w + 0.6, 0.25, d + 0.6), roof)
+	var awning := _mat(Color(0.55, 0.5, 0.45), "wood")
+	var awn_pos := Vector3(cx, 3.0, cz + hd + 0.7)
+	Builder.box(self, awn_pos, Vector3(3.5, 0.08, 1.2), awning, Vector3(-0.25, 0, 0))
+	var wood := _mat(Color(0.6, 0.48, 0.35), "wood")
+	var counter := Vector3(cx, 0.5, cz - hd + 0.9)
+	Builder.box(self, counter, Vector3(w - 2.0, 1.0, 0.6), wood)
+	_shelf_x(cx, cz - hd + 0.45, w - 1.5, 2.4)
+	_shelf_z(cx + hw - 0.45, cz, d - 1.5, 2.4)
+	if name != "":
+		_make_sign(Vector3(cx, 0, cz + hd + 1.8), name)
+	if note_file != "":
+		_make_note(Vector3(cx + 0.8, 1.02, cz - hd + 0.9), note_file)
+
+func _build_library(cx: float, cz: float) -> void:
+	var w := 12.0
+	var d := 12.0
+	var h := 7.0
+	var wall := _mat(Color(0.85, 0.84, 0.82), "stone")
+	var hw := w / 2.0
+	var hd := d / 2.0
+	_make_wall(cx, cz - hd, Vector3(w, h, 0.5), wall, true)
+	_make_wall(cx, cz + hd, Vector3(w, h, 0.5), wall, true)
+	_make_wall(cx - hw, cz, Vector3(0.5, h, d), wall, false)
+	_make_wall(cx + hw, cz, Vector3(0.5, h, d), wall, false)
+	var roof := _mat(Color(0.55, 0.53, 0.5), "roof")
+	Builder.box(self, Vector3(cx, h + 0.15, cz), Vector3(w + 0.6, 0.25, d + 0.6), roof)
+	_shelf_x(cx, cz - hd + 0.5, w - 1.2, 2.6)
+	_shelf_x(cx, cz + hd - 0.5, w - 1.2, 2.6)
+	_shelf_z(cx - hw + 0.5, cz, d - 1.2, 2.6)
+	_shelf_z(cx + hw - 0.5, cz, d - 1.2, 2.6)
+	_shelf_x(cx, cz, w - 4.0, 2.2)
+	_make_sign(Vector3(cx, 0, cz + hd + 1.8), "Bibliothèque")
+	_make_note(Vector3(cx, 1.13, cz), "res://data/notes/inventaire_biblio.json")
+	_make_relic("livre", Vector3(cx - hw + 0.5, 1.48, cz + 1.5))
+
+func _build_apartment(cx: float, cz: float) -> void:
+	var w := 10.0
+	var d := 12.0
+	var h := 7.5
+	var wall := _mat(Color(0.82, 0.8, 0.74), "plaster")
+	var hw := w / 2.0
+	var hd := d / 2.0
+	_make_wall(cx, cz - hd, Vector3(w, h, 0.5), wall, true)
+	_make_wall(cx, cz + hd, Vector3(w, h, 0.5), wall, true)
+	_make_wall(cx - hw, cz, Vector3(0.5, h, d), wall, false)
+	_make_wall(cx + hw, cz, Vector3(0.5, h, d), wall, false)
+	var roof := _mat(Color(0.58, 0.56, 0.53), "roof")
+	Builder.box(self, Vector3(cx, h + 0.15, cz), Vector3(w + 0.6, 0.25, d + 0.6), roof)
+	var bed := _mat(Color(0.55, 0.5, 0.45), "concrete")
+	var pillow := _mat(Color(0.8, 0.78, 0.72), "plaster")
+	Builder.box(self, Vector3(cx - hw + 1.2, 0.2, cz), Vector3(0.9, 0.4, 2.2), bed)
+	Builder.box(self, Vector3(cx - hw + 0.9, 0.45, cz - 0.8), Vector3(0.5, 0.12, 0.6), pillow)
+	var wood := _mat(Color(0.6, 0.48, 0.35), "wood")
+	var table_top := Vector3(cx + 1.5, 0.75, cz + 1.0)
+	Builder.box(self, table_top, Vector3(1.2, 0.08, 0.8), wood)
+	for dx in [-0.5, 0.5]:
+		for dz in [-0.3, 0.3]:
+			var leg := Vector3(cx + 1.5 + dx, 0.37, cz + 1.0 + dz)
+			Builder.box(self, leg, Vector3(0.08, 0.75, 0.08), wood)
+	var desk := Vector3(cx, 0.4, cz - hd + 0.7)
+	Builder.box(self, desk, Vector3(1.2, 0.8, 0.6), wood)
+	_make_note(Vector3(cx - 0.3, 0.82, cz - hd + 0.7), "res://data/notes/lettre_lea.json")
+	_shelf_z(cx + hw - 0.5, cz, d - 2.0, 2.2)
+	_make_relic("conserve", Vector3(cx + hw - 0.5, 1.48, cz - 2.0))
+
+func _shelf_x(cx: float, cz: float, length: float, h: float) -> void:
+	var wood := _mat(Color(0.6, 0.48, 0.35), "wood")
+	Builder.box(self, Vector3(cx, h / 2.0, cz), Vector3(length, h, 0.35), wood)
+	for i in range(1, 4):
+		var y := i * h / 4.0
+		Builder.box(self, Vector3(cx, y, cz + 0.16), Vector3(length, 0.05, 0.4), wood)
+
+func _shelf_z(cx: float, cz: float, length: float, h: float) -> void:
+	var wood := _mat(Color(0.6, 0.48, 0.35), "wood")
+	Builder.box(self, Vector3(cx, h / 2.0, cz), Vector3(0.35, h, length), wood)
+	for i in range(1, 4):
+		var y := i * h / 4.0
+		Builder.box(self, Vector3(cx + 0.16, y, cz), Vector3(0.4, 0.05, length), wood)
+
+func _build_signs() -> void:
+	_make_sign(Vector3(3.5, 0, 12), "Cendreval")
+	_make_note(Vector3(4.5, 0.03, -2), "res://data/notes/affiche_eglise.json")
 
 func _build_lamps() -> void:
 	var spots := [
@@ -218,7 +369,7 @@ func _build_props() -> void:
 		var pos := _street_pos()
 		if pos == Vector3.ZERO:
 			continue
-		match i % 6:
+		match i % 7:
 			0:
 				_cyl(pos + Vector3(0, 0.45, 0), 0.4, 0.9, Color(0.55, 0.42, 0.3), "wood")
 			1:
@@ -236,6 +387,8 @@ func _build_props() -> void:
 				_box(hay_pos, Vector3(1.4, 0.6, 1.0), hay_tint, "concrete", false, hay_rot)
 			5:
 				_make_scattered(pos)
+			6:
+				_make_car_wreck(pos)
 
 func _make_fence(pos: Vector3) -> void:
 	var wood := Color(0.6, 0.5, 0.38)
@@ -250,8 +403,25 @@ func _make_cart(pos: Vector3) -> void:
 	var cart_pos := pos + Vector3(0, 0.5, 0)
 	_box(cart_pos, Vector3(1.8, 0.5, 0.9), Color(0.6, 0.48, 0.35), "wood", false, body_rot)
 	var wheel_rot := Vector3(PI / 2.0, 0, 0)
-	_cyl(pos + Vector3(-0.7, 0.35, 0.55), 0.35, 0.08, Color(0.4, 0.4, 0.42), "metal", wheel_rot)
-	_cyl(pos + Vector3(0.7, 0.35, 0.55), 0.35, 0.08, Color(0.4, 0.4, 0.42), "metal", wheel_rot)
+	var wheel_tint := Color(0.4, 0.4, 0.42)
+	_cyl(pos + Vector3(-0.7, 0.35, 0.55), 0.35, 0.08, wheel_tint, "metal", wheel_rot)
+	_cyl(pos + Vector3(0.7, 0.35, 0.55), 0.35, 0.08, wheel_tint, "metal", wheel_rot)
+
+func _make_car_wreck(pos: Vector3) -> void:
+	var tint := Color(0.38, 0.39, 0.42) * _rng.randf_range(0.85, 1.1)
+	var rot := Vector3(
+		_rng.randf_range(-0.1, 0.1), _rng.randf_range(0, 3), _rng.randf_range(-0.15, 0.15)
+	)
+	var body_pos := pos + Vector3(0, 0.55, 0)
+	_box(body_pos, Vector3(2.4, 0.8, 1.2), tint, "metal", false, rot)
+	var cabin_pos := pos + Vector3(0, 1.05, 0)
+	_box(cabin_pos, Vector3(1.4, 0.5, 1.1), Color(0.18, 0.2, 0.22), "", false, rot)
+	var wheel_rot := Vector3(PI / 2.0, 0, 0)
+	var wheel_tint := Color(0.14, 0.14, 0.15)
+	for dx in [-0.8, 0.8]:
+		for dz in [-0.6, 0.6]:
+			var wp := pos + Vector3(dx, 0.3, dz)
+			_cyl(wp, 0.3, 0.1, wheel_tint, "", wheel_rot)
 
 func _make_scattered(pos: Vector3) -> void:
 	var plank_rot := Vector3(0, 0, _rng.randf_range(-0.5, 0.5))
@@ -260,18 +430,23 @@ func _make_scattered(pos: Vector3) -> void:
 	_box(pos + Vector3(0.5, 0.1, 0.3), Vector3(0.25, 0.06, 0.18), Color(0.85, 0.82, 0.72))
 
 func _build_rubble() -> void:
-	for i in range(10):
+	for i in range(12):
 		var cx := _rng.randf_range(-52.0, 52.0)
 		var cz := _rng.randf_range(-52.0, 52.0)
 		if _in_shaft(cx, cz, 2.0):
 			continue
-		for j in range(5):
-			var s := _rng.randf_range(0.4, 1.3)
-			var dx := _rng.randf_range(-1.2, 1.2)
-			var dz := _rng.randf_range(-1.2, 1.2)
-			var tilt := Vector3(0, 0, _rng.randf_range(-0.5, 0.5))
-			var tint := Color(0.55, 0.55, 0.57)
-			_box(Vector3(cx + dx, s / 2.0, cz + dz), Vector3(s, s, s), tint, "concrete", false, tilt)
+		var n := _rng.randi_range(3, 6)
+		for j in range(n):
+			var s := _rng.randf_range(0.3, 1.1)
+			var dx := _rng.randf_range(-1.5, 1.5)
+			var dz := _rng.randf_range(-1.5, 1.5)
+			var sink := _rng.randf_range(-0.15, 0.05)
+			var tilt := Vector3(
+				_rng.randf_range(-0.5, 0.5), _rng.randf_range(0, 3), _rng.randf_range(-0.5, 0.5)
+			)
+			var tint := Color(0.5, 0.5, 0.52) * _rng.randf_range(0.85, 1.1)
+			var size := Vector3(s, s * _rng.randf_range(0.5, 0.9), s * _rng.randf_range(0.6, 1.0))
+			_box(Vector3(cx + dx, s / 2.0 + sink, cz + dz), size, tint, "concrete", false, tilt)
 
 func _register_debris(node: StaticBody3D) -> void:
 	var dir := (SkyManager.PLANET_AI_POSITION - node.position).normalized()
@@ -311,32 +486,25 @@ func _build_border() -> void:
 			3:
 				pos = Vector3(CITY_HALF + out, y, along)
 		var s := _rng.randf_range(1.5, 5.0)
-		var tint := Color(0.6, 0.6, 0.62)
+		var tint := Color(0.55, 0.53, 0.5)
 		var tilt := Vector3(0, 0, _rng.randf_range(-0.4, 0.4))
 		var size := Vector3(s, s * _rng.randf_range(0.5, 1.0), s)
-		_register_debris(_box(pos, size, tint, "concrete", false, tilt))
+		_register_debris(_box(pos, size, tint, "stone", false, tilt))
 
 func _build_floating() -> void:
-	for i in range(3):
-		var s := _rng.randf_range(2.0, 4.0)
+	for i in range(4):
 		var x := _rng.randf_range(-40.0, 40.0)
 		var z := _rng.randf_range(-40.0, 40.0)
 		if _in_shaft(x, z, 3.0):
 			continue
-		var tilt := Vector3(0, 0, _rng.randf_range(-0.4, 0.4))
-		var y := _rng.randf_range(18.0, 30.0)
-		var tint := Color(0.6, 0.6, 0.62)
-		var size := Vector3(s, s * 0.6, s)
-		_register_debris(_box(Vector3(x, y, z), size, tint, "concrete", false, tilt))
-
-func _build_pickups() -> void:
-	_make_relic("radio", Vector3(12.0, 0.0, -18.0))
-	_make_relic("livre", Vector3(-14.0, 0.0, 8.0))
-	_make_relic("conserve", Vector3(20.0, 0.0, 30.0))
-	_make_relic("conserve", Vector3(-30.0, 0.0, -20.0))
-
-func _make_relic(kind: String, pos: Vector3) -> void:
-	var relic := Relic.new()
-	relic.kind = kind
-	relic.position = pos
-	add_child(relic)
+		var y := _rng.randf_range(16.0, 32.0)
+		var n := _rng.randi_range(2, 3)
+		for j in range(n):
+			var s := _rng.randf_range(1.5, 3.5)
+			var jx := _rng.randf_range(-2, 2)
+			var jy := _rng.randf_range(-2, 2)
+			var jz := _rng.randf_range(-2, 2)
+			var pos := Vector3(x + jx, y + jy, z + jz)
+			var tilt := Vector3(_rng.randf_range(-0.4, 0.4), 0, _rng.randf_range(-0.4, 0.4))
+			var size := Vector3(s, s * _rng.randf_range(0.4, 0.8), s * _rng.randf_range(0.6, 1.0))
+			_register_debris(_box(pos, size, Color(0.55, 0.53, 0.5), "stone", false, tilt))

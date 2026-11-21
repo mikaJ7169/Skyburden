@@ -147,6 +147,35 @@ static func make_roof() -> ImageTexture:
 			img.set_pixel(x, y, _shade(base * shades[key], rng.randf_range(-0.03, 0.03)))
 	return _tex(img)
 
+static func make_dirt() -> ImageTexture:
+	var rng := _rng(8808)
+	var img := _noise_img(8808, Color(0.36, 0.32, 0.26), 0.08)
+	for i in range(24):
+		var x := rng.randi_range(0, SIZE - 8)
+		var y := rng.randi_range(0, SIZE - 8)
+		var r := rng.randi_range(2, 7)
+		for py in range(y, y + r):
+			for px in range(x, x + r):
+				if Vector2(px - x, py - y).length() < r:
+					img.set_pixel(px, py, img.get_pixel(px, py) * rng.randf_range(0.7, 0.9))
+	for i in range(40):
+		var x := rng.randi_range(0, SIZE - 1)
+		var y := rng.randi_range(0, SIZE - 1)
+		img.set_pixel(x, y, Color(0.45, 0.44, 0.42))
+	for i in range(14):
+		var x := rng.randi_range(0, SIZE - 1)
+		var y := rng.randi_range(0, SIZE - 1)
+		img.set_pixel(x, y, Color(0.45, 0.52, 0.38))
+		img.set_pixel(x, clampi(y + 1, 0, SIZE - 1), Color(0.42, 0.5, 0.36))
+	_cracks(img, rng, 5, Color(0.22, 0.19, 0.15))
+	return _tex(img)
+
+static func make_plaster() -> ImageTexture:
+	var rng := _rng(9909)
+	var img := _noise_img(9909, Color(0.62, 0.60, 0.55), 0.04)
+	_cracks(img, rng, 6, Color(0.4, 0.38, 0.34))
+	return _tex(img)
+
 static func make_metal() -> ImageTexture:
 	var rng := _rng(6606)
 	var img := _noise_img(6606, Color(0.35, 0.36, 0.40), 0.05)
