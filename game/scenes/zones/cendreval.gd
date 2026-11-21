@@ -114,8 +114,10 @@ func _make_sign(pos: Vector3, text: String) -> void:
 	label.text = text
 	label.position = pos + Vector3(0, 2.1, 0.09)
 	label.billboard = BaseMaterial3D.BILLBOARD_ENABLED
-	label.pixel_size = 0.005
-	label.modulate = Color(0.9, 0.87, 0.75)
+	label.pixel_size = 0.006
+	label.modulate = Color(0.92, 0.89, 0.78)
+	label.outline_size = 8
+	label.outline_modulate = Color(0, 0, 0, 0.9)
 	add_child(label)
 
 func _build_ground() -> void:
@@ -134,6 +136,8 @@ func _build_auberge() -> void:
 	Builder.box(self, Vector3(3.0, h / 2.0, cz + 5.0), Vector3(4.0, h, 0.6), wall)
 	Builder.box(self, Vector3(-5.0, h / 2.0, cz), Vector3(0.6, h, 10.0), wall)
 	Builder.box(self, Vector3(5.0, h / 2.0, cz), Vector3(0.6, h, 10.0), wall)
+	var found := _mat(Color(0.42, 0.42, 0.44), "concrete")
+	Builder.box(self, Vector3(0, 0.2, cz), Vector3(10.5, 0.4, 10.5), found)
 	var slab_mat := _mat(Color(0.55, 0.52, 0.48), "roof")
 	var slab_pos := Vector3(0.4, 6.6, cz - 0.6)
 	Builder.box(self, slab_pos, Vector3(10.5, 0.3, 10.5), slab_mat, Vector3(0, 0, 0.22))
@@ -169,8 +173,10 @@ func _build_houses() -> void:
 				else:
 					_build_apartment(px, pz)
 
-func _make_wall(cx: float, cz: float, size: Vector3, mat: Material, horizontal: bool) -> void:
-	var gap := _rng.randf_range(1.2, 2.0)
+func _make_wall(
+	cx: float, cz: float, size: Vector3, mat: Material, horizontal: bool, with_door := false
+) -> void:
+	var gap := 2.0 if with_door else _rng.randf_range(1.2, 2.0)
 	var len := size.x if horizontal else size.z
 	var seg := (len - gap) / 2.0
 	var off := gap / 2.0 + seg / 2.0
@@ -182,6 +188,38 @@ func _make_wall(cx: float, cz: float, size: Vector3, mat: Material, horizontal: 
 		else:
 			pos.z = cz + side * off
 			Builder.box(self, pos, Vector3(size.x, size.y, seg), mat)
+	if with_door:
+		var jamb := _mat(Color(0.5, 0.5, 0.52), "concrete")
+		for side in [-1.0, 1.0]:
+			var jp := Vector3(cx + side * gap / 2.0, size.y / 2.0, cz)
+			if horizontal:
+				Builder.box(self, jp, Vector3(0.2, size.y, size.z + 0.15), jamb)
+			else:
+				Builder.box(self, jp, Vector3(size.x + 0.15, size.y, 0.2), jamb)
+		var lintel := Vector3(cx, size.y - 0.15, cz)
+		var lsize := Vector3.ZERO
+		if horizontal:
+			lsize = Vector3(gap + 0.4, 0.3, size.z + 0.15)
+		else:
+			lsize = Vector3(size.x + 0.15, 0.3, gap + 0.4)
+		Builder.box(self, lintel, lsize, jamb)
+	elif len > 7.0 and _rng.randf() < 0.8:
+		_make_window(cx, cz, horizontal)
+
+func _make_window(cx: float, cz: float, horizontal: bool) -> void:
+	var off := _rng.randf_range(-3.0, 3.0)
+	var frame := _mat(Color(0.55, 0.54, 0.52), "stone")
+	var dark := _mat(Color(0.09, 0.11, 0.13))
+	if horizontal:
+		var fp := Vector3(cx + off, 2.0, cz + 0.28)
+		var gp := Vector3(cx + off, 2.0, cz + 0.33)
+		Builder.box(self, fp, Vector3(0.9, 1.2, 0.08), frame)
+		Builder.box(self, gp, Vector3(0.7, 1.0, 0.04), dark)
+	else:
+		var fp := Vector3(cx + 0.28, 2.0, cz + off)
+		var gp := Vector3(cx + 0.33, 2.0, cz + off)
+		Builder.box(self, fp, Vector3(0.08, 1.2, 0.9), frame)
+		Builder.box(self, gp, Vector3(0.04, 1.0, 0.7), dark)
 
 func _build_house(cx: float, cz: float) -> void:
 	var w := _rng.randf_range(8.0, 13.0)
@@ -195,9 +233,11 @@ func _build_house(cx: float, cz: float) -> void:
 	var hw := w / 2.0
 	var hd := d / 2.0
 	_make_wall(cx, cz - hd, Vector3(w, h, 0.5), wall, true)
-	_make_wall(cx, cz + hd, Vector3(w, h, 0.5), wall, true)
+	_make_wall(cx, cz + hd, Vector3(w, h, 0.5), wall, true, true)
 	_make_wall(cx - hw, cz, Vector3(0.5, h, d), wall, false)
 	_make_wall(cx + hw, cz, Vector3(0.5, h, d), wall, false)
+	var found := _mat(Color(0.42, 0.42, 0.44), "concrete")
+	Builder.box(self, Vector3(cx, 0.2, cz), Vector3(w + 0.5, 0.4, d + 0.5), found)
 	if _rng.randf() < 0.7:
 		var chim := _mat(Color(0.7, 0.68, 0.65), "stone")
 		var chim_pos := Vector3(cx + hw - 1.0, h + 0.9, cz - hd + 1.0)
@@ -232,9 +272,11 @@ func _build_shop(cx: float, cz: float, name: String, note_file: String) -> void:
 	var hw := w / 2.0
 	var hd := d / 2.0
 	_make_wall(cx, cz - hd, Vector3(w, h, 0.5), wall, true)
-	_make_wall(cx, cz + hd, Vector3(w, h, 0.5), wall, true)
+	_make_wall(cx, cz + hd, Vector3(w, h, 0.5), wall, true, true)
 	_make_wall(cx - hw, cz, Vector3(0.5, h, d), wall, false)
 	_make_wall(cx + hw, cz, Vector3(0.5, h, d), wall, false)
+	var found := _mat(Color(0.42, 0.42, 0.44), "concrete")
+	Builder.box(self, Vector3(cx, 0.2, cz), Vector3(w + 0.5, 0.4, d + 0.5), found)
 	var roof := _mat(Color(0.6, 0.58, 0.55), "roof")
 	Builder.box(self, Vector3(cx, h + 0.15, cz), Vector3(w + 0.6, 0.25, d + 0.6), roof)
 	var awning := _mat(Color(0.55, 0.5, 0.45), "wood")
@@ -258,9 +300,11 @@ func _build_library(cx: float, cz: float) -> void:
 	var hw := w / 2.0
 	var hd := d / 2.0
 	_make_wall(cx, cz - hd, Vector3(w, h, 0.5), wall, true)
-	_make_wall(cx, cz + hd, Vector3(w, h, 0.5), wall, true)
+	_make_wall(cx, cz + hd, Vector3(w, h, 0.5), wall, true, true)
 	_make_wall(cx - hw, cz, Vector3(0.5, h, d), wall, false)
 	_make_wall(cx + hw, cz, Vector3(0.5, h, d), wall, false)
+	var found := _mat(Color(0.42, 0.42, 0.44), "concrete")
+	Builder.box(self, Vector3(cx, 0.2, cz), Vector3(w + 0.5, 0.4, d + 0.5), found)
 	var roof := _mat(Color(0.55, 0.53, 0.5), "roof")
 	Builder.box(self, Vector3(cx, h + 0.15, cz), Vector3(w + 0.6, 0.25, d + 0.6), roof)
 	_shelf_x(cx, cz - hd + 0.5, w - 1.2, 2.6)
@@ -280,9 +324,11 @@ func _build_apartment(cx: float, cz: float) -> void:
 	var hw := w / 2.0
 	var hd := d / 2.0
 	_make_wall(cx, cz - hd, Vector3(w, h, 0.5), wall, true)
-	_make_wall(cx, cz + hd, Vector3(w, h, 0.5), wall, true)
+	_make_wall(cx, cz + hd, Vector3(w, h, 0.5), wall, true, true)
 	_make_wall(cx - hw, cz, Vector3(0.5, h, d), wall, false)
 	_make_wall(cx + hw, cz, Vector3(0.5, h, d), wall, false)
+	var found := _mat(Color(0.42, 0.42, 0.44), "concrete")
+	Builder.box(self, Vector3(cx, 0.2, cz), Vector3(w + 0.5, 0.4, d + 0.5), found)
 	var roof := _mat(Color(0.58, 0.56, 0.53), "roof")
 	Builder.box(self, Vector3(cx, h + 0.15, cz), Vector3(w + 0.6, 0.25, d + 0.6), roof)
 	var bed := _mat(Color(0.55, 0.5, 0.45), "concrete")
@@ -326,17 +372,26 @@ func _build_lamps() -> void:
 		Vector2(40, 0), Vector2(-40, 0), Vector2(0, 40), Vector2(0, -40),
 		Vector2(40, 40), Vector2(-40, -40), Vector2(40, -40), Vector2(-40, 40),
 	]
+	var metal := Color(0.3, 0.31, 0.34)
+	var base_tint := Color(0.32, 0.33, 0.36)
 	for i in range(spots.size()):
-		var s: Vector2 = spots[i]
-		_box(Vector3(s.x, 2.25, s.y), Vector3(0.18, 4.5, 0.18), Color(0.5, 0.52, 0.56), "metal")
-		var head := _box(Vector3(s.x, 4.6, s.y), Vector3(0.55, 0.3, 0.55), NEON, "", true)
+		var x := spots[i].x
+		var z := spots[i].y
+		_box(Vector3(x, 0.15, z), Vector3(0.5, 0.3, 0.5), base_tint, "concrete")
+		_box(Vector3(x, 2.25, z), Vector3(0.14, 4.2, 0.14), metal, "metal")
+		_box(Vector3(x + 0.4, 4.5, z), Vector3(0.9, 0.1, 0.1), metal, "metal")
+		var lx := x + 0.8
+		_box(Vector3(lx, 4.55, z), Vector3(0.36, 0.42, 0.36), metal, "metal")
+		_box(Vector3(lx, 4.55, z), Vector3(0.26, 0.3, 0.26), NEON, "", true)
+		_box(Vector3(lx, 4.82, z), Vector3(0.42, 0.08, 0.42), metal, "metal")
 		var light := OmniLight3D.new()
 		light.light_color = NEON
-		light.light_energy = 0.45
-		light.omni_range = 7.0
+		light.light_energy = 0.5
+		light.omni_range = 8.0
 		light.shadow_enabled = false
-		head.add_child(light)
-		_lamp_lights.append({"light": light, "phase": i * 1.7, "base": 0.45})
+		light.position = Vector3(lx, 4.4, z)
+		add_child(light)
+		_lamp_lights.append({"light": light, "phase": i * 1.7, "base": 0.5})
 
 func _build_pillars() -> void:
 	var spots := [

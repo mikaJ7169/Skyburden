@@ -57,5 +57,7 @@ func _build_visual() -> void:
 	label.position = Vector3(0, 2.45, 0)
 	label.billboard = BaseMaterial3D.BILLBOARD_ENABLED
 	label.pixel_size = 0.004
-	label.modulate = Color(0.85, 0.85, 0.8)
+	label.modulate = Color(0.9, 0.9, 0.85)
+	label.outline_size = 8
+	label.outline_modulate = Color(0, 0, 0, 0.9)
 	add_child(label)

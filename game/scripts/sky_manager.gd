@@ -6,10 +6,10 @@ const SKY_HOR_START := Color(0.66, 0.68, 0.70)
 const SKY_HOR_END := Color(0.45, 0.15, 0.10)
 const FOG_START := Color(0.66, 0.68, 0.70)
 const FOG_END := Color(0.42, 0.16, 0.11)
-const FOG_DENSITY_START := 0.045
-const FOG_DENSITY_END := 0.08
+const FOG_DENSITY_START := 0.055
+const FOG_DENSITY_END := 0.09
 const MARS_POSITION := Vector3(-260.0, 190.0, -620.0)
-const PLANET_AI_POSITION := Vector3(420.0, 80.0, -720.0)
+const PLANET_AI_POSITION := Vector3(420.0, 110.0, -720.0)
 const MARS_SCALE_START := 0.5
 const MARS_SCALE_END := 16.0
 const PLANET_AI_SCALE_START := 4.0
@@ -87,26 +87,26 @@ func _planet_ai_texture() -> ImageTexture:
 	var img := Image.create(size, size, false, Image.FORMAT_RGB8)
 	var rng := RandomNumberGenerator.new()
 	rng.seed = 2098
-	var base := Color(0.30, 0.32, 0.31)
+	var base := Color(0.37, 0.39, 0.38)
 	for y in range(size):
 		for x in range(size):
 			img.set_pixel(x, y, base * rng.randf_range(0.85, 1.15))
 	for i in range(0, size, 16):
 		for t in range(size):
-			img.set_pixel(i, t, base * 0.7)
-			img.set_pixel(t, i, base * 0.7)
+			img.set_pixel(i, t, base * 0.75)
+			img.set_pixel(t, i, base * 0.75)
 	var dish := Vector2(46, 42)
 	var r := 20.0
 	for y in range(size):
 		for x in range(size):
 			var d := Vector2(x, y).distance_to(dish)
 			if d < r - 2.0:
-				img.set_pixel(x, y, base * 0.45)
+				img.set_pixel(x, y, base * 0.5)
 			elif d < r:
-				img.set_pixel(x, y, base * 1.4)
+				img.set_pixel(x, y, base * 1.5)
 	for y in range(62, 66):
 		for x in range(size):
-			img.set_pixel(x, y, base * 0.6)
+			img.set_pixel(x, y, base * 0.65)
 	return ImageTexture.create_from_image(img)
 
 func _build_flash() -> void:
@@ -124,10 +124,11 @@ func _on_progress_changed(p: float) -> void:
 	update_sky(p)
 
 func update_sky(p: float) -> void:
-	_sky_mat.sky_top_color = SKY_TOP_START.lerp(SKY_TOP_END, p)
-	_sky_mat.sky_horizon_color = SKY_HOR_START.lerp(SKY_HOR_END, p)
-	_sky_mat.ground_horizon_color = FOG_START.lerp(FOG_END, p)
-	_env.fog_light_color = FOG_START.lerp(FOG_END, p)
+	var q := p * p
+	_sky_mat.sky_top_color = SKY_TOP_START.lerp(SKY_TOP_END, q)
+	_sky_mat.sky_horizon_color = SKY_HOR_START.lerp(SKY_HOR_END, q)
+	_sky_mat.ground_horizon_color = FOG_START.lerp(FOG_END, q)
+	_env.fog_light_color = FOG_START.lerp(FOG_END, q)
 	_env.fog_density = lerpf(FOG_DENSITY_START, FOG_DENSITY_END, p)
 	var mars_s := lerpf(MARS_SCALE_START, MARS_SCALE_END, p)
 	_mars.scale = Vector3.ONE * mars_s

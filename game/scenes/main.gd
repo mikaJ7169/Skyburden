@@ -59,6 +59,8 @@ func _build_environment() -> void:
 	_env.fog_density = 0.045
 	_env.fog_sky_affect = 1.0
 	_env.glow_enabled = false
+	_env.ssao_enabled = false
+	_env.sdfgi_enabled = false
 	var we := WorldEnvironment.new()
 	we.environment = _env
 	add_child(we)
