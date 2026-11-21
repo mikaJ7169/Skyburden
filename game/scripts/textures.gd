@@ -52,7 +52,7 @@ static func make_stone() -> ImageTexture:
 				shades[key] = rng.randf_range(0.82, 1.12)
 			var on_line := x % cell < 2 or y % cell < 2
 			var base := Color(0.34, 0.33, 0.32) if on_line else Color(0.58, 0.56, 0.53)
-			var c := base * shades[key]
+			var c: Color = base * shades[key]
 			img.set_pixel(x, y, _shade(c, rng.randf_range(-0.04, 0.04)))
 	_cracks(img, rng, 7, Color(0.20, 0.19, 0.18))
 	_moss(img, rng, 10)
@@ -95,7 +95,7 @@ static func make_floor() -> ImageTexture:
 				shades[key] = rng.randf_range(0.85, 1.15)
 			var on_line := x % cell < 2 or y % cell < 2
 			var base := Color(0.22, 0.22, 0.24) if on_line else Color(0.38, 0.38, 0.41)
-			var c := base * shades[key]
+			var c: Color = base * shades[key]
 			if not on_line and rng.randf() < 0.03:
 				c = c * 0.7
 			img.set_pixel(x, y, _shade(c, rng.randf_range(-0.03, 0.03)))
