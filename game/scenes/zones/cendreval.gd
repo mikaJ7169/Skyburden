@@ -61,8 +61,8 @@ func _build_auberge() -> void:
 	_box(Vector3(0.4, 7.0, -0.6), Vector3(10.0, 0.4, 10.0), PALETTE[0], false, 0.22)
 
 func _build_blocks() -> void:
-	for bx in BLOCK_POSITIONS:
-		for bz in BLOCK_POSITIONS:
+	for bx: float in BLOCK_POSITIONS:
+		for bz: float in BLOCK_POSITIONS:
 			if absf(bx) <= 12.0 and absf(bz) <= 12.0:
 				continue
 			if _rng.randf() < 0.25:
@@ -70,8 +70,8 @@ func _build_blocks() -> void:
 			var w := _rng.randf_range(8.0, 12.0)
 			var d := _rng.randf_range(8.0, 12.0)
 			var h := _rng.randf_range(5.0, 13.0)
-			var px := bx + _rng.randf_range(-1.0, 1.0)
-			var pz := bz + _rng.randf_range(-1.0, 1.0)
+			var px: float = bx + _rng.randf_range(-1.0, 1.0)
+			var pz: float = bz + _rng.randf_range(-1.0, 1.0)
 			var color: Color = PALETTE[_rng.randi_range(0, PALETTE.size() - 1)]
 			var ruined := _rng.randf() < 0.4
 			if ruined:
