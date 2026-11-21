@@ -9,17 +9,29 @@ var _spawn_rotation := Vector3.ZERO
 
 @onready var _camera: Camera3D = $Camera3D
 @onready var _ray: RayCast3D = $Camera3D/RayCast3D
+@onready var _lamp_light: OmniLight3D = $LampLight
 
 func _ready() -> void:
 	GameState.register_player(self)
 	_spawn_position = global_position
 	_spawn_rotation = global_rotation
+	floor_max_angle = deg_to_rad(60.0)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func reset_to_spawn() -> void:
 	global_position = _spawn_position
 	global_rotation = _spawn_rotation
 	velocity = Vector3.ZERO
+	disable_lamp()
+
+func enable_lamp() -> void:
+	_lamp_light.light_energy = 1.2
+
+func disable_lamp() -> void:
+	_lamp_light.light_energy = 0.0
+
+func has_lamp() -> bool:
+	return _lamp_light.light_energy > 0.0
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:

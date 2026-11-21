@@ -8,7 +8,7 @@
 
 **Phase : production du code — Godot 4.x (GDScript), projet dans `game/`.**
 
-Jalon **M1** en cours : Cendreval (ville de départ, white-box) + Ben le glaneur (PNJ, dialogues en JSON français) + ciel dynamique (Mars grandit pendant la boucle de 37 min, flash rouge au crash, monde restauré à chaque boucle, mémoire persistante). Le prototype raycaster Python (zéro dépendance) reste dans le repo comme bac à sable technique.
+Jalons **M0/M1** en cours : réveil dans le **sous-sol** (fondu depuis le noir, lampe à huile), escalier vers **Cendreval** (ville de départ texturée : néons, ruines, limite d'arrachement rouge) + **Ben le glaneur** (PNJ, dialogues en JSON français) + ciel dynamique (Mars grandit pendant la boucle de 37 min, flash rouge au crash, monde restauré à chaque boucle, mémoire persistante). Le prototype raycaster Python (zéro dépendance) reste dans le repo comme bac à sable technique.
 
 ## Pitch
 

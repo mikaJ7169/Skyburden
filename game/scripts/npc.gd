@@ -15,9 +15,9 @@ func _ready() -> void:
 
 func _build_visual() -> void:
 	var mat := StandardMaterial3D.new()
-	mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-	mat.albedo_color = body_color
 	mat.texture_filter = BaseMaterial3D.TEXTURE_FILTER_NEAREST
+	mat.roughness = 1.0
+	mat.albedo_color = body_color
 	var capsule := CapsuleMesh.new()
 	capsule.radius = 0.32
 	capsule.height = 1.6

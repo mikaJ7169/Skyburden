@@ -7,9 +7,17 @@ var _timer: Label
 var _box: PanelContainer
 var _speaker: Label
 var _text: Label
+var _fade: ColorRect
 
 func _ready() -> void:
 	GameState.register_ui(self)
+	_fade = ColorRect.new()
+	_fade.color = Color(0, 0, 0)
+	_fade.modulate.a = 1.0
+	_fade.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_fade.set_anchors_preset(Control.PRESET_FULL_RECT)
+	add_child(_fade)
+	LoopManager.loop_started.connect(_on_loop_started)
 	_timer = Label.new()
 	_timer.set_anchors_preset(Control.PRESET_TOP_RIGHT)
 	_timer.position = Vector2(-150, 8)
@@ -38,6 +46,11 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	var s := int(LoopManager.remaining_seconds())
 	_timer.text = "%02d:%02d  —  boucle %d" % [s / 60, s % 60, GameState.loop_count]
+
+func _on_loop_started(_index: int) -> void:
+	_fade.modulate.a = 1.0
+	var tween := create_tween()
+	tween.tween_property(_fade, "modulate:a", 0.0, 3.0)
 
 func play_dialogue(speaker_name: String, lines: Array) -> void:
 	dialogue_active = true
