@@ -375,8 +375,9 @@ func _build_lamps() -> void:
 	var metal := Color(0.3, 0.31, 0.34)
 	var base_tint := Color(0.32, 0.33, 0.36)
 	for i in range(spots.size()):
-		var x := spots[i].x
-		var z := spots[i].y
+		var spot: Vector2 = spots[i]
+		var x := spot.x
+		var z := spot.y
 		_box(Vector3(x, 0.15, z), Vector3(0.5, 0.3, 0.5), base_tint, "concrete")
 		_box(Vector3(x, 2.25, z), Vector3(0.14, 4.2, 0.14), metal, "metal")
 		_box(Vector3(x + 0.4, 4.5, z), Vector3(0.9, 0.1, 0.1), metal, "metal")
@@ -398,7 +399,7 @@ func _build_pillars() -> void:
 		Vector2(0, -20), Vector2(0, 20), Vector2(-20, 0),
 		Vector2(20, 0), Vector2(-40, 0), Vector2(40, 0),
 	]
-	for s in spots:
+	for s: Vector2 in spots:
 		if _in_shaft(s.x, s.y, 2.0):
 			continue
 		_box(Vector3(s.x, 3.0, s.y), Vector3(1.2, 6.0, 1.2), Color(0.7, 0.7, 0.72), "concrete")
