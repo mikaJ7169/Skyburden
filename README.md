@@ -25,9 +25,13 @@ docs/
 │   └── gameplay.md    # Pistes de mécaniques (provisoire)
 ├── lore/
 │   ├── monde.md       # La dislocation, les strates, la chronologie
+│   ├── chronologie.md # 2025 → 2098 → l'Événement → aujourd'hui du jeu
+│   ├── l-oubli.md     # Les trois strates de l'oubli (matériel, humain, politique)
 │   └── factions.md    # Le tyran, l'Église de l'Ancrage, les Mnémos
 └── scenario/
-    └── synopsis.md    # Synopsis en trois actes (brouillon)
+    ├── synopsis.md            # Synopsis en trois actes (brouillon)
+    ├── acte-1.md              # Acte 1 — Le Réveil, puis la Fuite (5 zones)
+    └── revelation-joueur.md  # Le joueur, codeur de l'IA — identité et culpabilité
 ```
 
 ## Nom
