@@ -12,6 +12,13 @@ var _prompt: Label
 
 func _ready() -> void:
 	GameState.register_ui(self)
+	var vignette := TextureRect.new()
+	vignette.texture = _make_vignette()
+	vignette.set_anchors_preset(Control.PRESET_FULL_RECT)
+	vignette.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	vignette.stretch_mode = TextureRect.STRETCH_SCALE
+	vignette.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(vignette)
 	_fade = ColorRect.new()
 	_fade.color = Color(0, 0, 0)
 	_fade.modulate.a = 1.0
@@ -55,6 +62,18 @@ func _process(_delta: float) -> void:
 
 func set_prompt(text: String) -> void:
 	_prompt.text = text
+
+func _make_vignette() -> ImageTexture:
+	var size := 256
+	var img := Image.create(size, size, false, Image.FORMAT_RGBA8)
+	var c := Vector2(size, size) / 2.0
+	var max_d := c.length()
+	for y in range(size):
+		for x in range(size):
+			var d := Vector2(x, y).distance_to(c) / max_d
+			var a := clampf((d - 0.55) / 0.45, 0.0, 1.0) * 0.45
+			img.set_pixel(x, y, Color(0, 0, 0, a))
+	return ImageTexture.create_from_image(img)
 
 func _on_loop_started(_index: int) -> void:
 	_fade.modulate.a = 1.0

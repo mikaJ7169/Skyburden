@@ -8,6 +8,7 @@ const DEFAULTS := {
 	"right": KEY_D,
 	"fullscreen": KEY_F11,
 	"pause": KEY_ESCAPE,
+	"inventory": KEY_TAB,
 }
 
 const LABELS := {
@@ -18,6 +19,7 @@ const LABELS := {
 	"right": "Droite",
 	"fullscreen": "Plein écran",
 	"pause": "Menu / pause",
+	"inventory": "Inventaire",
 }
 
 const SAVE_PATH := "user://keybinds.cfg"

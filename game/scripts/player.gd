@@ -42,11 +42,14 @@ func _unhandled_input(event: InputEvent) -> void:
 		if event.keycode == Keybinds.key_for("pause"):
 			if GameState.ui == null or not GameState.ui.dialogue_active:
 				GameState.toggle_menu()
-		elif not GameState.menu_open:
+		elif not GameState.menu_open and not GameState.inventory_open:
 			if event.keycode == Keybinds.key_for("interact"):
 				_try_interact()
 			elif event.keycode == Keybinds.key_for("fullscreen"):
 				_toggle_fullscreen()
+			elif event.keycode == Keybinds.key_for("inventory"):
+				if GameState.ui == null or not GameState.ui.dialogue_active:
+					GameState.toggle_inventory()
 
 func _toggle_fullscreen() -> void:
 	if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN:
@@ -56,7 +59,7 @@ func _toggle_fullscreen() -> void:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 
 func _try_interact() -> void:
-	if _ray == null or GameState.menu_open:
+	if _ray == null or GameState.menu_open or GameState.inventory_open:
 		return
 	if GameState.ui != null and GameState.ui.dialogue_active:
 		return
@@ -71,7 +74,7 @@ func _try_interact() -> void:
 func _process(_delta: float) -> void:
 	if GameState.ui == null:
 		return
-	if _ray == null or GameState.menu_open:
+	if _ray == null or GameState.menu_open or GameState.inventory_open:
 		GameState.ui.set_prompt("")
 		return
 	_ray.force_raycast_update()
@@ -92,7 +95,7 @@ func _physics_process(delta: float) -> void:
 		reset_to_spawn()
 		return
 	var input_dir := Vector2.ZERO
-	var can_move := not GameState.menu_open
+	var can_move := not GameState.menu_open and not GameState.inventory_open
 	if GameState.ui != null and GameState.ui.dialogue_active:
 		can_move = false
 	if can_move:

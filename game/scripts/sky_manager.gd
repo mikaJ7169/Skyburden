@@ -14,6 +14,7 @@ const MARS_SCALE_START := 0.5
 const MARS_SCALE_END := 16.0
 const PLANET_AI_SCALE_START := 4.0
 const PLANET_AI_SCALE_END := 1.5
+const PLANET_ALPHA := 0.85
 const CRASH_FLASH_DURATION := 1.2
 
 var _env: Environment
@@ -29,11 +30,11 @@ func _ready() -> void:
 func setup(env: Environment, sky_mat: ProceduralSkyMaterial) -> void:
 	_env = env
 	_sky_mat = sky_mat
-	var mars_tex := _noise_texture(2107, Color(0.45, 0.10, 0.07), Color(0.75, 0.25, 0.15))
-	var ai_tex := _noise_texture(2098, Color(0.45, 0.50, 0.46), Color(0.65, 0.70, 0.62))
-	_mars = _build_planet(MARS_POSITION, mars_tex, Color(0.85, 0.30, 0.18), Color(0.45, 0.10, 0.06))
-	var ai_emission := Color(0.20, 0.25, 0.20)
-	_planet_ai = _build_planet(PLANET_AI_POSITION, ai_tex, Color(0.75, 0.80, 0.72), ai_emission)
+	var mars_tint := Color(0.95, 0.58, 0.28, PLANET_ALPHA)
+	_mars = _build_planet(MARS_POSITION, _mars_texture(), mars_tint, Color(0.55, 0.25, 0.08))
+	var ai_tint := Color(0.38, 0.40, 0.38, PLANET_ALPHA)
+	var ai_emission := Color(0.08, 0.10, 0.09)
+	_planet_ai = _build_planet(PLANET_AI_POSITION, _planet_ai_texture(), ai_tint, ai_emission)
 	_build_flash()
 	update_sky(0.0)
 
@@ -43,6 +44,7 @@ func _build_planet(pos: Vector3, tex: ImageTexture, tint: Color, emission: Color
 	mat.albedo_texture = tex
 	mat.albedo_color = tint
 	mat.texture_filter = BaseMaterial3D.TEXTURE_FILTER_NEAREST
+	mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
 	mat.disable_fog = true
 	mat.emission_enabled = true
 	mat.emission = emission
@@ -58,14 +60,53 @@ func _build_planet(pos: Vector3, tex: ImageTexture, tint: Color, emission: Color
 	add_child(mi)
 	return mi
 
-func _noise_texture(seed: int, c1: Color, c2: Color) -> ImageTexture:
-	var size := 64
+func _mars_texture() -> ImageTexture:
+	var size := 128
 	var img := Image.create(size, size, false, Image.FORMAT_RGB8)
 	var rng := RandomNumberGenerator.new()
-	rng.seed = seed
+	rng.seed = 2107
+	var c1 := Color(0.50, 0.20, 0.06)
+	var c2 := Color(0.95, 0.55, 0.25)
 	for y in range(size):
 		for x in range(size):
 			img.set_pixel(x, y, c1.lerp(c2, rng.randf()))
+	for i in range(7):
+		var c := Vector2(rng.randi_range(10, size - 10), rng.randi_range(10, size - 10))
+		var r := rng.randf_range(4.0, 13.0)
+		for y in range(size):
+			for x in range(size):
+				var d := Vector2(x, y).distance_to(c)
+				if d < r:
+					img.set_pixel(x, y, img.get_pixel(x, y) * 0.55)
+				elif d < r + 2.0:
+					img.set_pixel(x, y, img.get_pixel(x, y) * 1.25)
+	return ImageTexture.create_from_image(img)
+
+func _planet_ai_texture() -> ImageTexture:
+	var size := 128
+	var img := Image.create(size, size, false, Image.FORMAT_RGB8)
+	var rng := RandomNumberGenerator.new()
+	rng.seed = 2098
+	var base := Color(0.30, 0.32, 0.31)
+	for y in range(size):
+		for x in range(size):
+			img.set_pixel(x, y, base * rng.randf_range(0.85, 1.15))
+	for i in range(0, size, 16):
+		for t in range(size):
+			img.set_pixel(i, t, base * 0.7)
+			img.set_pixel(t, i, base * 0.7)
+	var dish := Vector2(46, 42)
+	var r := 20.0
+	for y in range(size):
+		for x in range(size):
+			var d := Vector2(x, y).distance_to(dish)
+			if d < r - 2.0:
+				img.set_pixel(x, y, base * 0.45)
+			elif d < r:
+				img.set_pixel(x, y, base * 1.4)
+	for y in range(62, 66):
+		for x in range(size):
+			img.set_pixel(x, y, base * 0.6)
 	return ImageTexture.create_from_image(img)
 
 func _build_flash() -> void:

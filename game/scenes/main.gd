@@ -6,6 +6,7 @@ const CENDREVAL_SCENE := "res://scenes/zones/cendreval.tscn"
 const BEN_SCENE := "res://scenes/npc/ben.tscn"
 const HUD_SCENE := "res://scenes/ui/hud.tscn"
 const PAUSE_MENU_SCENE := "res://scenes/ui/pause_menu.tscn"
+const INVENTORY_SCENE := "res://scenes/ui/inventory.tscn"
 const SKY_MANAGER_SCRIPT := "res://scripts/sky_manager.gd"
 
 const PLAYER_SPAWN := Vector3(0.0, -7.5, 9.0)
@@ -31,6 +32,8 @@ func _ready() -> void:
 	add_child(hud)
 	var pause_menu: CanvasLayer = load(PAUSE_MENU_SCENE).instantiate()
 	add_child(pause_menu)
+	var inventory: CanvasLayer = load(INVENTORY_SCENE).instantiate()
+	add_child(inventory)
 	var sky_manager: Node = load(SKY_MANAGER_SCRIPT).new()
 	add_child(sky_manager)
 	sky_manager.setup(_env, _sky_mat)

@@ -6,7 +6,7 @@ signal progress_changed(progress: float)
 
 const LOOP_DURATION_MINUTES := 37.0
 const TEST_LOOP_MINUTES := 5.0
-const USE_TEST_DURATION := true
+const USE_TEST_DURATION := false
 
 var elapsed := 0.0
 var running := false

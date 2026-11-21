@@ -1,0 +1,18 @@
+{
+  "lampe_huile": {
+    "name": "Lampe à huile",
+    "desc": "Ta lumière dans le noir. Elle se rallume à chaque boucle."
+  },
+  "relique_radio": {
+    "name": "Radio morte",
+    "desc": "Éteinte depuis cent ans. Sauf une, quelque part, qui émet encore."
+  },
+  "relique_livre": {
+    "name": "Livre imprimé",
+    "desc": "Posséder un livre est un crime selon l'Église de l'Ancrage."
+  },
+  "relique_conserve": {
+    "name": "Conserve",
+    "desc": "De la nourriture de l'ancien monde. Le contenu a dû mourir avec."
+  }
+}
