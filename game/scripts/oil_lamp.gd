@@ -1,7 +1,12 @@
-extends StaticBody3D
+extends "res://scripts/interactable.gd"
 
 func _ready() -> void:
 	add_to_group("world_state")
+	prompt = "Ramasser la lampe à huile"
+	flag = "lampe_huile"
+	_build_visual()
+
+func _build_visual() -> void:
 	var flame := StandardMaterial3D.new()
 	flame.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
 	flame.albedo_color = Color(0.9, 0.7, 0.35)
@@ -33,13 +38,6 @@ func _ready() -> void:
 	col.position = Vector3(0, 0.25, 0)
 	add_child(col)
 
-func interact() -> void:
-	if not visible:
-		return
-	MemoryStore.set_flag(&"lampe_huile")
+func _on_picked() -> void:
 	if GameState.player != null:
 		GameState.player.enable_lamp()
-	visible = false
-
-func on_loop_reset() -> void:
-	visible = true

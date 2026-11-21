@@ -2,6 +2,8 @@ extends Node3D
 
 const Builder := preload("res://scripts/builder.gd")
 const Tex := preload("res://scripts/textures.gd")
+const SkyManager := preload("res://scripts/sky_manager.gd")
+const Relic := preload("res://scripts/relic.gd")
 
 const CITY_HALF := 58.0
 const SHAFT_MIN := Vector2(-2.0, 2.0)
@@ -13,6 +15,7 @@ const NEON := Color(0.55, 0.85, 0.65)
 var _rng := RandomNumberGenerator.new()
 var _materials := {}
 var _tex := {}
+var _debris: Array = []
 
 func _ready() -> void:
 	_rng.seed = 2200
@@ -33,6 +36,7 @@ func _ready() -> void:
 	_build_rubble()
 	_build_border()
 	_build_floating()
+	_build_pickups()
 
 func _mat(tint: Color, tex_name := "", emission := false) -> StandardMaterial3D:
 	var key := tint.to_html() + "|" + tex_name + ("|e" if emission else "")
@@ -73,7 +77,8 @@ func _build_auberge() -> void:
 	var h := 3.5
 	var wall := _mat(Color(0.85, 0.82, 0.78), "brick")
 	Builder.box(self, Vector3(0, h / 2.0, cz - 5.0), Vector3(10.0, h, 0.6), wall)
-	Builder.box(self, Vector3(0, h / 2.0, cz + 5.0), Vector3(10.0, h, 0.6), wall)
+	Builder.box(self, Vector3(-3.0, h / 2.0, cz + 5.0), Vector3(4.0, h, 0.6), wall)
+	Builder.box(self, Vector3(3.0, h / 2.0, cz + 5.0), Vector3(4.0, h, 0.6), wall)
 	Builder.box(self, Vector3(-5.0, h / 2.0, cz), Vector3(0.6, h, 10.0), wall)
 	Builder.box(self, Vector3(5.0, h / 2.0, cz), Vector3(0.6, h, 10.0), wall)
 	var slab_mat := _mat(Color(0.5, 0.5, 0.52), "concrete")
@@ -181,7 +186,32 @@ func _build_border() -> void:
 		var s := _rng.randf_range(1.5, 5.0)
 		var tint := Color(0.6, 0.6, 0.62)
 		var tilt := Vector3(0, 0, _rng.randf_range(-0.4, 0.4))
-		_box(pos, Vector3(s, s * _rng.randf_range(0.5, 1.0), s), tint, "concrete", false, tilt)
+		var size := Vector3(s, s * _rng.randf_range(0.5, 1.0), s)
+		_register_debris(_box(pos, size, tint, "concrete", false, tilt))
+
+func _register_debris(node: StaticBody3D) -> void:
+	var dir := (SkyManager.PLANET_AI_POSITION - node.position).normalized()
+	_debris.append({"node": node, "base": node.position, "dir": dir})
+
+func _process(_delta: float) -> void:
+	var p := LoopManager.progress()
+	for d in _debris:
+		var node: StaticBody3D = d["node"]
+		var base: Vector3 = d["base"]
+		var dir: Vector3 = d["dir"]
+		node.position = base + dir * (p * 55.0) + Vector3(0, p * 12.0, 0)
+
+func _build_pickups() -> void:
+	_make_relic("radio", Vector3(12.0, 0.0, -18.0))
+	_make_relic("livre", Vector3(-14.0, 0.0, 8.0))
+	_make_relic("conserve", Vector3(20.0, 0.0, 30.0))
+	_make_relic("conserve", Vector3(-30.0, 0.0, -20.0))
+
+func _make_relic(kind: String, pos: Vector3) -> void:
+	var relic := Relic.new()
+	relic.kind = kind
+	relic.position = pos
+	add_child(relic)
 
 func _build_floating() -> void:
 	for i in range(3):
@@ -193,4 +223,5 @@ func _build_floating() -> void:
 		var tilt := Vector3(0, 0, _rng.randf_range(-0.4, 0.4))
 		var y := _rng.randf_range(18.0, 30.0)
 		var tint := Color(0.6, 0.6, 0.62)
-		_box(Vector3(x, y, z), Vector3(s, s * 0.6, s), tint, "concrete", false, tilt)
+		var size := Vector3(s, s * 0.6, s)
+		_register_debris(_box(Vector3(x, y, z), size, tint, "concrete", false, tilt))

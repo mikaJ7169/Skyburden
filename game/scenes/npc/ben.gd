@@ -2,6 +2,7 @@ extends "res://scripts/npc.gd"
 
 func _ready() -> void:
 	npc_name = "Ben"
+	prompt = "Parler à Ben"
 	dialogue_file = "res://data/dialogues/ben.json"
 	body_color = Color(0.48, 0.46, 0.42)
 	super._ready()

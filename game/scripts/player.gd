@@ -41,8 +41,17 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif event is InputEventKey and event.pressed and not event.echo:
 		if event.keycode == KEY_E:
 			_try_interact()
+		elif event.keycode == KEY_F11:
+			_toggle_fullscreen()
 		elif event.keycode == KEY_ESCAPE:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
+func _toggle_fullscreen() -> void:
+	if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		DisplayServer.window_set_size(Vector2i(1920, 1080))
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 
 func _try_interact() -> void:
 	if GameState.ui != null and GameState.ui.dialogue_active:
@@ -55,6 +64,19 @@ func _try_interact() -> void:
 			return
 		node = node.get_parent()
 
+func _process(_delta: float) -> void:
+	if GameState.ui == null:
+		return
+	_ray.force_raycast_update()
+	var node: Node = _ray.get_collider() as Node
+	var text := ""
+	while node != null:
+		if node.has_method("interact") and node.get("prompt") != null and not node.get("taken"):
+			text = "E — " + String(node.get("prompt"))
+			break
+		node = node.get_parent()
+	GameState.ui.set_prompt(text)
+
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y -= GRAVITY * delta
@@ -63,11 +85,11 @@ func _physics_process(delta: float) -> void:
 		return
 	var input_dir := Vector2.ZERO
 	if GameState.ui == null or not GameState.ui.dialogue_active:
-		if Input.is_key_pressed(KEY_W):
+		if Input.is_key_pressed(KEY_W) or Input.is_key_pressed(KEY_Z):
 			input_dir.y -= 1.0
 		if Input.is_key_pressed(KEY_S):
 			input_dir.y += 1.0
-		if Input.is_key_pressed(KEY_A):
+		if Input.is_key_pressed(KEY_A) or Input.is_key_pressed(KEY_Q):
 			input_dir.x -= 1.0
 		if Input.is_key_pressed(KEY_D):
 			input_dir.x += 1.0

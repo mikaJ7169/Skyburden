@@ -8,7 +8,7 @@ const HUD_SCENE := "res://scenes/ui/hud.tscn"
 const SKY_MANAGER_SCRIPT := "res://scripts/sky_manager.gd"
 
 const PLAYER_SPAWN := Vector3(0.0, -7.5, 9.0)
-const BEN_POSITION := Vector3(0.0, 0.0, -6.0)
+const BEN_POSITION := Vector3(0.0, 0.0, -2.5)
 
 var _env: Environment
 var _sky_mat: ProceduralSkyMaterial

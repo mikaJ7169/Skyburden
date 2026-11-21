@@ -8,6 +8,7 @@ var _box: PanelContainer
 var _speaker: Label
 var _text: Label
 var _fade: ColorRect
+var _prompt: Label
 
 func _ready() -> void:
 	GameState.register_ui(self)
@@ -28,6 +29,11 @@ func _ready() -> void:
 	cross.set_anchors_preset(Control.PRESET_CENTER)
 	cross.position = Vector2(-4, -10)
 	add_child(cross)
+	_prompt = Label.new()
+	_prompt.set_anchors_preset(Control.PRESET_CENTER_BOTTOM)
+	_prompt.position = Vector2(-160, -60)
+	_prompt.add_theme_font_size_override("font_size", 14)
+	add_child(_prompt)
 	_box = PanelContainer.new()
 	_box.set_anchors_preset(Control.PRESET_BOTTOM_WIDE)
 	_box.offset_top = -80
@@ -46,6 +52,9 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	var s := int(LoopManager.remaining_seconds())
 	_timer.text = "%02d:%02d  —  boucle %d" % [s / 60, s % 60, GameState.loop_count]
+
+func set_prompt(text: String) -> void:
+	_prompt.text = text
 
 func _on_loop_started(_index: int) -> void:
 	_fade.modulate.a = 1.0
