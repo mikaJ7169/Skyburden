@@ -53,11 +53,13 @@ func _ready() -> void:
 	_text.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	_text.add_theme_font_size_override("font_size", 14)
 	vb.add_child(_text)
+	var note_center := CenterContainer.new()
+	note_center.set_anchors_preset(Control.PRESET_FULL_RECT)
+	add_child(note_center)
 	_note_box = PanelContainer.new()
-	_note_box.set_anchors_preset(Control.PRESET_CENTER)
 	_note_box.custom_minimum_size = Vector2(420, 0)
 	_note_box.visible = false
-	add_child(_note_box)
+	note_center.add_child(_note_box)
 	var nvb := VBoxContainer.new()
 	_note_box.add_child(nvb)
 	_note_title = Label.new()

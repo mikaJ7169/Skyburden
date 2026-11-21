@@ -30,7 +30,9 @@ func _ready() -> void:
 	_rng.seed = 2200
 	_tex = {
 		"stone": Tex.make_stone(),
+		"stone_dark": Tex.make_stone_dark(),
 		"brick": Tex.make_brick(),
+		"brick_brown": Tex.make_brick_brown(),
 		"concrete": Tex.make_concrete(),
 		"dirt": Tex.make_dirt(),
 		"plaster": Tex.make_plaster(),
@@ -39,6 +41,7 @@ func _ready() -> void:
 		"roof": Tex.make_roof(),
 	}
 	_build_ground()
+	_build_ground_details()
 	_build_auberge()
 	_build_houses()
 	_build_signs()
@@ -48,7 +51,6 @@ func _ready() -> void:
 	_build_props()
 	_build_rubble()
 	_build_border()
-	_build_floating()
 
 func _mat(tint: Color, tex_name := "", emission := false) -> StandardMaterial3D:
 	var key := tint.to_html() + "|" + tex_name + ("|e" if emission else "")
@@ -107,16 +109,16 @@ func _make_relic(kind: String, pos: Vector3) -> void:
 	add_child(relic)
 
 func _make_sign(pos: Vector3, text: String) -> void:
-	var wood := Color(0.45, 0.36, 0.25)
-	_box(pos + Vector3(0, 1.0, 0), Vector3(0.12, 2.0, 0.12), wood, "wood")
-	_box(pos + Vector3(0, 2.1, 0), Vector3(1.8, 0.5, 0.06), Color(0.5, 0.4, 0.28), "wood")
+	var post_tint := Color(0.4, 0.32, 0.22)
+	_box(pos + Vector3(0, 1.1, 0), Vector3(0.16, 2.2, 0.16), post_tint, "wood")
+	_box(pos + Vector3(0, 2.05, 0), Vector3(1.9, 0.55, 0.1), Color(0.55, 0.45, 0.32), "wood")
 	var label := Label3D.new()
 	label.text = text
-	label.position = pos + Vector3(0, 2.1, 0.09)
-	label.billboard = BaseMaterial3D.BILLBOARD_ENABLED
-	label.pixel_size = 0.006
-	label.modulate = Color(0.92, 0.89, 0.78)
-	label.outline_size = 8
+	label.billboard = BaseMaterial3D.BILLBOARD_DISABLED
+	label.position = pos + Vector3(0, 2.05, 0.06)
+	label.pixel_size = 0.008
+	label.modulate = Color(0.95, 0.9, 0.75)
+	label.outline_size = 6
 	label.outline_modulate = Color(0, 0, 0, 0.9)
 	add_child(label)
 
@@ -139,8 +141,8 @@ func _build_auberge() -> void:
 	var found := _mat(Color(0.42, 0.42, 0.44), "concrete")
 	Builder.box(self, Vector3(0, 0.2, cz), Vector3(10.5, 0.4, 10.5), found)
 	var slab_mat := _mat(Color(0.55, 0.52, 0.48), "roof")
-	var slab_pos := Vector3(0.4, 6.6, cz - 0.6)
-	Builder.box(self, slab_pos, Vector3(10.5, 0.3, 10.5), slab_mat, Vector3(0, 0, 0.22))
+	var slab_pos := Vector3(0.4, h + 0.12, cz - 0.6)
+	Builder.box(self, slab_pos, Vector3(10.5, 0.3, 10.5), slab_mat, Vector3(0, 0, 0.08))
 	var chim := _mat(Color(0.7, 0.68, 0.65), "stone")
 	Builder.box(self, Vector3(-3.5, h + 1.0, cz - 3.5), Vector3(0.8, 2.0, 0.8), chim)
 	_make_sign(Vector3(0, 0, cz + 6.5), "Auberge")
@@ -163,7 +165,7 @@ func _build_houses() -> void:
 			elif forced == "library":
 				_build_library(px, pz)
 			elif forced == "apartment":
-				_build_apartment(px, pz)
+				_build_apartment(px, pz, true)
 			else:
 				var r := _rng.randf()
 				if r < 0.6:
@@ -226,9 +228,13 @@ func _build_house(cx: float, cz: float) -> void:
 	var d := _rng.randf_range(8.0, 13.0)
 	var ruined := _rng.randf() < 0.55
 	var h: float = _rng.randf_range(2.6, 4.2) if ruined else _rng.randf_range(4.5, 7.0)
-	var texes := ["stone", "brick", "plaster", "concrete"]
+	var texes := ["stone", "stone_dark", "brick", "brick_brown", "plaster", "concrete"]
 	var tex_name: String = texes[_rng.randi_range(0, texes.size() - 1)]
-	var tint := Color(0.85, 0.84, 0.82) * _rng.randf_range(0.9, 1.1)
+	var tints := [
+		Color(0.85, 0.84, 0.82), Color(0.8, 0.77, 0.7),
+		Color(0.76, 0.82, 0.76), Color(0.88, 0.86, 0.78),
+	]
+	var tint: Color = tints[_rng.randi_range(0, tints.size() - 1)] * _rng.randf_range(0.92, 1.08)
 	var wall := _mat(tint, tex_name)
 	var hw := w / 2.0
 	var hd := d / 2.0
@@ -290,7 +296,8 @@ func _build_shop(cx: float, cz: float, name: String, note_file: String) -> void:
 	if name != "":
 		_make_sign(Vector3(cx, 0, cz + hd + 1.8), name)
 	if note_file != "":
-		_make_note(Vector3(cx + 0.8, 1.02, cz - hd + 0.9), note_file)
+		_make_note(Vector3(cx + 0.8, 1.012, cz - hd + 0.9), note_file)
+	_add_warm_light(cx, cz, h * 0.5)
 
 func _build_library(cx: float, cz: float) -> void:
 	var w := 12.0
@@ -313,10 +320,12 @@ func _build_library(cx: float, cz: float) -> void:
 	_shelf_z(cx + hw - 0.5, cz, d - 1.2, 2.6)
 	_shelf_x(cx, cz, w - 4.0, 2.2)
 	_make_sign(Vector3(cx, 0, cz + hd + 1.8), "Bibliothèque")
-	_make_note(Vector3(cx, 1.13, cz), "res://data/notes/inventaire_biblio.json")
+	_make_note(Vector3(cx, 1.137, cz), "res://data/notes/inventaire_biblio.json")
+	_make_note(Vector3(cx + hw - 0.5, 1.336, cz - 1.0), "res://data/notes/note_mnemo.json")
 	_make_relic("livre", Vector3(cx - hw + 0.5, 1.48, cz + 1.5))
+	_add_warm_light(cx, cz, h * 0.5)
 
-func _build_apartment(cx: float, cz: float) -> void:
+func _build_apartment(cx: float, cz: float, with_story := false) -> void:
 	var w := 10.0
 	var d := 12.0
 	var h := 7.5
@@ -344,9 +353,13 @@ func _build_apartment(cx: float, cz: float) -> void:
 			Builder.box(self, leg, Vector3(0.08, 0.75, 0.08), wood)
 	var desk := Vector3(cx, 0.4, cz - hd + 0.7)
 	Builder.box(self, desk, Vector3(1.2, 0.8, 0.6), wood)
-	_make_note(Vector3(cx - 0.3, 0.82, cz - hd + 0.7), "res://data/notes/lettre_lea.json")
+	if with_story:
+		_make_note(Vector3(cx - 0.3, 0.812, cz - hd + 0.7), "res://data/notes/lettre_lea.json")
 	_shelf_z(cx + hw - 0.5, cz, d - 2.0, 2.2)
 	_make_relic("conserve", Vector3(cx + hw - 0.5, 1.48, cz - 2.0))
+	_add_poster(cx - 1.5, 2.2, cz - hd + 0.3, Color(0.6, 0.55, 0.45))
+	_add_poster(cx + 1.5, 2.4, cz - hd + 0.3, Color(0.55, 0.5, 0.56))
+	_add_warm_light(cx, cz, h * 0.5)
 
 func _shelf_x(cx: float, cz: float, length: float, h: float) -> void:
 	var wood := _mat(Color(0.6, 0.48, 0.35), "wood")
@@ -364,7 +377,40 @@ func _shelf_z(cx: float, cz: float, length: float, h: float) -> void:
 
 func _build_signs() -> void:
 	_make_sign(Vector3(3.5, 0, 12), "Cendreval")
-	_make_note(Vector3(4.5, 0.03, -2), "res://data/notes/affiche_eglise.json")
+	_make_note(Vector3(4.5, 0.012, -2), "res://data/notes/affiche_eglise.json")
+	_make_note(Vector3(-3, 0.012, 0.5), "res://data/notes/note_enfant.json")
+	_make_note(Vector3(1.5, 0.012, -3), "res://data/notes/note_glaneur.json")
+	_box(Vector3(-21.5, 0.4, 0), Vector3(0.8, 0.8, 0.8), Color(0.7, 0.58, 0.42), "wood")
+	_make_note(Vector3(-21.5, 0.812, 0), "res://data/notes/note_amarreur.json")
+
+func _add_warm_light(cx: float, cz: float, y: float) -> void:
+	var light := OmniLight3D.new()
+	light.light_color = WARM
+	light.light_energy = 0.6
+	light.omni_range = 9.0
+	light.shadow_enabled = false
+	light.position = Vector3(cx, y, cz)
+	add_child(light)
+
+func _add_poster(cx: float, y: float, cz: float, tint: Color) -> void:
+	_box(Vector3(cx, y, cz), Vector3(0.5, 0.7, 0.05), tint)
+
+func _build_ground_details() -> void:
+	for i in range(40):
+		var x := _rng.randf_range(-55.0, 55.0)
+		var z := _rng.randf_range(-55.0, 55.0)
+		if _in_shaft(x, z, 1.0):
+			continue
+		var s := _rng.randf_range(0.08, 0.22)
+		_box(Vector3(x, s / 2.0, z), Vector3(s, s, s), Color(0.42, 0.42, 0.44), "concrete")
+	for i in range(25):
+		var x := _rng.randf_range(-55.0, 55.0)
+		var z := _rng.randf_range(-55.0, 55.0)
+		if _in_shaft(x, z, 1.0):
+			continue
+		var g := _rng.randf_range(0.15, 0.3)
+		var tint := Color(0.4, 0.5, 0.32) * _rng.randf_range(0.9, 1.1)
+		_box(Vector3(x, g / 2.0, z), Vector3(0.12, g, 0.12), tint)
 
 func _build_lamps() -> void:
 	var spots := [
@@ -547,20 +593,4 @@ func _build_border() -> void:
 		var size := Vector3(s, s * _rng.randf_range(0.5, 1.0), s)
 		_register_debris(_box(pos, size, tint, "stone", false, tilt))
 
-func _build_floating() -> void:
-	for i in range(4):
-		var x := _rng.randf_range(-40.0, 40.0)
-		var z := _rng.randf_range(-40.0, 40.0)
-		if _in_shaft(x, z, 3.0):
-			continue
-		var y := _rng.randf_range(16.0, 32.0)
-		var n := _rng.randi_range(2, 3)
-		for j in range(n):
-			var s := _rng.randf_range(1.5, 3.5)
-			var jx := _rng.randf_range(-2, 2)
-			var jy := _rng.randf_range(-2, 2)
-			var jz := _rng.randf_range(-2, 2)
-			var pos := Vector3(x + jx, y + jy, z + jz)
-			var tilt := Vector3(_rng.randf_range(-0.4, 0.4), 0, _rng.randf_range(-0.4, 0.4))
-			var size := Vector3(s, s * _rng.randf_range(0.4, 0.8), s * _rng.randf_range(0.6, 1.0))
-			_register_debris(_box(pos, size, Color(0.55, 0.53, 0.5), "stone", false, tilt))
+

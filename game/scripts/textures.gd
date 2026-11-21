@@ -119,10 +119,28 @@ static func make_stone() -> ImageTexture:
 static func make_brick() -> ImageTexture:
 	var rng := _rng(2202)
 	var img := _base_img(Color(0.5, 0.26, 0.2))
-	_blocks(img, rng, Color(0.5, 0.26, 0.2), Color(0.42, 0.4, 0.38), 32, 16, true)
+	_blocks(img, rng, Color(0.5, 0.26, 0.2), Color(0.36, 0.34, 0.32), 32, 16, true)
 	_smooth_noise(img, 2202)
 	_blotch(img, rng, 6, Color(0.3, 0.16, 0.12), 10)
 	_cracks(img, rng, 4, Color(0.22, 0.14, 0.1))
+	return _tex(img)
+
+static func make_stone_dark() -> ImageTexture:
+	var rng := _rng(1102)
+	var img := _base_img(Color(0.44, 0.43, 0.42))
+	_blocks(img, rng, Color(0.44, 0.43, 0.42), Color(0.26, 0.25, 0.24), 32, 32)
+	_smooth_noise(img, 1102)
+	_cracks(img, rng, 7, Color(0.16, 0.15, 0.14))
+	_moss(img, rng, 12)
+	return _tex(img)
+
+static func make_brick_brown() -> ImageTexture:
+	var rng := _rng(2203)
+	var img := _base_img(Color(0.45, 0.32, 0.24))
+	_blocks(img, rng, Color(0.45, 0.32, 0.24), Color(0.34, 0.31, 0.28), 32, 16, true)
+	_smooth_noise(img, 2203)
+	_blotch(img, rng, 6, Color(0.28, 0.2, 0.14), 10)
+	_cracks(img, rng, 4, Color(0.2, 0.14, 0.1))
 	return _tex(img)
 
 static func make_plaster() -> ImageTexture:
@@ -135,10 +153,10 @@ static func make_plaster() -> ImageTexture:
 
 static func make_dirt() -> ImageTexture:
 	var rng := _rng(8808)
-	var img := _base_img(Color(0.33, 0.29, 0.23))
+	var img := _base_img(Color(0.38, 0.34, 0.27))
 	_smooth_noise(img, 8808)
-	_blotch(img, rng, 14, Color(0.24, 0.2, 0.15), 18)
-	_blotch(img, rng, 8, Color(0.42, 0.38, 0.3), 12)
+	_blotch(img, rng, 16, Color(0.26, 0.22, 0.16), 18)
+	_blotch(img, rng, 10, Color(0.47, 0.42, 0.33), 12)
 	for i in range(30):
 		var x := rng.randi_range(MARGIN, SIZE - MARGIN - 1)
 		var y := rng.randi_range(MARGIN, SIZE - MARGIN - 1)
