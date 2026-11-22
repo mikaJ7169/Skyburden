@@ -6,7 +6,9 @@
 
 ## Statut
 
-**Phase : écriture du scénario et du lore.** Aucun développement pour l'instant.
+**Phase : production du code — Godot 4.x (GDScript), projet dans `game/`.**
+
+Jalons **M0/M1** en cours : réveil dans le **sous-sol** (fondu depuis le noir, lampe à huile), escalier vers **Cendreval** (ville de départ texturée : néons, ruines, limite d'arrachement rouge) + **Ben le glaneur** (PNJ, dialogues en JSON français) + ciel dynamique (Mars grandit pendant la boucle de 37 min, flash rouge au crash, monde restauré à chaque boucle, mémoire persistante). Le prototype raycaster Python (zéro dépendance) reste dans le repo comme bac à sable technique.
 
 ## Pitch
 
@@ -26,8 +28,34 @@ docs/
 ├── lore/
 │   ├── monde.md       # La dislocation, les strates, la chronologie
 │   └── factions.md    # Le tyran, l'Église de l'Ancrage, les Mnémos
-└── scenario/
-    └── synopsis.md    # Synopsis en trois actes (brouillon)
+├── scenario/
+│   └── synopsis.md    # Synopsis en trois actes (brouillon)
+└── cartes/
+    └── strate_0.png   # Carte canonique de la Strate 0 (la terre ferme)
+
+game/                  # projet Godot 4 (moteur de production)
+├── autoload/          # GameState, LoopManager, WorldState, MemoryStore
+├── scripts/           # player, sky_manager, npc
+├── scenes/            # main, zones/cendreval, npc/ben, ui/hud
+├── data/dialogues/    # dialogues FR (JSON)
+└── assets/ + addons/
+
+skyburden/             # prototype raycaster Python (stdlib uniquement)
+main.py                # point d'entrée du prototype
+maps/                  # cartes du prototype (texte)
+tests/                 # tests du prototype (unittest)
+```
+
+## Lancer le jeu (Godot)
+
+Ouvrir `game/` dans **Godot 4.x** puis `F5`. Boucle de test : 5 min (`LoopManager.USE_TEST_DURATION`), boucle canonique : 37 min. Voir `game/README.md`.
+
+## Lancer le prototype Python
+
+```bash
+python3 main.py --out out/frame.png            # une image à la position de départ
+python3 main.py --demo out/demo                 # une séquence de déplacements
+python3 -m unittest discover -s tests           # tests
 ```
 
 ## Nom

@@ -1,0 +1,18 @@
+{
+  "lampe_huile": {
+    "name": "Lampe à huile",
+    "desc": "Encore pleine. Le bec est noir de suie."
+  },
+  "relique_radio": {
+    "name": "Radio de cuisine",
+    "desc": "Cadran éteint, haut-parleur déchiré, cordon rongé."
+  },
+  "relique_livre": {
+    "name": "Livre de recettes",
+    "desc": "Pages jaunies, reliure cassée. Des recettes de cuisine, rien d'autre."
+  },
+  "relique_conserve": {
+    "name": "Conserve",
+    "desc": "Métal cabossé. L'étiquette est illisible."
+  }
+}
