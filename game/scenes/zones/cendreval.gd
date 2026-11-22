@@ -368,8 +368,8 @@ func _build_shop(cx: float, cz: float, name: String, note_file: String) -> void:
 	Builder.box(self, fallen, Vector3(0.35, 2.2, 1.6), wood, Vector3(1.4, 0.3, 0.2))
 	for i in range(4):
 		var g := Vector3(cx + _rng.randf_range(-2, 2), 0.12, cz + _rng.randf_range(-1, 2))
-		var tint := Color(0.6, 0.55, 0.45) * _rng.randf_range(0.9, 1.1)
-		_pbox(g, Vector3(0.24, 0.2, 0.24), tint)
+		var gtint := Color(0.6, 0.55, 0.45) * _rng.randf_range(0.9, 1.1)
+		_pbox(g, Vector3(0.24, 0.2, 0.24), gtint)
 	_papers(Vector3(cx + 1.2, 0, cz - hd + 1.6))
 	if name != "":
 		_make_sign(Vector3(cx, 0, cz + hd + 1.8), name)
